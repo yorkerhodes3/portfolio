@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "id": "digital-passport-artworks",
+  "title": "Digital Passport for Artworks",
+  "repo": "Ethical-Tech-CoLab/digital-passport-artworks",
+  "summary": "A browser-based prototype for issuing, verifying and revoking digital passports for artworks, with duplicate detection and human review routing, all client-side.",
+  "kind": "application",
+  "methodTags": [
+    "provenance",
+    "open-source"
+  ],
+  "domainTags": [
+    "cultural-heritage"
+  ],
+  "contribution": {
+    "date": "2026-07-23",
+    "role": "advisor-prof",
+    "roleNote": "Originally by @ChristineLumen.",
+    "credits": [
+      {
+        "name": "Christine Lumen",
+        "github": "ChristineLumen",
+        "role": "Original author"
+      },
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "An artwork's digital passport is only useful if the same work cannot be registered twice, even from a photo taken at a different angle, and if anyone can check that a passport was issued by a trusted authority and has not been altered or revoked.",
+    "decision": "The whole lifecycle runs client-side in a single HTML file: fingerprints, similarity search, forgery-risk routing and a real ECDSA P-256 certificate chain via the Web Crypto API, with nothing leaving the browser tab except the optional MobileNet model.",
+    "tradeoff": "With no server or database, there is no persistent registry: duplicate detection only compares submissions within one browser session, and refreshing the page clears all memory.",
+    "limitation": "The README presents it as a prototype of the detection pipeline, not a production registry. The site notes that most forensic signals are hand-built heuristics kept as low-weight advisory signals, not a trained classifier.",
+    "caveat": "Duplicate detection works within a single browser session only; refreshing the page clears all memory. Keys and certificates are generated in the browser for the demonstration."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/digital-passport-artworks/commit/cdda2bb64ed30f625d0d2778b4b1f31aacf24805",
+        "date": "2026-07-23"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/digital-passport-artworks#readme",
+        "date": "2026-07-23"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/digital-passport-artworks"
+  },
+  "images": [
+    {
+      "id": "pipeline-overview",
+      "src": ".portfolio/pipeline-overview.webp",
+      "alt": "Page headed \"One upload, one continuous chain: vectors first, then trust.\" with nine step chips from Upload to Verify and a prototype notice about single-session duplicate detection.",
+      "caption": "The single-flow prototype: one upload runs fingerprinting, similarity, forensics and risk scoring before the certificate chain signs a passport.",
+      "credit": "Screenshot of the Digital Passport for Artworks site",
+      "source": "screenshot of index.html"
+    },
+    {
+      "id": "forensic-signals",
+      "src": ".portfolio/forensic-signals.webp",
+      "alt": "Section describing matching tiers and \"Forensic signal fusion\", with a \"What's real vs. simplified\" note explaining which signals are genuine and which are advisory.",
+      "caption": "The similarity and forensic steps, including the page's own account of which signals are real and which are simplified.",
+      "credit": "Screenshot of the Digital Passport for Artworks site",
+      "source": "screenshot of index.html (scrolled to the similarity and forensics steps)"
+    },
+    {
+      "id": "issue-revoke",
+      "src": ".portfolio/issue-revoke.webp",
+      "alt": "Trust-chain steps showing an issuing CA named Museo Civico Archeologico, a passport metadata form with a Sign & issue passport button, and a revocation toggle.",
+      "caption": "Issuance and revocation: the issuing CA signs the artwork record, and a StatusList2021-style bitstring revokes it instantly.",
+      "credit": "Screenshot of the Digital Passport for Artworks site",
+      "source": "screenshot of index.html (scrolled to the issue and revocation steps)"
+    }
+  ],
+  "defaultImageId": "pipeline-overview"
+}

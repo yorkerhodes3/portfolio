@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "evac-sim-melanie",
+  "title": "Evacuation Simulator",
+  "repo": "Ethical-Tech-CoLab/Evac-Sim-Melanie",
+  "summary": "An interactive agent-based model that lets students and humanitarians explore how information spread and demographics shape community evacuation behavior.",
+  "kind": "decision-model",
+  "methodTags": [
+    "decision-models"
+  ],
+  "domainTags": [
+    "humanitarian-response",
+    "education"
+  ],
+  "contribution": {
+    "date": "2026-07-23",
+    "role": "advisor-prof",
+    "roleNote": "Developed by Melanie MacKew as masters research at the NYU Center for Global Affairs (2026), under the Ethical Tech CoLab.",
+    "credits": [
+      {
+        "name": "Melanie MacKew",
+        "github": "mmelanie",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "In humanitarian evacuations, who leaves and when depends on how information spreads and on household demographics: alerts must be confirmed, neighbours influence one another, and elders, young children, pregnant people and unaccompanied minors move more slowly.",
+    "decision": "Households are modelled as family clusters whose hub waits for every member, and each member must confirm an alert before milling begins; every transition from unaware to done is probabilistic and depends on threat level, info clarity and household composition.",
+    "tradeoff": "Because transitions are probabilistic, a single run shows little and results need multi-run comparison; some outcomes, such as cars equalising vulnerability, follow directly from the parameter table rather than emerging from the model.",
+    "limitation": "The independent peer review recommends major revisions and notes that no empirical output is reported: not a single run, figure or distribution.",
+    "caveat": "A research prototype for academic demonstration and teaching only. Outputs are illustrative and are not a substitute for operational planning, legal advice, or assessment by qualified humanitarian and IHL professionals."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/Evac-Sim-Melanie/commit/bf67959de2fda7e2c6ce454165719f4baae08120",
+        "date": "2026-07-23"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/Evac-Sim-Melanie#readme",
+        "date": "2026-07-23"
+      },
+      {
+        "label": "Research report (EvacSim-Paper.md)",
+        "url": "https://github.com/Ethical-Tech-CoLab/Evac-Sim-Melanie/blob/main/EvacSim-Paper.md",
+        "date": "2026-07-23"
+      },
+      {
+        "label": "Peer review",
+        "url": "https://github.com/Ethical-Tech-CoLab/Evac-Sim-Melanie/blob/main/PEER-REVIEW.md",
+        "date": "2026-07-23"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/Evac-Sim-Melanie"
+  },
+  "images": [
+    {
+      "id": "guide-cycle",
+      "src": ".portfolio/guide-cycle.webp",
+      "alt": "EvacSim guide page headed \"How information flow shapes who evacuates and when\", with an Open Simulation button and a diagram of family clusters around a central Govt node.",
+      "caption": "The guide page and the evacuation cycle: family clusters wait on alerts from an information node before they can leave.",
+      "credit": "Screenshot of the Evacuation Simulator site",
+      "source": "screenshot of docs/index.html"
+    },
+    {
+      "id": "corridor-blocking",
+      "src": ".portfolio/corridor-blocking.webp",
+      "alt": "Guide section \"Simulating blocked and closing exit routes\" explaining four named exit gates and the corridor controls panel with open, closes-at and opens-at settings.",
+      "caption": "Corridor blocking: closing a gate mid-run forces rerouting and can model a ceasefire window that traps the slowest households.",
+      "credit": "Screenshot of the Evacuation Simulator site",
+      "source": "screenshot of docs/index.html (scrolled to corridor blocking)"
+    },
+    {
+      "id": "neighbour-influence",
+      "src": ".portfolio/neighbour-influence.webp",
+      "alt": "Guide section \"Neighbour influence summary panel\" defining social events fired, socially confirmed, officially confirmed and dominant channel metrics.",
+      "caption": "Reading a run: the summary panel separates confirmations from the official broadcast and from neighbours, the model's core research question.",
+      "credit": "Screenshot of the Evacuation Simulator site",
+      "source": "screenshot of docs/index.html (scrolled to reading the results)"
+    }
+  ],
+  "defaultImageId": "guide-cycle"
+}

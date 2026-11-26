@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "id": "mariupol-evacuation-model",
+  "title": "Humanitarian Corridors Under Siege: Mariupol 2022",
+  "repo": "Ethical-Tech-CoLab/mariupol-evacuation-model",
+  "summary": "A retrospective decision-support prototype that scores daily danger and evacuation feasibility for civilians during the 2022 siege of Mariupol, anchored in international humanitarian law.",
+  "kind": "decision-model",
+  "methodTags": [
+    "decision-models",
+    "data-visualization"
+  ],
+  "domainTags": [
+    "humanitarian-response",
+    "global-affairs"
+  ],
+  "contribution": {
+    "date": "2026-07-26",
+    "role": "advisor-prof",
+    "roleNote": "Ethical Tech CoLab fork of ChristineLumen/mariupol-evacuation-model; Yorke advised.",
+    "credits": [
+      {
+        "name": "Christine Lumen",
+        "github": "ChristineLumen",
+        "role": "Original author"
+      },
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "During the siege of Mariupol, 5 March – 20 May 2022, civilians faced daily danger from hostilities, deprivation and infrastructure destruction, while the negotiated evacuation mechanism envisaged by GC IV art. 17 arrived only on 30 April.",
+    "decision": "Combines six normalised severity components with a generalised power mean (p = 6, weakest-link), so the worst component drives the daily score instead of being averaged away, and pairs it with a satellite-based feasibility axis.",
+    "tradeoff": "The exponent, normalisation bounds and phase thresholds are documented conventions, and the sensitivity analysis shows two results, 'violence never dominates' and the Critical phase, do not survive alternative settings.",
+    "limitation": "Retrospective and only partially validated against observed displacement; event reporting degrades inside the besieged city as severity peaks, and district demographics in the feasibility axis are author's estimates.",
+    "caveat": "Retrospective research prototype, not operational guidance. Front lines and damage zones are approximate, and the same data fusion that prioritises evacuation could support targeting."
+  },
+  "evidence": {
+    "level": "evaluated-result",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/mariupol-evacuation-model/commit/47af9d5decd9502a1084cc5958c0ee5b0e175e05",
+        "date": "2026-07-26"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/mariupol-evacuation-model#readme",
+        "date": "2026-07-26"
+      },
+      {
+        "label": "Research report (plain language)",
+        "url": "https://github.com/Ethical-Tech-CoLab/mariupol-evacuation-model/blob/main/Mariupol-Severity-Model-Paper.md",
+        "date": "2026-07-26"
+      },
+      {
+        "label": "Methodology",
+        "url": "https://github.com/Ethical-Tech-CoLab/mariupol-evacuation-model/blob/main/docs/METHODOLOGY.md",
+        "date": "2026-07-26"
+      },
+      {
+        "label": "Peer review",
+        "url": "https://github.com/Ethical-Tech-CoLab/mariupol-evacuation-model/blob/main/PEER-REVIEW.md",
+        "date": "2026-07-26"
+      },
+      {
+        "label": "Sensitivity analysis script",
+        "url": "https://github.com/Ethical-Tech-CoLab/mariupol-evacuation-model/blob/main/docs/sensitivity.js",
+        "date": "2026-07-26"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/mariupol-evacuation-model"
+  },
+  "images": [
+    {
+      "id": "severity-timeline",
+      "src": ".portfolio/severity-timeline.webp",
+      "alt": "Severity module page with corridor-regime buttons, the date 16 March 2022 (Drama theatre struck) selected, and a line chart of daily composite severity from 5 March to 20 May across failed, self, human and no-corridor periods.",
+      "caption": "Daily composite severity across the siege, shaded by corridor regime; picking a date generates the situation assessment for that day.",
+      "credit": "Screenshot of the Mariupol 2022 corridor severity model site",
+      "source": "screenshot of severity-standalone.html"
+    },
+    {
+      "id": "decision-matrix",
+      "src": ".portfolio/decision-matrix.webp",
+      "alt": "Main page titled Humanitarian corridors under siege: Mariupol 2022, describing a two-axis decision matrix of Severity and Feasibility, with the Axis 1 Severity section beginning below.",
+      "caption": "The two-axis decision matrix: daily severity from hostilities and deprivation, and feasibility from satellite-verified damage and night-light loss.",
+      "credit": "Screenshot of the Mariupol 2022 corridor severity model site",
+      "source": "screenshot of index.html"
+    },
+    {
+      "id": "sensitivity",
+      "src": ".portfolio/sensitivity.webp",
+      "alt": "Document excerpt card headed Peer Review, quoting that the deprivation clock leads on 42–56 of 77 days under every variant and that the mid-March timing is robust.",
+      "caption": "What survives the sensitivity analysis run after peer review: the deprivation clock dominates and the mid-March timing holds.",
+      "credit": "Excerpt from the Mariupol 2022 model README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "severity-timeline"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "yorke-rhodes-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio of Yorke E. Rhodes III's work since January 2026, built from each project's portfolio.json.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "refresh": "node src/refresh/refresh.mjs",
+    "validate": "node src/refresh/validate-cli.mjs",
+    "capture": "node src/build/capture.mjs",
+    "assets": "node src/build/project-assets.mjs",
+    "build": "node src/build/build.mjs",
+    "pdf": "node src/build/pdf.mjs",
+    "check:pdf": "node src/build/check-pdf.mjs",
+    "preview": "node src/build/serve.mjs dist 4173",
+    "upstream": "node src/refresh/upstream-prs.mjs",
+    "test": "node --test test/",
+    "upstream:open": "node src/refresh/gather-context.mjs && node src/build/project-assets.mjs && node src/refresh/upstream-prs.mjs --open",
+    "review": "node src/build/review-table.mjs"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@fontsource/bebas-neue": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/space-mono": "^5.3.0",
+    "axe-core": "^4.14.1",
+    "pdfjs-dist": "^4.10.38",
+    "playwright-core": "^1.65.1"
+  }
+}

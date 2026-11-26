@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "india-evacsimulation",
+  "title": "Evacuation Readiness & Uncertainty Simulator",
+  "repo": "Ethical-Tech-CoLab/India-EvacSimulation",
+  "summary": "A browser-based research instrument that models how uncertain field intelligence degrades decisions about where to evacuate civilians in armed conflict, built for doctoral research on civilian protection.",
+  "kind": "decision-model",
+  "methodTags": [
+    "decision-models",
+    "open-source"
+  ],
+  "domainTags": [
+    "humanitarian-response",
+    "global-affairs"
+  ],
+  "contribution": {
+    "date": "2026-07-28",
+    "role": "advisor-prof",
+    "roleNote": "Doctoral research by India Clarke under the Ethical Tech CoLab at the NYU Center for Global Affairs.",
+    "credits": [
+      {
+        "name": "India Clarke",
+        "github": "indiaclarke03-ops",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "When humanitarian organisations decide where to move civilians fleeing conflict, they choose among destinations they do not fully understand: security reports may be stale, authority consent assumed and host-community willingness never asked. Decision quality can collapse while nothing on the ground has changed.",
+    "decision": "Treats Security, Authority consent and Willingness as non-substitutable gatekeepers that can cap readiness at 20%, and distinguishes an unassessed factor (Unknown) from a host community's confirmed refusal (Unwilling).",
+    "tradeoff": "Uncertainty enters through one auditable formula, so the downward sensitivity curve is a built-in assumption made explicit rather than an independent finding, and hard caps make a strong site with one blocked gatekeeper score like a weak one.",
+    "limitation": "A conceptual demonstration on synthetic data: outputs need empirical calibration, the 40% success threshold is an unsourced internal assumption, and the information-value ranking is not statistically resolvable at its default 100 runs.",
+    "caveat": "All destinations and evacuee groups are synthetic and generated from a seed. This is a research and teaching demonstration, not an operational decision-support system, and its outputs are uncalibrated."
+  },
+  "evidence": {
+    "level": "evaluated-result",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/India-EvacSimulation/commit/b6e99d8d4d3e54ede2483503d6f299059096b75e",
+        "date": "2026-07-28"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/India-EvacSimulation#readme",
+        "date": "2026-07-28"
+      },
+      {
+        "label": "Research report (ERUS)",
+        "url": "https://github.com/Ethical-Tech-CoLab/India-EvacSimulation/blob/main/ERUS-Paper.md",
+        "date": "2026-07-28"
+      },
+      {
+        "label": "Peer review",
+        "url": "https://github.com/Ethical-Tech-CoLab/India-EvacSimulation/blob/main/PEER-REVIEW.md",
+        "date": "2026-07-28"
+      },
+      {
+        "label": "Methodology",
+        "url": "https://github.com/Ethical-Tech-CoLab/India-EvacSimulation/blob/main/METHODOLOGY.md",
+        "date": "2026-07-28"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/India-EvacSimulation"
+  },
+  "images": [
+    {
+      "id": "simulator",
+      "src": ".portfolio/simulator.webp",
+      "alt": "Simulator set to seed 42, eight destinations, three evacuee groups and 30% field uncertainty, with destination cards showing gatekeeper badges, an assignment matrix of composite scores and Monte Carlo success rates, and an outcome summary.",
+      "caption": "The seed-42 worked example: composite scores, 500-trial Monte Carlo success rates and assignments for three groups at 30% uncertainty.",
+      "credit": "Screenshot of the Evacuation Readiness & Uncertainty Simulator site",
+      "source": "screenshot of index.html"
+    },
+    {
+      "id": "sensitivity-chart",
+      "src": "paper-figures/sensitivity-chart.png",
+      "alt": "Line chart of Monte Carlo success rate against field uncertainty from 0 to 100% for mixed general population, unaccompanied minors and elderly groups, with a dashed 40% minimum line.",
+      "caption": "Predicted success falls as field uncertainty rises; the report notes this follows from the scoring rule and that the 40% line is an internal assumption.",
+      "credit": "Image from the India-EvacSimulation repository",
+      "source": "repository file paper-figures/sensitivity-chart.png"
+    },
+    {
+      "id": "info-value",
+      "src": "paper-figures/info-value-panel.png",
+      "alt": "Factor Information Value panel ranking Food & water and Medical capacity at +0.8pp, Capacity at +0.4pp, and Willingness and Security slightly negative.",
+      "caption": "Where better intelligence would help most; the report warns this ranking is not statistically resolvable at the default run count.",
+      "credit": "Image from the India-EvacSimulation repository",
+      "source": "repository file paper-figures/info-value-panel.png"
+    }
+  ],
+  "defaultImageId": "simulator"
+}

@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "id": "ai-carbon-footprint",
+  "title": "AI's Carbon Footprint",
+  "repo": "Ethical-Tech-CoLab/ai-carbon-footprint",
+  "summary": "An Ethical Tech CoLab academic report for non-technical readers on the environmental impact of AI: energy use in training and inference, data-center and hardware toll, and mitigation and policy options.",
+  "kind": "research",
+  "methodTags": [
+    "frontier-models"
+  ],
+  "domainTags": [
+    "climate-energy",
+    "ai-governance"
+  ],
+  "contribution": {
+    "date": "2026-07-27",
+    "role": "advisor-prof",
+    "roleNote": "Advised by Professor Yorke Rhodes III and written by eight Ethical Tech CoLab researchers, per the README.",
+    "credits": [
+      {
+        "name": "Alexandra Du",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Elizabeth Matthews",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Emily Harrington",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Hannah Zhao",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Jennifer Hofmann",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Natasha Nagarajan",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Renata Gladkikh",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Smita Samanta",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "AI's rapid expansion carries a significant but often overlooked environmental cost, from the energy demands of training and inference to the toll of data centers and hardware, and the policy debate needs those costs stated clearly.",
+    "decision": "The report was put through an independent academic peer review, and the review, its 'major revisions' verdict and each revision applied are published alongside the report rather than replaced silently.",
+    "tradeoff": "Unresolved criticism stays visible: the review's objection that the thesis qualifier 'without hindering its development' is asserted and never argued is still marked open.",
+    "limitation": "The thesis that mitigation need not hinder AI's development remains unargued, and the rebound effect of efficiency gains is not engaged; inference-energy scenarios are illustrative upper bounds.",
+    "caveat": "Inference-energy figures are illustrative projections and upper bounds. Views are the researchers' own, not the official positions of NYU, Microsoft or any partner institution."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/ai-carbon-footprint/commit/188c2304eddf8d8ea87a10545628dcc84ead3146",
+        "date": "2026-07-27"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/ai-carbon-footprint#readme",
+        "date": "2026-07-27"
+      },
+      {
+        "label": "Research report (plain language)",
+        "url": "https://github.com/Ethical-Tech-CoLab/ai-carbon-footprint/blob/main/AICF-Paper.md",
+        "date": "2026-07-27"
+      },
+      {
+        "label": "Peer review",
+        "url": "https://github.com/Ethical-Tech-CoLab/ai-carbon-footprint/blob/main/PEER-REVIEW.md",
+        "date": "2026-07-27"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/ai-carbon-footprint"
+  },
+  "images": [
+    {
+      "id": "report-cover",
+      "src": ".portfolio/report-cover.webp",
+      "alt": "Report title page reading AI's Carbon Footprint: The Environmental Impact of Artificial Intelligence, with the advisor, author names and four headline figures including 1,287 MWh to train GPT-3.",
+      "caption": "The report's title page: who wrote and advised it, and the headline figures on training energy, grid emissions and data-center demand.",
+      "credit": "Screenshot of the AI's Carbon Footprint site",
+      "source": "screenshot of index.html"
+    },
+    {
+      "id": "cooling",
+      "src": ".portfolio/cooling.webp",
+      "alt": "Report text describing liquid, immersion, free, evaporative and hybrid data-center cooling, followed by a paragraph on water usage effectiveness (WUE).",
+      "caption": "The data-center cooling taxonomy, which the peer review singled out as clear and correct.",
+      "credit": "Screenshot of the AI's Carbon Footprint site",
+      "source": "screenshot of index.html"
+    },
+    {
+      "id": "policy-conclusion",
+      "src": ".portfolio/policy-conclusion.webp",
+      "alt": "Report text on international agreements and policy for sustainable AI, followed by section 07, Conclusion & Future Directions.",
+      "caption": "The regulatory and policy discussion leading into the report's conclusion and future directions.",
+      "credit": "Screenshot of the AI's Carbon Footprint site",
+      "source": "screenshot of index.html"
+    }
+  ],
+  "defaultImageId": "report-cover"
+}

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "id": "usage-calc",
+  "title": "usage-calc",
+  "repo": "Ethical-Tech-CoLab/usage-calc",
+  "summary": "A command-line tool that reads the GitHub Copilot CLI's local request ledger and publishes what an AI-assisted project cost in money, tokens, model time and human time as one self-contained page.",
+  "kind": "tool",
+  "methodTags": [
+    "data-visualization",
+    "open-source"
+  ],
+  "domainTags": [
+    "ai-governance"
+  ],
+  "contribution": {
+    "date": "2026-08-11",
+    "role": "built",
+    "credits": []
+  },
+  "narrative": {
+    "problem": "Almost every public claim about what AI-assisted work costs rests on an invented denominator: a remembered number of hours, a guessed number of requests, a rate nobody published.",
+    "decision": "It reads the per-request SQLite ledger the Copilot CLI writes as it works, with the model, token counts, duration and billed price, and refuses to print a total it cannot reconcile; the output is a single HTML page with no CDN, build step or server.",
+    "tradeoff": "The ledger is per machine, so a dashboard built on one laptop is a floor, not a total: other machines must be exported and merged by hand, and a machine nobody remembers stays invisible.",
+    "limitation": "The dollar figure is a list-price equivalent, not a bill; person time is an inferred residual that cannot distinguish thinking from lunch; the energy panel is an estimate whose bracket spans a factor of 24; and nothing measures whether the output was worth having."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/usage-calc/commit/d688a913d298cec5cca722d73c328f756b3dd685",
+        "date": "2026-08-11"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/usage-calc#readme",
+        "date": "2026-08-11"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/usage-calc"
+  },
+  "images": [
+    {
+      "id": "ledger",
+      "src": ".portfolio/ledger.webp",
+      "alt": "Document-excerpt card titled \"What a Copilot CLI project actually cost\" quoting the README on the local SQLite ledger with one row per request.",
+      "caption": "The data source: a ledger written as the work happened, carrying the model, tokens, duration and billed price of every request.",
+      "credit": "Excerpt from the usage-calc README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "two-machines",
+      "src": ".portfolio/two-machines.webp",
+      "alt": "Document-excerpt card titled \"Working across more than one machine\" quoting the README's two-machine result of $599.62 becoming $1,484.30.",
+      "caption": "A measured result from a real two-machine project: a single machine's ledger understated the project-wide cost and request count.",
+      "credit": "Excerpt from the usage-calc README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "measured-inferred",
+      "src": ".portfolio/measured-inferred.webp",
+      "alt": "Document-excerpt card titled \"What the numbers mean\" quoting the README's distinction between measured model time and inferred person time.",
+      "caption": "How the dashboard labels its numbers: model time is measured, person time is inferred, and the page always says which is which.",
+      "credit": "Excerpt from the usage-calc README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "ledger"
+}

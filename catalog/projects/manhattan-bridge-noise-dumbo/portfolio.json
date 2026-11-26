@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "manhattan-bridge-noise-dumbo",
+  "title": "Silencing the Span",
+  "repo": "Ethical-Tech-CoLab/manhattan-bridge-noise-dumbo",
+  "summary": "An open research programme that defines the subway rail-noise problem from the Manhattan Bridge in DUMBO, Brooklyn, as the evidence a design-build intervention would need before procurement.",
+  "kind": "research",
+  "methodTags": [
+    "provenance",
+    "data-visualization",
+    "digital-twins",
+    "decision-models"
+  ],
+  "domainTags": [
+    "civic-infrastructure",
+    "education"
+  ],
+  "contribution": {
+    "date": "2026-08-11",
+    "role": "built",
+    "credits": []
+  },
+  "narrative": {
+    "problem": "B, D, N and Q trains cross the Manhattan Bridge roughly every 76 seconds, about 20 hours a day, and the MTA measured 87.50 dB(A) Leq at the Brooklyn Bridge Park dog run. Twenty-one years of measurement have produced no mitigation: the state rapid-transit noise code leaves the level for elevated structures \"to be established\", and NYC 311 has no category for rail noise.",
+    "decision": "It is deliberately a problem definition, not a design: every citation carries a verification state, each document gets an adversarial red-team pass, and withdrawn claims are quoted in place rather than quietly deleted.",
+    "tradeoff": "No option in any document is recommended for procurement, and most findings stay hedged until methods that need records requests, field measurement or surveys are actually carried out.",
+    "limitation": "No calibrated acoustic measurement has been taken and no survey has been made; of the 48 methods specified, six have been executed and one partially. None of the documents is peer-reviewed.",
+    "caveat": "The acoustic demonstration uses an assumed spectrum, the agent model uses invented itineraries, and the 3D wireframe is inferred geometry rather than a survey."
+  },
+  "evidence": {
+    "level": "evaluated-result",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/manhattan-bridge-noise-dumbo/commit/8f773706699643382299444db2245b20e6697119",
+        "date": "2026-08-11"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/manhattan-bridge-noise-dumbo#readme",
+        "date": "2026-08-11"
+      },
+      {
+        "label": "Problem definition (IDEA-CONCEPT.md)",
+        "url": "https://github.com/Ethical-Tech-CoLab/manhattan-bridge-noise-dumbo/blob/main/IDEA-CONCEPT.md",
+        "date": "2026-08-11"
+      },
+      {
+        "label": "Community evidence audit",
+        "url": "https://github.com/Ethical-Tech-CoLab/manhattan-bridge-noise-dumbo/blob/main/COMMUNITY-EVIDENCE-AUDIT.md",
+        "date": "2026-08-11"
+      },
+      {
+        "label": "Visual model framework",
+        "url": "https://github.com/Ethical-Tech-CoLab/manhattan-bridge-noise-dumbo/blob/main/VISUAL-MODEL-FRAMEWORK.md",
+        "date": "2026-08-11"
+      },
+      {
+        "label": "Data collection results",
+        "url": "https://github.com/Ethical-Tech-CoLab/manhattan-bridge-noise-dumbo/blob/main/data-collection/README.md",
+        "date": "2026-08-11"
+      },
+      {
+        "label": "Procurement comparison",
+        "url": "https://github.com/Ethical-Tech-CoLab/manhattan-bridge-noise-dumbo/blob/main/procurement/README.md",
+        "date": "2026-08-11"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/manhattan-bridge-noise-dumbo"
+  },
+  "images": [
+    {
+      "id": "span-overview",
+      "src": ".portfolio/span-overview.webp",
+      "alt": "Opening page titled \"Silencing the Span\" with the figure 98.9 dB(A) average maximum measured at the dog run, over a black-and-white bridge photograph with a wireframe overlay.",
+      "caption": "The opening page states the problem with the MTA's own measurement and links to the interactive demonstrations and the research underneath.",
+      "credit": "Screenshot of the Silencing the Span site",
+      "source": "screenshot of index.html"
+    },
+    {
+      "id": "field-visit",
+      "src": "pedestrian-site-visits/web/20260803_190152.jpg",
+      "alt": "Street-level photograph of a Manhattan Bridge tower framed between buildings at the end of a cobbled street crowded with pedestrians and cars.",
+      "caption": "A still from the pedestrian site visits, the first material in the repository captured rather than retrieved: the people beneath the bridge whom the exposure question concerns.",
+      "credit": "Image from the manhattan-bridge-noise-dumbo repository",
+      "source": "repository file pedestrian-site-visits/web/20260803_190152.jpg"
+    },
+    {
+      "id": "procurement-comparison",
+      "src": ".portfolio/procurement-comparison.webp",
+      "alt": "Procurement dashboard headed \"What this would have cost to buy\" with four figures: $632.57 actual cost, $68,441 median noise study, a bottom-up range, and scope not delivered.",
+      "caption": "The procurement comparison reports three cost instruments side by side and never averages them, and prices separately the field, survey, design and legal scope not delivered.",
+      "credit": "Screenshot of the Silencing the Span site",
+      "source": "screenshot of procurement/procurement-dashboard.html"
+    }
+  ],
+  "defaultImageId": "span-overview"
+}

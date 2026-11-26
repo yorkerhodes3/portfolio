@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "id": "arts-provenance-agent",
+  "title": "Digital Provenance Passport",
+  "repo": "Ethical-Tech-CoLab/arts-provenance-agent",
+  "summary": "A research prototype agent that traces the provenance of artworks and artifacts, flags looting and repatriation risk, and issues a signed, tamper-evident passport for each object.",
+  "kind": "application",
+  "methodTags": [
+    "provenance",
+    "agentic-workloads",
+    "blockchain",
+    "ethereum"
+  ],
+  "domainTags": [
+    "cultural-heritage",
+    "commerce"
+  ],
+  "contribution": {
+    "date": "2026-10-13",
+    "role": "advisor-prof",
+    "roleNote": "Masters research at the NYU Center for Global Affairs under the Ethical Tech CoLab, built for the Microsoft × Coinbase x402 hackathon.",
+    "credits": [
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "Provenance for many objects is incomplete or contested, and the registers that certify stolen cultural property have no public API. Material taken from archaeological sites or under colonial rule was never reported stolen, so it cannot appear in a stolen-property register at all.",
+    "decision": "Grounding searches an allowlist of authoritative sources and extracts only cited facts, so a claim with no source is never produced; no register check can return \"clear\", and every check, including failed ones, is signed into the Passport with its caveat.",
+    "tradeoff": "The sourcing rule blocks unsourced claims, not false ones, and the allowlist of mostly Western institutions searches best where objects are already well documented and worst for source-country, colonial-era and archaeological material.",
+    "limitation": "None of the fifteen catalogue scores was computed by the pipeline; each was assigned by hand. The web pipeline and the canonical scorer still return different numbers, and the national heritage authorities of source countries are not covered.",
+    "caveat": "A research prototype for academic demonstration: outputs are indicative, not a determination of title. The published site is a pre-rendered capture whose passports are signed with a throwaway key; payments use the Base Sepolia testnet."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/arts-provenance-agent/commit/2e29c192bb4979e509975d001a13505bf70c4b09",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/arts-provenance-agent#readme",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Research report (DPP-Paper.md)",
+        "url": "https://github.com/Ethical-Tech-CoLab/arts-provenance-agent/blob/main/DPP-Paper.md",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Peer review",
+        "url": "https://github.com/Ethical-Tech-CoLab/arts-provenance-agent/blob/main/PEER-REVIEW.md",
+        "date": "2026-10-13"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/arts-provenance-agent"
+  },
+  "images": [
+    {
+      "id": "passport-flow",
+      "src": ".portfolio/passport-flow.webp",
+      "alt": "Document-excerpt card titled \"Digital Provenance Passport\" quoting the README's one-sentence description of the x402-native agent and its signed Passport.",
+      "caption": "What the agent does: trace provenance, flag looting, repatriation and valuation risk, and sign a tamper-evident Passport per object.",
+      "credit": "Excerpt from the Digital Provenance Passport README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "euphronios-krater",
+      "src": "public/objects/euphronios-krater.jpg",
+      "alt": "Photograph of the Euphronios Krater, a red-figure Greek vase with a painted scene of winged figures lifting a fallen warrior, in a museum display case.",
+      "caption": "The Euphronios Krater, a catalogue case of archaeological looting: made in Athens, looted in Italy and held in New York, so only the Italian register reaches it.",
+      "credit": "Image from the arts-provenance-agent repository",
+      "source": "repository file public/objects/euphronios-krater.jpg"
+    },
+    {
+      "id": "rosetta-stone",
+      "src": "public/objects/rosetta-stone.jpg",
+      "alt": "Photograph of the Rosetta Stone, a dark granodiorite slab inscribed with hieroglyphic, Demotic and Greek text, against a black background.",
+      "caption": "The Rosetta Stone, a colonial-acquisition case the catalogue marks as structurally uncovered: no register can hold a colonial-era seizure from Egypt.",
+      "credit": "Image from the arts-provenance-agent repository",
+      "source": "repository file public/objects/rosetta-stone.jpg"
+    }
+  ],
+  "defaultImageId": "passport-flow"
+}

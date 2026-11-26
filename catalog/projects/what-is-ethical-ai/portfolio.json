@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "what-is-ethical-ai",
+  "title": "What Is Ethical AI?",
+  "repo": "Ethical-Tech-CoLab/what-is-ethical-ai",
+  "summary": "The Ethical Tech CoLab's foundational paper, tracing ethics from early civilizations through international relations and human rights law to responsible and humanitarian AI.",
+  "kind": "research",
+  "methodTags": [
+    "open-source"
+  ],
+  "domainTags": [
+    "ai-governance",
+    "global-affairs",
+    "humanitarian-response"
+  ],
+  "contribution": {
+    "date": "2026-10-13",
+    "role": "advisor-prof",
+    "roleNote": "Master's research (M.S. in Global Affairs) at the NYU Center for Global Affairs, published by the Ethical Tech CoLab in collaboration with Microsoft.",
+    "credits": [
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "AI ethics guidance has multiplied, with 84 guidelines mapped converging on five principles but diverging on how to apply them, while 118 countries, overwhelmingly in the Global South, are party to none of the major AI governance initiatives the UN surveyed.",
+    "decision": "The paper's answer is institutional rather than technical: ethical AI is not a product feature but AI whose entire lifecycle stays accountable to ethical deliberation, to human rights as a floor, to do no harm, and to the participation of those it affects.",
+    "tradeoff": "An institutional framing gives no technical test a system can pass; it places responsibility on the institutions that govern AI, so the argument cannot certify any particular system as ethical in itself.",
+    "limitation": "It is a conceptual paper that reports no original evaluation. The designed PDF still carries two errors fixed in the web text, and the references carry no URLs or DOIs, so citations were not link-checked."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/what-is-ethical-ai/commit/30a26ead1cb92258047dca8c4644673b8c830fb2",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/what-is-ethical-ai#readme",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Paper (REPORT.md)",
+        "url": "https://github.com/Ethical-Tech-CoLab/what-is-ethical-ai/blob/main/REPORT.md",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Paper (PDF)",
+        "url": "https://github.com/Ethical-Tech-CoLab/what-is-ethical-ai/blob/main/docs/pdf/What-Is-Ethical-AI-ETC-Report.pdf",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Credibility review (BACKLOG.md)",
+        "url": "https://github.com/Ethical-Tech-CoLab/what-is-ethical-ai/blob/main/BACKLOG.md",
+        "date": "2026-10-13"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/what-is-ethical-ai"
+  },
+  "images": [
+    {
+      "id": "paper-cover",
+      "src": ".portfolio/paper-cover.webp",
+      "alt": "Paper web page headed \"What Is Ethical AI?\" with its subtitle, NYU Center for Global Affairs and Microsoft attribution, and buttons to download the PDF, view the repository or read on the CoLab site.",
+      "caption": "The published paper: the Ethical Tech CoLab's foundational account of ethics, ethical technology and ethical international relations.",
+      "credit": "Screenshot of the What Is Ethical AI? site",
+      "source": "screenshot of docs/index.html"
+    },
+    {
+      "id": "responsible-ai-section",
+      "src": ".portfolio/responsible-ai-section.webp",
+      "alt": "Body text on the operationalization and safety turn in responsible AI, followed by the heading \"10. The Historical Evolution of AI in Humanitarian Work\".",
+      "caption": "Two of the paper's sections: the rise of responsible AI from critique to standards, then the turn to AI in humanitarian work.",
+      "credit": "Screenshot of the What Is Ethical AI? site",
+      "source": "screenshot of docs/index.html (sections 9 and 10)"
+    },
+    {
+      "id": "references",
+      "src": ".portfolio/references.webp",
+      "alt": "Alphabetical reference list including Gebru et al. on datasheets for datasets, UN, EU High-Level Expert Group, IEEE, IASC, ICRC, ILO and ISO/IEC 42001 sources.",
+      "caption": "Part of the reference list, which draws on UN, ICRC, ILO, standards bodies and academic work on AI ethics.",
+      "credit": "Screenshot of the What Is Ethical AI? site",
+      "source": "screenshot of docs/index.html (references)"
+    }
+  ],
+  "defaultImageId": "paper-cover"
+}

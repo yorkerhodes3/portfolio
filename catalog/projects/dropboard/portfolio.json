@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "id": "dropboard",
+  "title": "DropBoard",
+  "repo": "Ethical-Tech-CoLab/dropboard",
+  "summary": "A shared drop-space in the browser where people in a meeting, or one person across devices, exchange files, links and text using a short access code, with no accounts or installs.",
+  "kind": "application",
+  "methodTags": [
+    "collaboration-tools"
+  ],
+  "domainTags": [
+    "collaboration",
+    "education"
+  ],
+  "contribution": {
+    "date": "2026-07-24",
+    "role": "advisor-prof",
+    "roleNote": "Fork of alx-du/dropboard by Alex Du; the repository includes a build log and executive report written as a teaching deliverable on building with AI coding tools.",
+    "credits": [
+      {
+        "name": "Alex Du",
+        "github": "alx-du",
+        "role": "Original author"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "Moving things between people mid-meeting is still awkward: links shared in a video call chat disappear when the call ends, teammates send files across several messaging apps, AirDrop only works Apple-to-Apple, and tools like Slack, Drive or Miro assume everyone shares a workspace and accounts.",
+    "decision": "Boards are ephemeral sessions joined with a short human-readable access code and no user accounts; the deployed backend is Cloudflare Workers with Durable Objects for WebSocket sync and expiry, plus R2 for files, behind a backend-agnostic frontend switch.",
+    "tradeoff": "Skipping accounts keeps a board usable within seconds on any device, but the access code becomes the only barrier, so it has to be treated like a meeting link rather than a password, and nothing is kept once a session expires.",
+    "limitation": "It is a working demo under a working name: AI features are deferred, the Supabase backend is only a scaffolded alternative, and open questions remain about default expiry, sustainable file-size caps, host powers and abuse reporting.",
+    "caveat": "Access codes are the only barrier to a board — treat them like a meeting link, not a password. Boards are ephemeral and their content is deleted when the session expires."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/dropboard/commit/d950445cc3a1cfbd8a516c8d032f18a64d2350f5",
+        "date": "2026-07-24"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/dropboard#readme",
+        "date": "2026-07-24"
+      },
+      {
+        "label": "Product design",
+        "url": "https://github.com/Ethical-Tech-CoLab/dropboard/blob/main/docs/PRODUCT_DESIGN.md",
+        "date": "2026-07-24"
+      },
+      {
+        "label": "Backend options analysis",
+        "url": "https://github.com/Ethical-Tech-CoLab/dropboard/blob/main/docs/BACKEND_OPTIONS.md",
+        "date": "2026-07-24"
+      },
+      {
+        "label": "Build log (teaching write-up)",
+        "url": "https://github.com/Ethical-Tech-CoLab/dropboard/blob/main/docs/teaching/BUILD_LOG.md",
+        "date": "2026-07-24"
+      },
+      {
+        "label": "Executive report",
+        "url": "https://github.com/Ethical-Tech-CoLab/dropboard/blob/main/docs/teaching/EXECUTIVE_REPORT.md",
+        "date": "2026-07-24"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/dropboard"
+  },
+  "images": [
+    {
+      "id": "start-board",
+      "src": ".portfolio/start-board.webp",
+      "alt": "DropBoard landing page with the tagline 'A shared drop-space in your browser. No accounts, no installs.', a Start a board button and a field to join with a code such as TIGER-4821.",
+      "caption": "The whole entry flow: start a board or join one with a short code, with no sign-up.",
+      "credit": "Screenshot of the DropBoard site",
+      "source": "screenshot of web/index.html"
+    },
+    {
+      "id": "how-it-works",
+      "src": ".portfolio/how-it-works.webp",
+      "alt": "Document excerpt card headed 'How It Works' quoting the README: drag files onto the board, paste links or type quick text notes, and items appear for everyone in real time.",
+      "caption": "Once joined, anyone in the session can drop and grab files, links and notes live.",
+      "credit": "Excerpt from the DropBoard README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "access-codes",
+      "src": ".portfolio/access-codes.webp",
+      "alt": "Document excerpt card headed 'Security & Privacy' quoting the README: access codes are the only barrier and should be treated like a meeting link, not a password.",
+      "caption": "The design states its own security boundary plainly: the code is a meeting link, not a password.",
+      "credit": "Excerpt from the DropBoard README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "start-board"
+}

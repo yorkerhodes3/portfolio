@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "id": "website",
+  "title": "Ethical Tech CoLab Website",
+  "repo": "Ethical-Tech-CoLab/website",
+  "summary": "The public website of the NYU Center for Global Affairs × Microsoft Research Ethical Tech CoLab, presenting its cohorts, research projects, live demos, publications, team and newsletter.",
+  "kind": "application",
+  "methodTags": [
+    "collaboration-tools"
+  ],
+  "domainTags": [
+    "ai-governance",
+    "human-rights",
+    "education"
+  ],
+  "contribution": {
+    "date": "2026-10-13",
+    "role": "co-built",
+    "credits": [
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Alex Du",
+        "github": "alx-du",
+        "role": "Contributor"
+      },
+      {
+        "name": "India Clarke",
+        "github": "indiaclarke03-ops",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "The CoLab's projects move from research question to fielded prototype within a semester-long cohort, leaving many separate repositories, demos and reports. Visitors need one public place to find the cohorts, research projects, live demos, publications, newsletter and team.",
+    "decision": "A Next.js App Router site keeps most general site data in one content module (src/content/site.ts), with publication reports and newsletter metadata in their own modules, so content is edited at its source rather than in presentation components; a generated static-site snapshot is committed alongside the source.",
+    "tradeoff": "Typed content modules keep names, projects and links consistent across pages, but every content change is a code edit and rebuild rather than a CMS entry, which is why the repository carries a content guide, a contribution workflow and recommended repository controls.",
+    "limitation": "The About route is hidden and returns 404, team headshots are added by hand, and open content work is tracked in BACKLOG.md and UPDATES-NEEDED.md; the README documents no automated content or accessibility evaluation."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/website/commit/c859606b4fb3758cb7f4eb8afe31591835e20e05",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/website#readme",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Design system specification",
+        "url": "https://github.com/Ethical-Tech-CoLab/website/blob/main/docs/DESIGN-SYSTEM.md",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Content guide",
+        "url": "https://github.com/Ethical-Tech-CoLab/website/blob/main/docs/CONTENT-GUIDE.md",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Contribution workflow",
+        "url": "https://github.com/Ethical-Tech-CoLab/website/blob/main/CONTRIBUTING.md",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Static site vs Next.js",
+        "url": "https://github.com/Ethical-Tech-CoLab/website/blob/main/docs/static-site-vs-nextjs.md",
+        "date": "2026-10-13"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/website"
+  },
+  "images": [
+    {
+      "id": "portfolio-projects",
+      "src": ".portfolio/portfolio-projects.webp",
+      "alt": "Portfolio page of the Ethical Tech CoLab website with an Evacuation row of project cards marked LIVE, such as Exodus, Evacuation Inform Index and Mariupol 2022, and a Cultural Heritage row including Digital Art Passport (VANGO) and Arts Provenance Agent.",
+      "caption": "The portfolio groups cohort projects by theme, with live-demo badges, language and cohort term on each card.",
+      "credit": "Screenshot of the Ethical Tech CoLab website",
+      "source": "screenshot of static-site/portfolio/index.html (scrolled)"
+    },
+    {
+      "id": "home-hero",
+      "src": ".portfolio/home-hero.webp",
+      "alt": "Home page hero reading 'NYU CGA × Microsoft — Ethical Tech CoLab — Exploring technology to improve the human condition.' over a purple background, with navigation for Home, Portfolio, Team, Newsletter and Contact.",
+      "caption": "The home page introduces the CoLab as a research collaboration between NYU's Center for Global Affairs and Microsoft.",
+      "credit": "Screenshot of the Ethical Tech CoLab website",
+      "source": "screenshot of static-site/index.html"
+    },
+    {
+      "id": "publications",
+      "src": ".portfolio/publications.webp",
+      "alt": "Publications page with an Artificial Intelligence row of report cards marked BOOK and PUBLISHED, including What Is Ethical AI? and Agentic Language Development, above a Guidelines row with cards such as Project Startup Guide and GitHub 101.",
+      "caption": "Publications are catalogued by theme, with page-turn book editions and CoLab-only guidelines marked.",
+      "credit": "Screenshot of the Ethical Tech CoLab website",
+      "source": "screenshot of static-site/publications/index.html (scrolled)"
+    }
+  ],
+  "defaultImageId": "portfolio-projects"
+}

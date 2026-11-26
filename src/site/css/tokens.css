@@ -1,0 +1,28 @@
+/* Wayfinder default theme (Ethical Tech CoLab), ported from yorkerhodes3/agentic-ontology docs/assets/js/themes.js. */
+:root {
+  --bg: #120c1a;
+  --surface: #1b1226;
+  --card: #201630;
+  --card-2: #281c3c;
+  --fg: #f3eefb;
+  --muted: #bdb1d6;
+  --faint: #8f82aa;
+  --accent: #c8f04b;
+  --accent-ink: #141414;
+  --glow: #7b5cff;
+  --glow-2: #b8d400;
+  --secondary: #3b1878;
+  --border: rgba(139, 92, 246, 0.26);
+  --border-strong: rgba(200, 240, 75, 0.4);
+  --ok: #4ade80;
+  --warn: #fbbf24;
+  --risk: #fb7185;
+  --info: #38bdf8;
+  --series-1: #c8f04b; --series-2: #7b5cff; --series-3: #38bdf8; --series-4: #f472b6; --series-5: #fbbf24; --series-6: #2dd4bf;
+  --font-display: "Bebas Neue", Impact, "Arial Narrow", sans-serif;
+  --font-body: "Space Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font-mono: "Space Mono", ui-monospace, Menlo, monospace;
+  --font-text: "Inter", system-ui, sans-serif;
+  --r-sm: 8px; --r-md: 14px; --r-lg: 22px;
+  --wrap: 1200px;
+}

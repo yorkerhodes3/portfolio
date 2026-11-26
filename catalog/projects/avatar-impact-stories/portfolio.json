@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "avatar-impact-stories",
+  "title": "Avatar Impact Stories — Many Voices",
+  "repo": "Ethical-Tech-CoLab/Avatar-Impact-Stories",
+  "summary": "An interactive kiosk wall that plays first-person survivor testimonies through AI-generated avatars, so accounts of trafficking and forced labour can be shown while survivors' identities stay protected.",
+  "kind": "application",
+  "methodTags": [
+    "applied-ai"
+  ],
+  "domainTags": [
+    "human-rights",
+    "creative-media"
+  ],
+  "contribution": {
+    "date": "2026-09-15",
+    "role": "co-built",
+    "roleNote": "Fall 2025 Generative AI for Good cohort project: students made the avatar stories, advised by Shiran Mlamdovsky Somech; Yorke maintains the kiosk.",
+    "credits": [
+      {
+        "name": "Shiran Mlamdovsky Somech",
+        "role": "Contributor"
+      },
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "Survivor testimony is the most persuasive evidence there is and the most dangerous thing a survivor can give: a real face beside an account of trafficking or forced labour can expose someone to retaliation, while silhouettes, voice modulation or actors cost what makes testimony land.",
+    "decision": "Each account is delivered by a synthetic D-ID presenter, with an AI watermark over every playing video, so the testimony stays first-person while the identity behind it stays protected.",
+    "tradeoff": "The presenters carry the limits of Fall 2025 tooling (lip-sync drift, fixed gaze, narrow emotional range), and testimony has to be cut to an avatar's short attention window of roughly 40 seconds to 2 minutes.",
+    "limitation": "The avatars are a deliberately unrefreshed snapshot of Fall 2025 D-ID output, and the README reports no evaluation of how visitors respond to the wall.",
+    "caveat": "Every presenter is synthetic; the accounts are not. They describe trafficking, forced and child labour, violence and conscription, presented plainly — please take care."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/Avatar-Impact-Stories/commit/adef8013bf5fe8516c590e4cdb4f13978f178bbf",
+        "date": "2026-09-15"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/Avatar-Impact-Stories#readme",
+        "date": "2026-09-15"
+      },
+      {
+        "label": "How this was made (provenance page)",
+        "url": "https://github.com/Ethical-Tech-CoLab/Avatar-Impact-Stories/blob/main/about.html",
+        "date": "2026-09-15"
+      },
+      {
+        "label": "Kiosk regression suite",
+        "url": "https://github.com/Ethical-Tech-CoLab/Avatar-Impact-Stories/blob/main/tools/test_kiosk.py",
+        "date": "2026-09-15"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/Avatar-Impact-Stories"
+  },
+  "images": [
+    {
+      "id": "start-screen",
+      "src": ".portfolio/start-screen.webp",
+      "alt": "Dark start screen titled Many Voices, describing a wall of stories about trafficking, forced and child labour and violence, with a Begin button and a How this was made link.",
+      "caption": "The kiosk's start screen warns about the content and links to how the stories were made before anything plays.",
+      "credit": "Screenshot of the Avatar Impact Stories site",
+      "source": "screenshot of index.html"
+    },
+    {
+      "id": "how-it-was-made",
+      "src": ".portfolio/how-it-was-made.webp",
+      "alt": "How this was made page stating every presenter is synthetic and every account is not, with a section titled Why synthetic presenters and a quotation from Generative AI for Good.",
+      "caption": "The visitor-facing provenance page: why synthetic presenters are used, where the stories came from, and where the ethical lines were drawn.",
+      "credit": "Screenshot of the Avatar Impact Stories site",
+      "source": "screenshot of about.html"
+    },
+    {
+      "id": "crowd-backdrop",
+      "src": "Crowd.png",
+      "alt": "Purple-tinted photograph of a crowded subway platform with a New York University tile sign, titled The Ethical Tech Summit, with logos including Ethical Tech CoLab, Generative AI for Good and D-ID.",
+      "caption": "The default crowd backdrop behind the wall of phone tiles, carrying the argument that these accounts are everywhere and mostly unheard.",
+      "credit": "Image from the Avatar-Impact-Stories repository",
+      "source": "repository file Crowd.png"
+    }
+  ],
+  "defaultImageId": "start-screen"
+}

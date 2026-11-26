@@ -1,0 +1,18 @@
+{
+  "$comment": "Single source for the portfolio's identity. To change the bio line everywhere (dashboard, share previews, CV and bios), edit bioLine here and rebuild. See BACKLOG Q-09 for the open question about its wording.",
+  "name": "Yorke E. Rhodes III",
+  "shortName": "Yorke Rhodes",
+  "bioLine": "I make complex decisions testable, from what an AI agent can share to where a model helps predict outcomes, to where a 3rd party risk can break a company.",
+  "headline": "Director, Digital Transformation, Traceability at Microsoft · Cofounder, Blockchain at Microsoft · Adjunct Professor, NYU Center for Global Affairs · Founder, Ethical Tech CoLab",
+  "siteUrl": "https://yorkerhodes3.github.io/portfolio/",
+  "links": [
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/yorkerhodes" },
+    { "label": "GitHub", "url": "https://github.com/yorkerhodes3" },
+    { "label": "Ethical Tech CoLab", "url": "https://github.com/Ethical-Tech-CoLab" }
+  ],
+  "location": "New York City Metropolitan Area",
+  "accounts": {
+    "yorkerhodes3": "Personal projects",
+    "Ethical-Tech-CoLab": "Ethical Tech CoLab (NYU Center for Global Affairs)"
+  }
+}

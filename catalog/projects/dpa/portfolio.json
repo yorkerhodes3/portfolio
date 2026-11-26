@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "dpa",
+  "title": "DPA — Digital Passport for Artworks",
+  "repo": "Ethical-Tech-CoLab/DPA",
+  "summary": "A working monorepo that consolidates five AABC × SDA Bocconi provenance prototypes into one pipeline that scores an artwork's provenance and issues one signed passport with role-based views.",
+  "kind": "infrastructure",
+  "methodTags": [
+    "provenance",
+    "blockchain",
+    "ethereum",
+    "applied-ai"
+  ],
+  "domainTags": [
+    "cultural-heritage"
+  ],
+  "contribution": {
+    "date": "2026-08-19",
+    "role": "co-built",
+    "roleNote": "Consolidates five upstream prototypes; most package code was written by others and vendored (see ATTRIBUTION.md).",
+    "credits": [
+      {
+        "name": "Christine Lumen",
+        "github": "ChristineLumen",
+        "role": "Original author"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "An artwork whose provenance is uncertain is effectively invisible: it cannot be lent, studied, insured or claimed, because surfacing it exposes its holder to legal and reputational risk. Five separate prototypes in the AABC × SDA Bocconi programme each addressed part of the problem.",
+    "decision": "Reports three numbers that are never combined (confidence, coverage and forgery risk) and refuses to fold coverage into the score, so an object no register could ever have recorded is not ranked as safer than one the registers cleared.",
+    "tradeoff": "Readers must interpret a score together with its coverage class instead of a single ranking, and every demo case routes to human review rather than auto-issuing a passport.",
+    "limitation": "Everything on the site runs on committed fixtures: no live register was contacted, notarisation runs in mock mode, demo signing keys are deterministic, Stage 0 capture is not yet wired into the pipeline, and two decisions are reopened.",
+    "caveat": "Demonstration only: scores are computed over real cited sources, but no live register was queried and no attestation was written to any chain. The 3D exhibit object is procedural, not a scan of a real artefact."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/DPA/commit/cc0091782bb7aacaf9db3fbb069d134c4fe25d02",
+        "date": "2026-08-19"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/DPA#readme",
+        "date": "2026-08-19"
+      },
+      {
+        "label": "Decision records",
+        "url": "https://github.com/Ethical-Tech-CoLab/DPA/blob/main/docs/DECISIONS.md",
+        "date": "2026-08-19"
+      },
+      {
+        "label": "Architecture v0.4",
+        "url": "https://github.com/Ethical-Tech-CoLab/DPA/blob/main/docs/ARCHITECTURE-v0.4.md",
+        "date": "2026-08-19"
+      },
+      {
+        "label": "Meeting brief",
+        "url": "https://github.com/Ethical-Tech-CoLab/DPA/blob/main/docs/MEETING-BRIEF.md",
+        "date": "2026-08-19"
+      },
+      {
+        "label": "Attribution",
+        "url": "https://github.com/Ethical-Tech-CoLab/DPA/blob/main/ATTRIBUTION.md",
+        "date": "2026-08-19"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/DPA"
+  },
+  "images": [
+    {
+      "id": "coverage-argument",
+      "src": ".portfolio/coverage-argument.webp",
+      "alt": "Document excerpt card titled 58 is worse than 28, quoting the README on why the Bura askos, scoring 58 and structurally uncovered, is less safe than the Getty Bronze, scoring 28 and well covered.",
+      "caption": "The system's core argument: a provenance score shown without its coverage class inverts.",
+      "credit": "Excerpt from the DPA README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "one-record",
+      "src": ".portfolio/one-record.webp",
+      "alt": "Document excerpt card titled What DPA is, quoting the README that a passport is not a certificate of authenticity or a title deed but a single signed record with as many lawful views as there are roles.",
+      "caption": "What a passport is and is not: one signed record disclosed differently to each role.",
+      "credit": "Excerpt from the DPA README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "what-is-real",
+      "src": ".portfolio/what-is-real.webp",
+      "alt": "Document excerpt card titled What is real and what is not, quoting the README that no live register was ever contacted and register checks run over committed fixtures.",
+      "caption": "The README's own statement of what the demonstration does not do.",
+      "credit": "Excerpt from the DPA README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "coverage-argument"
+}

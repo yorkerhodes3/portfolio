@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "energy-cyber-society",
+  "title": "Energy Cyber Society",
+  "repo": "Ethical-Tech-CoLab/energy-cyber-society",
+  "summary": "A virtual town of fifteen LLM agents that gather, verify and argue about the day's energy-sector cybersecurity news, publishing an executive brief, a broadsheet and a risk check with a US focus.",
+  "kind": "application",
+  "methodTags": [
+    "agentic-workloads",
+    "frontier-models",
+    "applied-ai",
+    "open-source"
+  ],
+  "domainTags": [
+    "cybersecurity",
+    "climate-energy"
+  ],
+  "contribution": {
+    "date": "2026-11-24",
+    "role": "advisor-prof",
+    "roleNote": "Runs the Conductor–desks–Auditor–Policy Engine–Ledger topology from yorkerhodes3/neocloud-supply-os Appendix B1.",
+    "credits": [
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "The day's energy-sector cyber news arrives from dozens of feeds in several languages, often driven by vendor reports, single sources or claims with no named attributor, and a defender needs to know what is confirmed, how serious it is and what to do first.",
+    "decision": "Policy is enforced in code, not left to the agents: 39 rules and a validator reject unsourced bullets, off-taxonomy values and unattributed claims, and an independent Verifier sees only stripped facts and pulled source text, never the author's reasoning.",
+    "tradeoff": "Coverage is limited to an allowlist of RSS feeds and a keyword energy filter, so outlets without working public feeds (NERC, Reuters, ENISA, Dragos) are missed and occasional off-topic stories slip in.",
+    "limitation": "The executive brief stays unsigned until a person signs; CISA's feeds return 403 to some clients, and the scheduled curation run aborts while the cloud sandbox blocks the feed hosts.",
+    "caveat": "Written by AI agents with invented resident names. The brief is unsigned until a person reviews it, and the CIO risk check is a ranking aid, not an audit."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/energy-cyber-society/commit/b0afd93982fd9d849cacb2106945f5c703d7253d",
+        "date": "2026-11-24"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/energy-cyber-society#readme",
+        "date": "2026-11-24"
+      },
+      {
+        "label": "Rules (39)",
+        "url": "https://github.com/Ethical-Tech-CoLab/energy-cyber-society/blob/main/RULES.md",
+        "date": "2026-11-24"
+      },
+      {
+        "label": "Intelligence analysis procedure",
+        "url": "https://github.com/Ethical-Tech-CoLab/energy-cyber-society/blob/main/INTELLIGENCE_ANALYSIS.md",
+        "date": "2026-11-24"
+      },
+      {
+        "label": "Critical peer review",
+        "url": "https://github.com/Ethical-Tech-CoLab/energy-cyber-society/blob/main/REVIEW.md",
+        "date": "2026-11-24"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/energy-cyber-society"
+  },
+  "images": [
+    {
+      "id": "town",
+      "src": "docs/screenshots/town.png",
+      "alt": "Pixel-art town map with buildings such as Newsroom, Threat Lab, Press Review, Verification Office and Incident Desk, energy facilities around the edges, named residents walking the streets and one speech bubble.",
+      "caption": "The town: each building is a resident's desk, and residents can be overheard or clicked to talk; the tabs above open the brief, risk check and methodology.",
+      "credit": "Image from the energy-cyber-society repository",
+      "source": "repository file docs/screenshots/town.png"
+    },
+    {
+      "id": "gazette",
+      "src": ".portfolio/gazette.webp",
+      "alt": "Broadsheet titled The Energy Cyber Gazette for Tuesday, November 24, 2026, with a headline on four confirmed energy incidents, sourced story columns, a press review and editor's considerations.",
+      "caption": "The Gazette prints the same board as a newspaper, with each story's sources and the Verifier's grade beneath it.",
+      "credit": "Screenshot of the Energy Cyber Society site",
+      "source": "screenshot of docs/gazette.html"
+    },
+    {
+      "id": "topology",
+      "src": ".portfolio/topology.webp",
+      "alt": "Diagram linking External sources, Envoy gateway, quarantined Reader, 14 domain desks, Auditor, Policy and Mandate Engine, Event Ledger, Consumers and Out of mandate to human, coloured by code, quarantine and human roles.",
+      "caption": "The intelligence framework: untrusted text is quarantined, policy runs in code, an independent auditor re-checks, and anything out of mandate goes to a person.",
+      "credit": "Image from the energy-cyber-society repository",
+      "source": "repository file docs/topology.svg"
+    }
+  ],
+  "defaultImageId": "town"
+}

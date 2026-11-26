@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "id": "cyber-dictionary",
+  "title": "Cyber Dictionary",
+  "repo": "Ethical-Tech-CoLab/cyber-dictionary",
+  "summary": "A plain-English dictionary of technology and cybersecurity terms, with a library of open data sources, documented incident case studies and printable editions, built for quick lookups on the job.",
+  "kind": "research",
+  "methodTags": [
+    "open-source"
+  ],
+  "domainTags": [
+    "cybersecurity",
+    "education"
+  ],
+  "contribution": {
+    "date": "2026-10-13",
+    "role": "advisor-prof",
+    "credits": [
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "The terms, protocols, attacks and frameworks that come up on the job are scattered across long references, and open data sources are hard to wire into a project without knowing which API, key requirement and cost each one involves.",
+    "decision": "Keeps all content in plain data files (terms.js, library.js and Markdown case studies) that the site, the build-time checks and the generated PDF books all read, so the printed editions cannot drift from the website.",
+    "tradeoff": "Each definition is held to one or two sentences for quick lookups, which costs precision; with no framework or build step, entries are edited by appending objects to arrays by hand.",
+    "limitation": "A reference rather than a study: definitions are brief and in the CoLab's own wording, the published counts are snapshots that change with each commit, and links refused by bot protection are recorded as not verified."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/cyber-dictionary/commit/176036b9a929735d3b134a29102d4c4432d67521",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/cyber-dictionary#readme",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Volume I: The Cyber Dictionary (PDF)",
+        "url": "https://github.com/Ethical-Tech-CoLab/cyber-dictionary/blob/main/book/dictionary/cyber-dictionary.pdf",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Volume II: The Database Library (PDF)",
+        "url": "https://github.com/Ethical-Tech-CoLab/cyber-dictionary/blob/main/book/library/database-library.pdf",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Link check results",
+        "url": "https://github.com/Ethical-Tech-CoLab/cyber-dictionary/blob/main/link-status.json",
+        "date": "2026-10-13"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/cyber-dictionary"
+  },
+  "images": [
+    {
+      "id": "dictionary-shelves",
+      "src": ".portfolio/dictionary-shelves.webp",
+      "alt": "Dictionary tab headed Technology and cybersecurity, defined plainly, with a search box and bookshelf-style domain groups such as Networking & Protocols, Cryptography, Identity & Access and Cloud & Infrastructure.",
+      "caption": "The dictionary browses terms by domain as books on shelves, with search that forgives typos and answers to synonyms.",
+      "credit": "Screenshot of the Cyber Dictionary site",
+      "source": "screenshot of index.html"
+    },
+    {
+      "id": "library-page",
+      "src": "book/library/pages/p03.webp",
+      "alt": "Page 2 of the printed Database Library volume, Satellite & Earth Observation, with entries for AWS Open Data Registry, Copernicus, Google Earth Engine, NASA Earthdata and others, each with Connect and Access notes.",
+      "caption": "A page of the generated Database Library edition: each source records what it is, how to connect and what it costs.",
+      "credit": "Image from the cyber-dictionary repository",
+      "source": "repository file book/library/pages/p03.webp"
+    },
+    {
+      "id": "case-studies",
+      "src": ".portfolio/case-studies.webp",
+      "alt": "Document excerpt card titled The case studies, quoting the README that every case cites four public references and cross-references the dictionary terms it turns on.",
+      "caption": "Case studies are tied to the dictionary, and the build refuses a case that points at a missing term.",
+      "credit": "Excerpt from the Cyber Dictionary README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "dictionary-shelves"
+}

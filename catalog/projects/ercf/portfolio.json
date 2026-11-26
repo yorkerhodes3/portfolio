@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "ercf",
+  "title": "ERCF — Evacuation Risk and Cost Framework",
+  "repo": "Ethical-Tech-CoLab/ercf",
+  "summary": "A decision-support tool for humanitarian planners that estimates the human and financial cost of civilian evacuation in armed conflict from a seven-dimension risk score and historical cases.",
+  "kind": "decision-model",
+  "methodTags": [
+    "decision-models",
+    "data-visualization",
+    "open-source",
+    "applied-ai"
+  ],
+  "domainTags": [
+    "humanitarian-response",
+    "global-affairs"
+  ],
+  "contribution": {
+    "date": "2026-10-15",
+    "role": "advisor-prof",
+    "roleNote": "Developed by Yago Rocha in collaboration with the Microsoft Ethical Tech CoLab.",
+    "credits": [
+      {
+        "name": "Yago Rocha",
+        "github": "yagorocha-web",
+        "role": "Original author"
+      },
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "Planners deciding whether to evacuate civilians from a conflict zone need to weigh the cost of moving people now against the mounting cost of assisting those who stay, under uncertain threat, access, authorization and logistics conditions, with little calibrated evidence to hand.",
+    "decision": "Frames the choice as a break-even between a one-time evacuation cost and cumulative daily in-zone assistance cost, and tags every cost parameter as Validated, Estimated or Unvalidated so the evidence behind each figure stays visible.",
+    "tradeoff": "The headline break-even is driven by the least-evidenced parameters yet, as the peer review notes, is delivered as a single point with no uncertainty band; mortality is deliberately kept out of assistance costs to avoid implying a financial value on human life.",
+    "limitation": "The mortality model is indicative, not predictive: calibrated on 16 of 31 historical cases with 7 of 16 within 2x, and level L4 cannot capture both urban sieges and precision enclave operations. The peer review recommends major revisions.",
+    "caveat": "Not operational advice: cost figures are logistics estimates only and do not value human life. The free-tier backend can take up to a minute to wake, and saved scenarios reset when it restarts."
+  },
+  "evidence": {
+    "level": "evaluated-result",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/ercf/commit/ff2cb5ebee3eabaee3200a9df13241bcd2972802",
+        "date": "2026-10-15"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/ercf#readme",
+        "date": "2026-10-15"
+      },
+      {
+        "label": "Research report",
+        "url": "https://github.com/Ethical-Tech-CoLab/ercf/blob/main/ERCF-Paper.md",
+        "date": "2026-10-15"
+      },
+      {
+        "label": "Peer review",
+        "url": "https://github.com/Ethical-Tech-CoLab/ercf/blob/main/PEER-REVIEW.md",
+        "date": "2026-10-15"
+      },
+      {
+        "label": "v7 statistical validation script",
+        "url": "https://github.com/Ethical-Tech-CoLab/ercf/blob/main/calibration/validate_v7.py",
+        "date": "2026-10-15"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/ercf"
+  },
+  "images": [
+    {
+      "id": "scenario-builder",
+      "src": ".portfolio/scenario-builder.webp",
+      "alt": "ERCF scenario builder with an ethical notice banner, scenario parameter fields for population at risk, vulnerable population share, distance and terrain, a Level 0 baseline card, and empty evacuation cost and act-now-versus-wait panels awaiting a scenario.",
+      "caption": "The scenario builder: enter a population and conditions, and the tool estimates evacuation cost and compares evacuating now with waiting.",
+      "credit": "Screenshot of the ERCF site",
+      "source": "screenshot of docs/index.html"
+    },
+    {
+      "id": "risk-dimensions",
+      "src": ".portfolio/risk-dimensions.webp",
+      "alt": "Seven risk-dimension sliders from D1 Kinetic Threat to D7 Information, each marked validated, estimated or expert judgement, beside transport mode selection, a personnel cost assumption note and a data confidence notice.",
+      "caption": "Seven risk dimensions drive the score, and each input and cost assumption carries its evidence status.",
+      "credit": "Screenshot of the ERCF site",
+      "source": "screenshot of docs/index.html"
+    },
+    {
+      "id": "break-even",
+      "src": ".portfolio/break-even.webp",
+      "alt": "Document excerpt card headed Evacuation Decision Analysis, quoting the README's description of the break-even chart comparing one-time evacuation cost with cumulative daily in-zone assistance cost.",
+      "caption": "The decision the tool supports: the day after which evacuating becomes the lower-cost option.",
+      "credit": "Excerpt from the ERCF README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "scenario-builder"
+}

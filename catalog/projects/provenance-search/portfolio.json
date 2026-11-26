@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "id": "provenance-search",
+  "title": "Arts & Artifacts — Provenance Intelligence",
+  "repo": "Ethical-Tech-CoLab/provenance-search",
+  "summary": "A research prototype that looks up an artwork's ownership history across free public sources and emits a provenance passport with a confidence score computed by a fixed algorithm, not by the AI.",
+  "kind": "tool",
+  "methodTags": [
+    "provenance",
+    "applied-ai",
+    "frontier-models"
+  ],
+  "domainTags": [
+    "cultural-heritage"
+  ],
+  "contribution": {
+    "date": "2026-07-27",
+    "role": "advisor-prof",
+    "roleNote": "Developed under the Ethical Tech CoLab at the NYU Center for Global Affairs as part of masters research (2026).",
+    "credits": [
+      {
+        "name": "Yago Rocha",
+        "github": "yagorocha-web",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "An object with an unexplained break in its ownership history may have been stolen, looted in war or illegally excavated, but the records are scattered across museum accession files, auction catalogues, police reports and heir claims that rarely speak to one another.",
+    "decision": "Gemini identifies images and assembles the timeline from retrieved facts, but the confidence score is computed entirely in server.js by fixed, published deductions, and general-knowledge entries are labelled and never marked verified.",
+    "tradeoff": "Fixed rules keep the score transparent but blunt: a well-documented history containing a wartime seizure and an obscure object with no history can both score very low, and the number alone does not distinguish them.",
+    "limitation": "The weights are the developer's judgment, not derived from a study, expert panel or validation against known cases; nothing checks the model-assembled timeline against retrieved material; searches are simple text matches over a Western-weighted source list.",
+    "caveat": "For academic demonstration only: results are indicative, not a clearance or certificate of title. It searches the public web pages of INTERPOL, the Art Loss Register and others, not their restricted databases."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/provenance-search/commit/b9a0304c4a502c90a50ef44d0436ed40a56b25ad",
+        "date": "2026-07-27"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/provenance-search#readme",
+        "date": "2026-07-27"
+      },
+      {
+        "label": "Research report",
+        "url": "https://github.com/Ethical-Tech-CoLab/provenance-search/blob/main/Provenance-Search-Paper.md",
+        "date": "2026-07-27"
+      },
+      {
+        "label": "Credibility-review backlog",
+        "url": "https://github.com/Ethical-Tech-CoLab/provenance-search/blob/main/BACKLOG.md",
+        "date": "2026-07-27"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/provenance-search",
+    "demo": "https://provenance-search-production.up.railway.app"
+  },
+  "images": [
+    {
+      "id": "home",
+      "src": ".portfolio/home.webp",
+      "alt": "Arts & Artifacts home page headed Every artwork carries its history, we make it visible, describing cross-checks of museum collections, cultural archives and loss registries, with a Verify an artwork button and counts of 7 sources, 0 sign-up and 3 ways to search.",
+      "caption": "The tool traces an artwork's ownership chain across public sources and returns a passport with a rule-based confidence score.",
+      "credit": "Screenshot of the Arts & Artifacts site",
+      "source": "screenshot of index.html"
+    },
+    {
+      "id": "how-it-works",
+      "src": ".portfolio/how-it-works.webp",
+      "alt": "How it works section with four steps: Identify with Gemini Vision, Research with Tavily across authoritative domains, Ground with no-key museum and Wikidata APIs, and The Passport with deterministic scoring, above a Verify provenance form with field mode and full report tabs.",
+      "caption": "Four steps from photo or description to passport; the AI identifies and gathers, while a fixed algorithm scores.",
+      "credit": "Screenshot of the Arts & Artifacts site",
+      "source": "screenshot of index.html"
+    },
+    {
+      "id": "confidence-score",
+      "src": ".portfolio/confidence-score.webp",
+      "alt": "Document excerpt card headed Confidence score algorithm, listing the README's deductions: start at 100%, minus 30% per custody gap, 25% for thin corroboration, 10% per high-severity flag and 10% for an anomalous valuation.",
+      "caption": "The whole scoring rule fits on one card, which makes it checkable; the report notes the weights are judgment, not measurement.",
+      "credit": "Excerpt from the Arts & Artifacts README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "how-it-works"
+}

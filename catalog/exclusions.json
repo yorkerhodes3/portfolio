@@ -1,0 +1,6 @@
+{
+  "$comment": "Repositories that must not be named publicly, by SHA-256 of lowercase owner/repo. The refresh skips them and reports only a count.",
+  "sha256": [
+    "de39babd3bbe360561271beacfdf4758e28e67ae2d6624c8a2dd619d6458cce1"
+  ]
+}

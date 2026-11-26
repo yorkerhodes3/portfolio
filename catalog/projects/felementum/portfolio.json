@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "id": "felementum",
+  "title": "Felementum",
+  "repo": "Ethical-Tech-CoLab/felementum",
+  "summary": "An interactive 3D explorer for N-tier supply chain networks that follows materials from OEMs down to the mines, for spotting systemic suppliers and single-country dependencies.",
+  "kind": "application",
+  "methodTags": [
+    "data-visualization",
+    "applied-ai",
+    "open-source"
+  ],
+  "domainTags": [
+    "supply-chain-resilience"
+  ],
+  "contribution": {
+    "date": "2026-11-15",
+    "role": "built",
+    "credits": []
+  },
+  "narrative": {
+    "problem": "Supply chains run many tiers deep, from finished products through module integrators, component makers and refiners to extraction sites, so systemic suppliers, single-country dependencies and hidden concentration risk are hard to see from any single tier.",
+    "decision": "Runs entirely in the browser as a static site on seeded synthetic data, with an optional data assistant that works locally or with the visitor's own AI provider key, held only in browser memory.",
+    "tradeoff": "No real supplier data is shown, so concentration and exposure figures demonstrate the method rather than describe any company, and larger datasets must be downloaded to the browser (about 6 MB for the stress set).",
+    "limitation": "Company names and supplier relationships are fictional and mine capacities approximate; the 68 Playwright checks test the interface, and no validation of the risk measures against real supply chains is reported.",
+    "caveat": "Synthetic data: company names and supplier relationships are fictional. Mine sites are real public locations, but their capacities are approximate and for illustration only; nothing describes any real company's supply chain."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/felementum/commit/bb23f6b6b1935ac4e9c97ebf2e7d6a6fe020220a",
+        "date": "2026-11-15"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/felementum#readme",
+        "date": "2026-11-15"
+      },
+      {
+        "label": "End-to-end test suite",
+        "url": "https://github.com/Ethical-Tech-CoLab/felementum/blob/main/tests/e2e/README-E2E.md",
+        "date": "2026-11-15"
+      },
+      {
+        "label": "Synthetic data guide",
+        "url": "https://github.com/Ethical-Tech-CoLab/felementum/blob/main/docs/SYNTHETIC_DATA_GUIDE.md",
+        "date": "2026-11-15"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/felementum"
+  },
+  "images": [
+    {
+      "id": "graph",
+      "src": ".portfolio/graph.webp",
+      "alt": "3D explorer showing hundreds of tier-colored nodes over a dark globe, with a side panel of search, tier filters 0 to 14, systemic-risk toggles, tour and Earth controls, and an Ask about the supply chain data box.",
+      "caption": "The N-tier explorer: tier filters, systemic-supplier highlighting and the data assistant around a 3D graph of the default synthetic network.",
+      "credit": "Screenshot of the Felementum site",
+      "source": "screenshot of site/supply-chain-graph.html"
+    },
+    {
+      "id": "generator",
+      "src": ".portfolio/generator.webp",
+      "alt": "Synthetic Data Generator page with a seed and determinism note, Default, Enterprise Scale and Stress Test 10K presets, distribution parameters and a live bar preview of tier sizes.",
+      "caption": "The generator builds seeded, reproducible datasets: identical seeds and parameters always produce the same network.",
+      "credit": "Screenshot of the Felementum site",
+      "source": "screenshot of site/supply-chain-synthetic-gen.html"
+    },
+    {
+      "id": "landing",
+      "src": ".portfolio/landing.webp",
+      "alt": "Felementum landing page with the tagline See the whole supply chain, from finished product to the mine, a Launch the 3D Explorer button, a graph preview and cards for the explorer, generator and training page.",
+      "caption": "The landing page links the explorer, the synthetic data generator and the synthetic data training walkthrough.",
+      "credit": "Screenshot of the Felementum site",
+      "source": "screenshot of site/index.html"
+    }
+  ],
+  "defaultImageId": "graph"
+}

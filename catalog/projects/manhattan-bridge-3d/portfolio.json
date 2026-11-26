@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "id": "manhattan-bridge-3d",
+  "title": "Manhattan Bridge Digital Twin",
+  "repo": "Ethical-Tech-CoLab/manhattan-bridge-3d",
+  "summary": "A source-governed, part-addressable digital twin of the Manhattan Bridge for browser rendering and HO-scale study, in which every dimension traces to a registered source with a confidence grade.",
+  "kind": "application",
+  "methodTags": [
+    "digital-twins",
+    "provenance",
+    "open-source"
+  ],
+  "domainTags": [
+    "civic-infrastructure"
+  ],
+  "contribution": {
+    "date": "2026-08-15",
+    "role": "built",
+    "credits": []
+  },
+  "narrative": {
+    "problem": "No existing 3D model of the Manhattan Bridge is authoritative, and there is no public measured drawing of it — the HAER survey contains photographs and no drawings — so a detailed model easily ends up inventing dimensions it cannot source.",
+    "decision": "Official dimensions and archival drawings in GEOMETRY-CONTROL.md are the control geometry: scripts parse it and carry no numbers of their own, anything without a registered source is tagged confidence D, and geometry provenance is drawn as solid, dashed and dotted outlines so uncertainty is visible by default.",
+    "tradeoff": "Refusing to invent dimensions keeps the model honest, but 66 of 103 parts remain grade D and 14 of 78 control values are placeholders; photographs can grade materials but cannot promote a dimension above D without scale control.",
+    "limitation": "The remaining placeholders wait on NYC DOT and MTA record drawings that are not public, for which a FOIL request is prepared; none of the 253 audit photographs has been reviewed yet, and CI skips schema validation of the published contract documents.",
+    "caveat": "Most parts are inferred or placeholder geometry. Switching off inferred and assumed parts in the viewer leaves the towers, anchorages and station markers — the whole of what the model can be said to document."
+  },
+  "evidence": {
+    "level": "evaluated-result",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/manhattan-bridge-3d/commit/e5ddb9b14eb1fb31c69135e6c0ca11cc015b428f",
+        "date": "2026-08-15"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/manhattan-bridge-3d#readme",
+        "date": "2026-08-15"
+      },
+      {
+        "label": "Geometry control (source of truth)",
+        "url": "https://github.com/Ethical-Tech-CoLab/manhattan-bridge-3d/blob/main/GEOMETRY-CONTROL.md",
+        "date": "2026-08-15"
+      },
+      {
+        "label": "Source register",
+        "url": "https://github.com/Ethical-Tech-CoLab/manhattan-bridge-3d/blob/main/SOURCE-REGISTER.md",
+        "date": "2026-08-15"
+      },
+      {
+        "label": "Confidence model",
+        "url": "https://github.com/Ethical-Tech-CoLab/manhattan-bridge-3d/blob/main/CONFIDENCE-MODEL.md",
+        "date": "2026-08-15"
+      },
+      {
+        "label": "FOIL records request",
+        "url": "https://github.com/Ethical-Tech-CoLab/manhattan-bridge-3d/blob/main/FOIL-REQUEST.md",
+        "date": "2026-08-15"
+      },
+      {
+        "label": "Validation report",
+        "url": "https://github.com/Ethical-Tech-CoLab/manhattan-bridge-3d/blob/main/tests/validation_report.json",
+        "date": "2026-08-15"
+      },
+      {
+        "label": "How to design a sibling bridge",
+        "url": "https://github.com/Ethical-Tech-CoLab/manhattan-bridge-3d/blob/main/HOW-TO-DESIGN.md",
+        "date": "2026-08-15"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/manhattan-bridge-3d"
+  },
+  "images": [
+    {
+      "id": "main-tower",
+      "src": "sources/photos/image-set-001-main-towers/SRC-018-332346b3dc1e.jpg",
+      "alt": "Black-and-white HAER photograph NY-127-7 looking up at a Manhattan Bridge main tower, its lattice-braced steel legs rising from a masonry pier, with main cables, suspenders and the stiffening truss deck receding across the river.",
+      "caption": "A registered source photograph of a main tower. Photographs enter the model only with a source ID, licence, attribution and checksum, and can grade materials but not dimensions.",
+      "credit": "HAER NY-127-7, Historic American Engineering Record, Library of Congress; via Ethical Tech CoLab manhattan-bridge-noise-dumbo, CC BY 4.0",
+      "source": "repository file sources/photos/image-set-001-main-towers/SRC-018-332346b3dc1e.jpg"
+    },
+    {
+      "id": "photo-review",
+      "src": ".portfolio/photo-review.webp",
+      "alt": "Photo review page titled 'Manhattan Bridge — material and arrangement evidence — photo review' with Save decisions and filter controls, a counter reading 0 kept, 0 skipped, 253 undecided, and definitions for categories such as masonry, arch, truss, steel surface and cable.",
+      "caption": "The photograph audit sheet: each category states what a photo can establish and which open question it feeds; all 253 photographs are still undecided.",
+      "credit": "Screenshot of the Manhattan Bridge Digital Twin site",
+      "source": "screenshot of viewer/public/review/index.html"
+    },
+    {
+      "id": "deck-underside",
+      "src": "sources/photos/image-set-008-approach-spans/SRC-018-3943aec4c91d.jpg",
+      "alt": "Colour photograph from a lawn beneath the Manhattan Bridge looking up at the underside of its deck framing and suspender cables, with trees and DUMBO buildings below and a blue sky.",
+      "caption": "Crowdsourced views come from where people stand, which covers the underside well but cannot see inside the truss bays where placeholders remain.",
+      "credit": "Ethical Tech CoLab, manhattan-bridge-noise-dumbo pedestrian site visits, CC BY 4.0",
+      "source": "repository file sources/photos/image-set-008-approach-spans/SRC-018-3943aec4c91d.jpg"
+    }
+  ],
+  "defaultImageId": "main-tower"
+}

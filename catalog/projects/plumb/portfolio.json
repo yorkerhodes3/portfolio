@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "plumb",
+  "title": "Plumb",
+  "repo": "Ethical-Tech-CoLab/plumb",
+  "summary": "A browser-based tool for architectural and preservation work that produces measured, verifiable photographs of historic buildings and bridges, with a calibrated grid and ruler and C2PA provenance.",
+  "kind": "tool",
+  "methodTags": [
+    "provenance",
+    "open-source",
+    "digital-twins"
+  ],
+  "domainTags": [
+    "cultural-heritage",
+    "civic-infrastructure"
+  ],
+  "contribution": {
+    "date": "2026-08-19",
+    "role": "built",
+    "credits": []
+  },
+  "narrative": {
+    "problem": "Architectural and preservation work needs photographs that are evidence, not illustrations: images you can measure from, whose location, creator, date and lineage can be verified. The HABS/HAER/HALS documentation standards already require a scale in the photograph.",
+    "decision": "C2PA is the provenance backbone: raw captures are signed at ingest and every derivative names its parents as C2PA ingredients, while authoritative measurement happens in server-side post-processing that can be re-run later on the same immutable bytes.",
+    "tradeoff": "As a browser app it cannot reach on-device keystore signing, the only route to C2PA Assurance Level 2, so that is deferred; Android Chrome is the primary platform and iOS Safari gets an honestly labelled reduced feature set.",
+    "limitation": "It is not survey-grade: achievable accuracy is roughly USIBD LOA20–LOA10 for marker-calibrated single images, measurements are exact only on the calibrated plane, and it does not replace a total station, laser scan or licensed survey.",
+    "caveat": "Needs a phone camera over HTTPS; Android Chrome gets the full feature set. Measurement stays disabled until the grid is calibrated, and results are not a licensed survey."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/plumb/commit/6ec6d48092b2bc1d45f029ee4b0241fddaf5f9ca",
+        "date": "2026-08-19"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/plumb#readme",
+        "date": "2026-08-19"
+      },
+      {
+        "label": "Research findings",
+        "url": "https://github.com/Ethical-Tech-CoLab/plumb/blob/main/docs/01-research-findings.md",
+        "date": "2026-08-19"
+      },
+      {
+        "label": "Calibration methodology",
+        "url": "https://github.com/Ethical-Tech-CoLab/plumb/blob/main/docs/02-calibration-methodology.md",
+        "date": "2026-08-19"
+      },
+      {
+        "label": "Server and provenance design",
+        "url": "https://github.com/Ethical-Tech-CoLab/plumb/blob/main/docs/05-server-and-provenance.md",
+        "date": "2026-08-19"
+      },
+      {
+        "label": "Field guide (HOW-TO-PLUMB.md)",
+        "url": "https://github.com/Ethical-Tech-CoLab/plumb/blob/main/HOW-TO-PLUMB.md",
+        "date": "2026-08-19"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/plumb"
+  },
+  "images": [
+    {
+      "id": "capture-app",
+      "src": ".portfolio/capture-app.webp",
+      "alt": "Plumb capture screen with an empty camera view listing three steps, a CAL-0 not-to-scale badge, grid and ruler toggles, and Capture and Calibrate panels on the right.",
+      "caption": "The browser client: start the camera, calibrate against something of known size, add a hold-out check, then measure; nothing leaves the device.",
+      "credit": "Screenshot of the Plumb site",
+      "source": "screenshot of prototype/index.html"
+    },
+    {
+      "id": "calibration-target",
+      "src": ".portfolio/calibration-target.webp",
+      "alt": "Printable Plumb calibration target with four checkerboard corner markers, width and height arrows, a form for measured dimensions and a 100 mm check bar.",
+      "caption": "The printed calibration target puts a scale in the frame, the requirement landmark documentation standards set for measured photographs.",
+      "credit": "Image from the Plumb repository",
+      "source": "repository file docs/assets/target-a4.svg"
+    },
+    {
+      "id": "off-plane-trap",
+      "src": ".portfolio/off-plane-trap.webp",
+      "alt": "Section diagram of a camera photographing a wall with a cornice projecting 600 mm, showing how the cornice reads about 24 mm wrong when only the wall plane is calibrated.",
+      "caption": "The field guide's main warning: Plumb is exact only on the calibrated surface, so projecting features need their depth entered or a second plane.",
+      "credit": "Image from the Plumb repository",
+      "source": "repository file docs/assets/06-off-plane-trap.svg"
+    }
+  ],
+  "defaultImageId": "capture-app"
+}

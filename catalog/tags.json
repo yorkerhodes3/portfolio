@@ -1,0 +1,59 @@
+{
+  "$comment": "Controlled vocabulary for portfolio.json. Facet tags filter the dashboard: any within a facet, all across facets. Adding a tag here is the only way to make it valid.",
+  "facets": {
+    "method": {
+      "label": "Methods",
+      "tags": {
+        "applied-ai": "Applied AI",
+        "agentic-workloads": "Agentic workloads",
+        "frontier-models": "Frontier models",
+        "blockchain": "Blockchain",
+        "ethereum": "Ethereum",
+        "decision-models": "Decision models & simulation",
+        "edge-hardware": "Edge hardware & self-hosting",
+        "open-source": "Open source",
+        "digital-twins": "Digital twins & 3D",
+        "provenance": "Provenance & verifiable credentials",
+        "data-visualization": "Data visualization",
+        "collaboration-tools": "Collaboration & publishing tools"
+      }
+    },
+    "domain": {
+      "label": "Domains",
+      "tags": {
+        "commerce": "Commerce & payments",
+        "global-affairs": "Global affairs & diplomacy",
+        "supply-chain-resilience": "Supply chain resilience",
+        "humanitarian-response": "Humanitarian response & evacuation",
+        "human-rights": "Human rights & forced labor",
+        "cultural-heritage": "Cultural heritage",
+        "cybersecurity": "Cybersecurity",
+        "ai-governance": "AI ethics & governance",
+        "education": "Education & research methods",
+        "civic-infrastructure": "Cities & infrastructure",
+        "climate-energy": "Climate & energy",
+        "creative-media": "Creative media & games",
+        "collaboration": "Teams & collaboration"
+      }
+    }
+  },
+  "kinds": {
+    "research": "Research & papers",
+    "decision-model": "Decision models & simulations",
+    "tool": "Tools & libraries",
+    "infrastructure": "Infrastructure & hardware",
+    "application": "Applications"
+  },
+  "evidenceLevels": {
+    "design": "Design",
+    "working-demo": "Working demonstration",
+    "evaluated-result": "Evaluated result",
+    "field-use": "Documented field use"
+  },
+  "roles": {
+    "built": "Built",
+    "co-built": "Co-built",
+    "directed": "Directed",
+    "advisor-prof": "Advisor/Prof"
+  }
+}

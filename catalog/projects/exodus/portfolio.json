@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "id": "exodus",
+  "title": "Exodus — Civilian Evacuation Risk Platform",
+  "repo": "Ethical-Tech-CoLab/Exodus",
+  "summary": "A single FastAPI web platform for civilian-evacuation planning that unifies a crisis map, the ERCF scenario cost model and the CERAI risk assessment behind one backend and interface.",
+  "kind": "decision-model",
+  "methodTags": [
+    "decision-models",
+    "data-visualization",
+    "applied-ai",
+    "frontier-models"
+  ],
+  "domainTags": [
+    "humanitarian-response",
+    "global-affairs"
+  ],
+  "contribution": {
+    "date": "2026-07-23",
+    "role": "advisor-prof",
+    "roleNote": "Unifies Ethical Tech CoLab tools: EII, ERCF, CERAI and the route and behavioral simulators.",
+    "credits": [
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      },
+      {
+        "name": "cruiz",
+        "role": "Contributor"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "Civilian-evacuation risk tools built separately, a crisis-information map, a scenario cost model and a risk anticipation index, each answer part of the question and run on their own backends, data sources and keys, so a planner has to move between them.",
+    "decision": "Brings the three tools together as tabs of one FastAPI application, so all three share one backend, one design language and one set of API keys, with scenario storage in SQLite.",
+    "tradeoff": "The platform carries copies of its component models that must be re-synced when their upstream repositories change, and its live features depend on several third-party services (INFORM/ACAPS, ACLED, Tavily, GDELT, Anthropic), with fallbacks when keys are missing.",
+    "limitation": "The README documents no evaluation, tests or limitations of its own, and the CoLab's After the Corridor report lists Exodus as built and operational but not yet validated.",
+    "caveat": "Country analysis is AI-generated (Claude, with a fallback), and live news and conflict data depend on third-party API keys; the platform is not validated for operational evacuation decisions."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/Exodus/commit/0d8ee48b0a8108c4fd4354b4e8d1a98dcc766e37",
+        "date": "2026-07-23"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/Exodus#readme",
+        "date": "2026-07-23"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/Exodus",
+    "demo": "https://exodus-ruddy.vercel.app"
+  },
+  "images": [
+    {
+      "id": "platform",
+      "src": ".portfolio/platform.webp",
+      "alt": "Document excerpt card headed Civilian Evacuation Risk Platform, quoting the README: a single FastAPI application unifying three civilian-evacuation risk tools that share one backend, design language and set of API keys.",
+      "caption": "What Exodus is: one application that brings three separately built evacuation risk tools together.",
+      "credit": "Excerpt from the Exodus README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "crisis-map",
+      "src": ".portfolio/crisis-map.webp",
+      "alt": "Document excerpt card headed Crisis Map, quoting the README's description of an interactive world map of INFORM Severity Index crises with live news and an ACLED conflict timeline per country.",
+      "caption": "The Crisis Map tab, from the Evacuation Inform Index, puts crisis severity, news and conflict history on one map.",
+      "credit": "Excerpt from the Exodus README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "risk-assessment",
+      "src": ".portfolio/risk-assessment.webp",
+      "alt": "Document excerpt card headed Risk Assessment, quoting the README's description of an Endangerment and Feasibility assessment with gauges, a GDELT news feed and 47 historical cases.",
+      "caption": "The Risk Assessment tab, from CERAI, scores endangerment and feasibility against historical cases.",
+      "credit": "Excerpt from the Exodus README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "platform"
+}

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "digital-3d-shared-contracts",
+  "title": "Digital 3D — Shared Contracts",
+  "repo": "Ethical-Tech-CoLab/digital-3d-shared-contracts",
+  "summary": "Shared JSON schemas, a canonical coordinate frame and a framework-agnostic viewer kernel that let independently owned 3D modules, such as a bridge twin and a district twin, work together.",
+  "kind": "tool",
+  "methodTags": [
+    "digital-twins"
+  ],
+  "domainTags": [
+    "civic-infrastructure"
+  ],
+  "contribution": {
+    "date": "2026-08-15",
+    "role": "built",
+    "credits": []
+  },
+  "narrative": {
+    "problem": "Independently owned 3D modules, such as a bridge model and a neighbourhood model, must agree on where things are, which vertical datum is zero, how levels of detail relate and what one module may know about another; otherwise a bridge authored against mean high water can sit 0.59 m into buildings authored against NAVD88.",
+    "decision": "The repository holds no module data, only normative JSON Schema 2020-12 contracts, a frozen canonical scene frame that modules copy byte-for-byte, and a framework-agnostic viewer kernel; every level of detail from every module is placed on one max_geometric_error_m axis.",
+    "tradeoff": "Freezing the frame anchor and allowing only additions within a major version keeps every module's coordinates stable, but the anchor cannot be corrected for the life of contract version 1, and removing anything must wait for a new major version.",
+    "limitation": "The bundled fixtures are tiny and synthetic and exist only to self-test the schemas; the contracts are consumed so far by two sibling modules, manhattan-bridge-3d and dumbo-district-3d, and the repository has no hosted demo of its own."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/digital-3d-shared-contracts/commit/5cbff0d5cf5419affe93f80690290582406412b8",
+        "date": "2026-08-15"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/digital-3d-shared-contracts#readme",
+        "date": "2026-08-15"
+      },
+      {
+        "label": "Coordinate system",
+        "url": "https://github.com/Ethical-Tech-CoLab/digital-3d-shared-contracts/blob/main/COORDINATE-SYSTEM.md",
+        "date": "2026-08-15"
+      },
+      {
+        "label": "Viewer API",
+        "url": "https://github.com/Ethical-Tech-CoLab/digital-3d-shared-contracts/blob/main/VIEWER-API.md",
+        "date": "2026-08-15"
+      },
+      {
+        "label": "Viewer modes",
+        "url": "https://github.com/Ethical-Tech-CoLab/digital-3d-shared-contracts/blob/main/VIEWER-MODES.md",
+        "date": "2026-08-15"
+      },
+      {
+        "label": "Governance",
+        "url": "https://github.com/Ethical-Tech-CoLab/digital-3d-shared-contracts/blob/main/GOVERNANCE.md",
+        "date": "2026-08-15"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/digital-3d-shared-contracts"
+  },
+  "images": [
+    {
+      "id": "no-module-data",
+      "src": ".portfolio/no-module-data.webp",
+      "alt": "Document excerpt card headed 'No module data' quoting the README: only the things that must be agreed once and used by everyone — schemas, their documents and the runtime packages both viewers consume.",
+      "caption": "The repository's scope rule: it publishes agreements, not geometry, so modules depend on contracts rather than on each other's source.",
+      "credit": "Excerpt from the Digital 3D Shared Contracts README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "one-frame",
+      "src": ".portfolio/one-frame.webp",
+      "alt": "Document excerpt card headed 'One frame' quoting the README on naming vertical datums so a bridge on mean high water does not sit 0.59 m into buildings on NAVD88.",
+      "caption": "A shared, frozen scene frame with named vertical datums is what lets separately built modules line up.",
+      "credit": "Excerpt from the Digital 3D Shared Contracts README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "one-lod-axis",
+      "src": ".portfolio/one-lod-axis.webp",
+      "alt": "Document excerpt card headed 'One LOD axis' quoting the README: a viewer mode is a different screen-space-error budget on the shared ladder, the difference between CAD inspection and a walkthrough.",
+      "caption": "One level-of-detail axis lets the same viewer act as a CAD inspector or a district walkthrough without forking.",
+      "credit": "Excerpt from the Digital 3D Shared Contracts README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "no-module-data"
+}

@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "id": "colab-board",
+  "title": "Ethical Tech CoLab Board",
+  "repo": "Ethical-Tech-CoLab/colab-board",
+  "summary": "A local-first spatial whiteboard for touch displays, classrooms, studios and workshops that runs in the browser and can replay how a session's ideas evolved.",
+  "kind": "application",
+  "methodTags": [
+    "collaboration-tools",
+    "provenance"
+  ],
+  "domainTags": [
+    "education",
+    "collaboration"
+  ],
+  "contribution": {
+    "date": "2026-08-18",
+    "role": "built",
+    "credits": []
+  },
+  "narrative": {
+    "problem": "Classrooms, studios and workshops on touch displays need a shared thinking surface that runs without a server, keeps board content on the device, and can replay how ideas evolved.",
+    "decision": "Live boards use a host-ordered star topology over encrypted WebRTC: edits to different objects merge in host order and, for the same object, the latest host-ordered change wins, intentionally avoiding CRDT and account/server complexity.",
+    "tradeoff": "Concurrent changes to the same object are resolved by the last host-ordered edit rather than merged, and host traffic grows with both active artists and recipients, so the host needs a desktop or unmetered connection.",
+    "limitation": "Seven participants are the validated working size; larger sessions should be benchmarked on their real network first. QR handoff and live boards depend on the public PeerJS signaling service, and VPNs or restrictive networks can block WebRTC."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/colab-board/commit/60e99a0bf42198c276188480b8b359aaa6299b24",
+        "date": "2026-08-18"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/colab-board#readme",
+        "date": "2026-08-18"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/colab-board"
+  },
+  "images": [
+    {
+      "id": "board-canvas",
+      "src": ".portfolio/board-canvas.webp",
+      "alt": "CoLab Board with a dark grid canvas, a left tool rail, a pen colour bar, Canvas and Spatial 3D toggles, a Replay button and a welcome panel reading \"Make ideas visible.\"",
+      "caption": "The empty board: pen, highlighter, eraser, notes and images on an infinite canvas, saved on the device, with replay and a 3D spatial view.",
+      "credit": "Screenshot of the CoLab Board site",
+      "source": "screenshot of dist/index.html"
+    },
+    {
+      "id": "live-session-test",
+      "src": ".portfolio/live-session-test.webp",
+      "alt": "Document-excerpt card titled \"Live-session scale\" quoting the README's acceptance-test result for one host and six participants.",
+      "caption": "The README's acceptance-test result for live peer boards, which sets seven participants as the validated working size.",
+      "credit": "Excerpt from the CoLab Board README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "local-first",
+      "src": ".portfolio/local-first.webp",
+      "alt": "Document-excerpt card titled \"A local-first thinking surface\" quoting the README on running in the browser and keeping content on the device.",
+      "caption": "The core design choice: no server, with board content kept on the device unless the user exports it.",
+      "credit": "Excerpt from the CoLab Board README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "board-canvas"
+}

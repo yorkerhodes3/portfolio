@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "id": "after-the-corridor-report",
+  "title": "After the Corridor",
+  "repo": "Ethical-Tech-CoLab/after-the-corridor-report",
+  "summary": "A research report for funders and humanitarian researchers that reads the CoLab's evacuation prototypes and forced-labour risk index together and extends them to refugee economic inclusion at Dzaleka, Malawi.",
+  "kind": "research",
+  "methodTags": [
+    "applied-ai",
+    "decision-models",
+    "open-source"
+  ],
+  "domainTags": [
+    "humanitarian-response",
+    "human-rights"
+  ],
+  "contribution": {
+    "date": "2026-10-13",
+    "role": "advisor-prof",
+    "roleNote": "Ethical Tech CoLab research report; the published report lists Prof. Yorke E. Rhodes III and Sylvia Maier as faculty directors.",
+    "credits": [
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Christine Lumen",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Alana Robertson",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Melanie MacKew",
+        "github": "mmelanie",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Carlos D. Ruiz",
+        "role": "Student researcher"
+      },
+      {
+        "name": "India Clarke",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Yago Rocha",
+        "github": "yagorocha-web",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Teresa Cantero",
+        "role": "Contributor"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "A successful evacuation typically ends in a camp and years of protracted displacement. At Dzaleka Refugee Camp, Malawi, humanitarian financing has collapsed while an encampment policy bars residents from working, and the camp now holds 53,000 to 60,000 people in a site built for 10,000 to 12,000.",
+    "decision": "Names the one thing the lab refuses to build, biometric identity for displaced people, and records that refusal as a versioned decision pattern (DDC-0001) rather than leaving it implicit.",
+    "tradeoff": "Services that depend on verified individual identity are ruled out, so the proposed infrastructure has to rely on measurement, aggregate evidence, privacy-preserving rails and rights information instead.",
+    "limitation": "Maturity varies by tool: only the ERCF cost engine is validated, and for evacuation; the livelihoods index and inclusion simulator are proposed, and their weights and thresholds stay provisional until expert-elicited and calibrated.",
+    "caveat": "Views and findings are the researchers' own, not those of NYU, Microsoft, UNHCR, WFP or any partner institution; external programs cited are evidence, not CoLab partnerships."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/after-the-corridor-report/commit/9f425449e6e944d06179f3407f341f52f1545c16",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/after-the-corridor-report#readme",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Report (Markdown source)",
+        "url": "https://github.com/Ethical-Tech-CoLab/after-the-corridor-report/blob/main/REPORT.md",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Report (PDF)",
+        "url": "https://github.com/Ethical-Tech-CoLab/after-the-corridor-report/blob/main/docs/pdf/After-the-Corridor-ETC-Research-Report.pdf",
+        "date": "2026-10-13"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/after-the-corridor-report"
+  },
+  "images": [
+    {
+      "id": "report-cover",
+      "src": ".portfolio/report-cover.webp",
+      "alt": "Title page of the After the Corridor report site with the subtitle, author list, faculty directors and buttons to download the PDF, open the repository and visit the Ethical Tech CoLab.",
+      "caption": "The report's title page: who wrote it, who directed it, and where to read the PDF.",
+      "credit": "Screenshot of the After the Corridor report site",
+      "source": "screenshot of docs/index.html"
+    },
+    {
+      "id": "financial-model",
+      "src": ".portfolio/financial-model.webp",
+      "alt": "Report text ending a section with Limitations (no official validation yet) and Future research bullets, followed by the heading 5. The financial model: from evacuation break-even to inclusion break-even.",
+      "caption": "Section 5 re-points the validated evacuation cost engine to inclusion break-even, and flags the new parameters as unvalidated.",
+      "credit": "Screenshot of the After the Corridor report site",
+      "source": "screenshot of docs/index.html"
+    },
+    {
+      "id": "accountability",
+      "src": ".portfolio/accountability.webp",
+      "alt": "Report section 10.4 Failure and accountability, listing failure conditions and commitments to a pre-registered analysis plan, followed by the heading for section 11 on funder alignment.",
+      "caption": "The report states in advance what would count as failure and commits to a pre-registered validation plan and a public do-no-harm review.",
+      "credit": "Screenshot of the After the Corridor report site",
+      "source": "screenshot of docs/index.html"
+    }
+  ],
+  "defaultImageId": "report-cover"
+}

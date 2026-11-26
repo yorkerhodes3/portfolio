@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "3d-agentic-evacuation-simulation",
+  "title": "3D Agentic Evacuation Simulation",
+  "repo": "Ethical-Tech-CoLab/3d-agentic-evacuation-simulation",
+  "summary": "Browser 3-D evacuation twins of Mariupol, Lower Manhattan, the Las Vegas Strip and Miami in which a synthetic population of households chooses between real road-routed exits, for planning and teaching.",
+  "kind": "decision-model",
+  "methodTags": [
+    "decision-models",
+    "digital-twins",
+    "data-visualization",
+    "open-source"
+  ],
+  "domainTags": [
+    "humanitarian-response",
+    "civic-infrastructure"
+  ],
+  "contribution": {
+    "date": "2026-11-20",
+    "role": "co-built",
+    "roleNote": "Joins the ETC mariupol-evacuation-model data with the agent model of Google Cloud Platform's Race Condition, via the ETC fork race-condition-mod.",
+    "credits": [
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "An evacuation is many people, imperfect information, shared routes, bottlenecks and a clock. A census records who people are, but not who they travel with or how they behave, and those are what decide who is still inside when a route closes.",
+    "decision": "Renders deck.gl layers over a keyless CARTO basemap with open Sentinel-2 imagery and OpenStreetMap building centroids, instead of the photogrammetry model and bespoke Three.js scene of the Race Condition fork it builds on.",
+    "tradeoff": "Buildings are extruded columns whose heights exist only where OpenStreetMap records them (96% in Lower Manhattan, 0% in Mariupol), and the 10 m Sentinel-2 mosaic softens when zoomed to a street.",
+    "limitation": "Zone populations are modelled and county cohort figures are applied to districts; household-unit and behaviour mixes, transit boarding capacities and weather multipliers are modelled, not sourced; transit covers Lower Manhattan only.",
+    "caveat": "Open-data and non-operational: a planning and teaching artifact. No agent corresponds to a real person, and nothing here is operational guidance or an evacuation plan for any of these cities."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/3d-agentic-evacuation-simulation/commit/e9bc726c6fc9157acb2fe4426f7ea357e4a25a7b",
+        "date": "2026-11-20"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/3d-agentic-evacuation-simulation#readme",
+        "date": "2026-11-20"
+      },
+      {
+        "label": "Method: what is real, modelled and illustrative",
+        "url": "https://github.com/Ethical-Tech-CoLab/3d-agentic-evacuation-simulation/blob/main/docs/METHOD.md",
+        "date": "2026-11-20"
+      },
+      {
+        "label": "Agent decision rules",
+        "url": "https://github.com/Ethical-Tech-CoLab/3d-agentic-evacuation-simulation/blob/main/docs/AGENT_DECISIONS.md",
+        "date": "2026-11-20"
+      },
+      {
+        "label": "Evacuation input reference",
+        "url": "https://github.com/Ethical-Tech-CoLab/3d-agentic-evacuation-simulation/blob/main/docs/EVACUATION_INPUT_REFERENCE.md",
+        "date": "2026-11-20"
+      },
+      {
+        "label": "Model invariant tests",
+        "url": "https://github.com/Ethical-Tech-CoLab/3d-agentic-evacuation-simulation/blob/main/test/model.test.mjs",
+        "date": "2026-11-20"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/3d-agentic-evacuation-simulation"
+  },
+  "images": [
+    {
+      "id": "console",
+      "src": ".portfolio/console.webp",
+      "alt": "Mariupol 3D console with Run, Reset and Link buttons, sliders for 6,000 agents, information quality, warning spread and seed, population-mix tabs and variability sliders for walking speed, information, risk tolerance and timing; the map area is dark.",
+      "caption": "The control console: population size, information quality, warning spread and individual variability are all adjustable, and a configured run can be shared as a link.",
+      "credit": "Screenshot of the 3D Agentic Evacuation Simulation site",
+      "source": "screenshot of index.html"
+    },
+    {
+      "id": "transit-result",
+      "src": ".portfolio/transit-result.webp",
+      "alt": "Document excerpt card headed Transit — a door the weather can shut, quoting that a transit shutdown two hours in is worse than having no transit at all.",
+      "caption": "An emergent result reported in the README: in Lower Manhattan, stopping transit two hours in leaves people walking to shut stations and lengthens 90th-percentile clearance.",
+      "credit": "Excerpt from the 3D Agentic Evacuation Simulation README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "households",
+      "src": ".portfolio/households.webp",
+      "alt": "Document excerpt card headed The agents, quoting that one agent is one household carrying a weight for how many real people it stands for.",
+      "caption": "Agents are weighted households, so the agent count sets resolution rather than population size; the tests assert results do not depend on it.",
+      "credit": "Excerpt from the 3D Agentic Evacuation Simulation README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "console"
+}

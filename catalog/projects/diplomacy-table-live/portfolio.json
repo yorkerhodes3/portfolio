@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "id": "diplomacy-table-live",
+  "title": "Diplomacy Table",
+  "repo": "Ethical-Tech-CoLab/diplomacy-table-live",
+  "summary": "A teaching console and replay app for multi-party AI negotiation simulations, letting instructors explain the settings and replay recorded runs without a backend.",
+  "kind": "application",
+  "methodTags": [
+    "agentic-workloads",
+    "applied-ai",
+    "open-source"
+  ],
+  "domainTags": [
+    "global-affairs",
+    "education"
+  ],
+  "contribution": {
+    "date": "2026-08-24",
+    "role": "built",
+    "roleNote": "Static, reference-only build of the Diplomacy Table pages from the DTSF monorepo.",
+    "credits": []
+  },
+  "narrative": {
+    "problem": "A live AI negotiation demo in front of a room depends on a server staying up, a model staying responsive and a session not expiring, and instructors also need to explain the knobs, tactics and arithmetic that decide whether a deal is even possible.",
+    "decision": "Publishes complete tick-by-tick recordings of real runs that play back in the actual negotiation room with no backend, each exported from one declared perspective so a delegation's view simply omits what that seat could not see.",
+    "tradeoff": "A recording cannot be steered or re-read from another seat: the View As selector is locked during replay, and running a new negotiation still needs a live DTSF backend, which is a separate private system.",
+    "limitation": "Three of the console's ten tabs (Connect, Delegations, Bake-off) need a live instance, and the console itself notes where rule-based tactic detection breaks down.",
+    "caveat": "Recorded negotiations are AI-generated: model delegations (gemma3:12b in the gallery) play the parties, so positions attributed to real states and officials are simulated."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/diplomacy-table-live/commit/fd0e708e45f11b9bb97c865804d91b559911a8c7",
+        "date": "2026-08-24"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/diplomacy-table-live#readme",
+        "date": "2026-08-24"
+      },
+      {
+        "label": "Recorded negotiation runs",
+        "url": "https://github.com/Ethical-Tech-CoLab/diplomacy-table-live/blob/main/runs/index.json",
+        "date": "2026-08-24"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/diplomacy-table-live"
+  },
+  "images": [
+    {
+      "id": "recordings",
+      "src": ".portfolio/recordings.webp",
+      "alt": "Gallery titled Recorded negotiations with cards for Strait of Hormuz, Aurora-Borealis supply and Iran-US nuclear runs, each tagged operator view or a delegation view with counts of rounds, moves, tactics and ticks.",
+      "caption": "The replay gallery: each recording is a complete run, labelled by whose perspective it shows and how much was withheld.",
+      "credit": "Screenshot of the Diplomacy Table site",
+      "source": "screenshot of app.html"
+    },
+    {
+      "id": "teaching-console",
+      "src": ".portfolio/teaching-console.webp",
+      "alt": "Diplomacy Table Configuration & Teaching Console with tabs for Architecture, Knobs, Models, Tactics & Goals, Scenario, ZOPA and Runbook, showing the Connect tab's backend URL field and resolution order.",
+      "caption": "The teaching console works offline as reference material; connecting it to a DTSF backend enables live probes.",
+      "credit": "Screenshot of the Diplomacy Table site",
+      "source": "screenshot of index.html"
+    },
+    {
+      "id": "honest-recording",
+      "src": ".portfolio/honest-recording.webp",
+      "alt": "Document excerpt card headed Reading a recording honestly, quoting that tick numbers are not renumbered when material is withheld.",
+      "caption": "Redaction is visible: gaps in the tick sequence show that something was said without revealing what.",
+      "credit": "Excerpt from the Diplomacy Table README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "recordings"
+}
