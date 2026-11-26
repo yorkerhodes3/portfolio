@@ -1,0 +1,38 @@
+name: Refresh catalog
+
+# Owner-run (SPECIFICATION FR-10): rereads every project's portfolio.json, checks demo links,
+# mirrors pictures and opens a pull request. Merging that pull request publishes the changes.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Refresh
+        env:
+          GITHUB_TOKEN: ${{ secrets.PORTFOLIO_READ_TOKEN || secrets.GITHUB_TOKEN }}
+        run: npm run refresh
+      - name: Open the review pull request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if git diff --quiet -- catalog media && [ -z "$(git status --porcelain -- catalog media)" ]; then echo "No catalog changes."; exit 0; fi
+          branch="refresh/$(date -u +%Y-%m-%d-%H%M)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add catalog media
+          git commit -m "Refresh catalog $(date -u +%Y-%m-%d)"
+          git push -u origin "$branch"
+          gh pr create --title "Refresh catalog $(date -u +%Y-%m-%d)" --body-file catalog/refresh-report.md
