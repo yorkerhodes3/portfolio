@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "id": "fraternity",
+  "title": "Fraternity",
+  "repo": "Ethical-Tech-CoLab/Fraternity",
+  "summary": "Comparative situation research across protracted refugee and displacement crises, building a sourced evidence base to find high-leverage intervention opportunities before narrowing to one.",
+  "kind": "research",
+  "methodTags": [
+    "open-source"
+  ],
+  "domainTags": [
+    "humanitarian-response",
+    "global-affairs"
+  ],
+  "contribution": {
+    "date": "2026-11-23",
+    "role": "advisor-prof",
+    "roleNote": "NYU student independent study for the fall 2026 semester.",
+    "credits": [
+      {
+        "name": "Yago Rocha",
+        "github": "yagorocha-web",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "Protracted refugee and displacement crises differ in their legal and policy settings, funding, disaster risk and protection pathways. Finding a lever that is high-leverage, tractable and neglected needs comparable, sourced situation data across several sites, not one case studied in isolation.",
+    "decision": "Breadth before depth: one reusable four-pathway method is applied across camps, with one case file per crisis following the same structure so cases can be compared side by side before going deep on any single opportunity.",
+    "tradeoff": "Prioritising breadth defers deep work on any one site until a cross-case comparison surfaces an opportunity, and figures that diverge across sources are kept unreconciled, so each must be checked by date before it is used comparatively.",
+    "limitation": "Since 19 October 2026 the work has shifted to NameBridge, cross-border name intelligence for missing-person search, which is a research prototype: offline, synthetic data only, no live case decisions. The situation research is kept for reference only."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/Fraternity/commit/5526e52df91f40b1af7b4bcbb271e5f0fcb1e6e6",
+        "date": "2026-11-23"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/Fraternity#readme",
+        "date": "2026-11-23"
+      },
+      {
+        "label": "Research methodology (CONCEPT.md)",
+        "url": "https://github.com/Ethical-Tech-CoLab/Fraternity/blob/main/CONCEPT.md",
+        "date": "2026-11-23"
+      },
+      {
+        "label": "Cross-case comparison",
+        "url": "https://github.com/Ethical-Tech-CoLab/Fraternity/blob/main/docs/comparison.md",
+        "date": "2026-11-23"
+      },
+      {
+        "label": "NameBridge concept",
+        "url": "https://github.com/Ethical-Tech-CoLab/Fraternity/blob/main/docs/CONCEPT-IDEA.md",
+        "date": "2026-11-23"
+      },
+      {
+        "label": "NameBridge benchmark protocol",
+        "url": "https://github.com/Ethical-Tech-CoLab/Fraternity/blob/main/docs/BENCHMARK_PROTOCOL.md",
+        "date": "2026-11-23"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/Fraternity"
+  },
+  "images": [
+    {
+      "id": "research-scope",
+      "src": ".portfolio/research-scope.webp",
+      "alt": "Document-excerpt card titled \"Fraternity\" quoting the README's description of broad, comparative research across protracted refugee and displacement crises.",
+      "caption": "The research question: compare crises broadly first, then narrow to the intervention opportunity the comparison surfaces.",
+      "credit": "Excerpt from the Fraternity README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "namebridge",
+      "src": ".portfolio/namebridge.webp",
+      "alt": "Document-excerpt card titled \"Current work: NameBridge\" quoting the NameBridge README on cross-border name intelligence for missing-person search.",
+      "caption": "The current line of work: a sourced name knowledge graph with probabilistic entity resolution and human review for missing-person search.",
+      "credit": "Excerpt from the NameBridge README",
+      "source": "README excerpt (namebridge/README.md)"
+    },
+    {
+      "id": "sourcing-discipline",
+      "src": ".portfolio/sourcing-discipline.webp",
+      "alt": "Document-excerpt card titled \"Sourcing discipline\" quoting the README rule that every figure keeps its source, date and reporting period.",
+      "caption": "The sourcing rule behind every case file: divergent figures stay visible rather than being silently reconciled.",
+      "credit": "Excerpt from the Fraternity README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "research-scope"
+}

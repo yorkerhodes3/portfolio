@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "read-as-book",
+  "title": "read-as-book",
+  "repo": "Ethical-Tech-CoLab/read-as-book",
+  "summary": "A drop-in \"Read as book\" page turner that lets any website show a PDF as a full-screen book with page curl, plus a React component and a PDF-to-pages CLI.",
+  "kind": "tool",
+  "methodTags": [
+    "collaboration-tools",
+    "open-source"
+  ],
+  "domainTags": [
+    "education"
+  ],
+  "contribution": {
+    "date": "2026-10-13",
+    "role": "advisor-prof",
+    "roleNote": "Extracted from the Ethical Tech CoLab website, where it powers the report readers.",
+    "credits": [
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "Sites that publish reports as PDFs, such as the Ethical Tech CoLab website, want readers to flip through them like a real book, on static hosts such as GitHub Pages, Netlify or S3, without a server or a PDF renderer in the page.",
+    "decision": "Pages are plain images pre-rendered from the PDF at build time by the included CLI, so the browser never loads pdf.js, the book opens instantly, and it works on a purely static host.",
+    "tradeoff": "Very long documents become many image files, and because the aspect ratio is taken from page 1, a PDF with mixed page sizes will letterbox.",
+    "limitation": "The README offers a GitHub install for when the package is not on npm; the repository's checks are a typecheck plus a CLI smoke test, and the bundled example runs on generated placeholder pages."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/read-as-book/commit/7931a167d118511e76b2e31472a27087eeffb96a",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/read-as-book#readme",
+        "date": "2026-10-13"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/read-as-book"
+  },
+  "images": [
+    {
+      "id": "page-turner",
+      "src": ".portfolio/page-turner.webp",
+      "alt": "Document-excerpt card titled \"read-as-book\" quoting the README's description of a drop-in page turner with page curl, keyboard control and a mobile single-page mode.",
+      "caption": "What the library does: a full-screen page-curl reader that drops into any website.",
+      "credit": "Excerpt from the read-as-book README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "example-page",
+      "src": ".portfolio/example-page.webp",
+      "alt": "Example page titled read-as-book with an instruction to point PAGES at your own images or run the read-as-book-pages CLI, and a \"Read as book\" button.",
+      "caption": "The bundled example: one button opens the reader, and the CLI command shown renders a real PDF into its pages.",
+      "credit": "Screenshot of the read-as-book example",
+      "source": "screenshot of example/index.html"
+    },
+    {
+      "id": "static-pages",
+      "src": ".portfolio/static-pages.webp",
+      "alt": "Document-excerpt card titled \"Turn your PDF into pages\" quoting the README on pre-rendering page images at build time so the book works on static hosts.",
+      "caption": "The key design choice: pre-rendered page images instead of in-browser PDF rendering.",
+      "credit": "Excerpt from the read-as-book README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "page-turner"
+}

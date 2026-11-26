@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "id": "forced-labor-structural-risk-index",
+  "title": "Forced Labor Structural Risk Index (FLSRI)",
+  "repo": "Ethical-Tech-CoLab/forced-labor-structural-risk-index",
+  "summary": "A country-level index, scored 0–1, of the structural conditions under which forced labor becomes more likely, published as an interactive site with uncertainty bands for researchers and policymakers.",
+  "kind": "decision-model",
+  "methodTags": [
+    "decision-models",
+    "data-visualization"
+  ],
+  "domainTags": [
+    "human-rights",
+    "supply-chain-resilience"
+  ],
+  "contribution": {
+    "date": "2026-11-05",
+    "role": "advisor-prof",
+    "roleNote": "Developed under the Ethical Tech CoLab at the NYU Center for Global Affairs as part of masters research (2026).",
+    "credits": [
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      },
+      {
+        "name": "aml1045",
+        "github": "aml1045",
+        "role": "Contributor"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "Forced labor is largely hidden, so a country index cannot count or estimate cases. What can be compared are the structural conditions that make recruitment and exploitation more likely, and those must be measured transparently, with thin data and uncertainty stated rather than hidden.",
+    "decision": "The headline score is the geometric mean of Recruitment × Exploitation, built from indicators standardized against fixed literature-based anchors; a coverage floor leaves thin-data countries unscored rather than imputed, and each score carries a 90% rank band from 10,000 seeded Monte Carlo re-scorings.",
+    "tradeoff": "The geometric mean penalizes imbalance and the no-imputation rule avoids misleading values, but 11 of about 195 countries go unscored, Monetization is computed yet excluded from the composite, and the wide bands leave mid-table ranks hard to read.",
+    "limitation": "It reads origin-side risk and under-reads destination and sponsorship systems such as kafala, so several Gulf destination states score low; validation covers the structure, not individual scores, and there is no clean external prevalence benchmark. Peer review recommended major revisions.",
+    "caveat": "Scores estimate structural conditions, not prevalence. Read them in tiers with their uncertainty bands, not as exact ranks, legal findings about any state or compliance assessments of any enterprise."
+  },
+  "evidence": {
+    "level": "evaluated-result",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/forced-labor-structural-risk-index/commit/8c95b220a924a2211568ffb7a3d492fa1cf0ec1e",
+        "date": "2026-11-05"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/forced-labor-structural-risk-index#readme",
+        "date": "2026-11-05"
+      },
+      {
+        "label": "Research report",
+        "url": "https://github.com/Ethical-Tech-CoLab/forced-labor-structural-risk-index/blob/main/FLSRI-Paper.md",
+        "date": "2026-11-05"
+      },
+      {
+        "label": "Methods",
+        "url": "https://github.com/Ethical-Tech-CoLab/forced-labor-structural-risk-index/blob/main/docs/METHODS.md",
+        "date": "2026-11-05"
+      },
+      {
+        "label": "Scoring rules",
+        "url": "https://github.com/Ethical-Tech-CoLab/forced-labor-structural-risk-index/blob/main/docs/scoring-rules.md",
+        "date": "2026-11-05"
+      },
+      {
+        "label": "Data provenance",
+        "url": "https://github.com/Ethical-Tech-CoLab/forced-labor-structural-risk-index/blob/main/docs/data-provenance.md",
+        "date": "2026-11-05"
+      },
+      {
+        "label": "Independent peer review",
+        "url": "https://github.com/Ethical-Tech-CoLab/forced-labor-structural-risk-index/blob/main/PEER-REVIEW.md",
+        "date": "2026-11-05"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/forced-labor-structural-risk-index"
+  },
+  "images": [
+    {
+      "id": "risk-map",
+      "src": ".portfolio/risk-map.webp",
+      "alt": "FLSRI home page with the headline 'Forced labor is a crime. It takes root in measurable conditions. This index maps where.' beside an orange choropleth preview map, highest and lowest risk countries, and links to Explore, Rankings, Country profiles, Simulation and Indicators & sources.",
+      "caption": "The index maps structural forced-labor risk for 184 scored countries on a 0–1 scale and links to rankings, profiles and sources.",
+      "credit": "Screenshot of the FLSRI site",
+      "source": "screenshot of public/bundle.html"
+    },
+    {
+      "id": "simulation",
+      "src": ".portfolio/simulation.webp",
+      "alt": "Simulation page titled 'A structural what-if, not a forecast' with a notice explaining what the tool is and is not, controls for country and component weight, and a panel for Afghanistan showing published score 0.63, rank 3 and its R and E components.",
+      "caption": "The what-if tool recomputes scores from the real per-country data under changed weights or operators, showing how sensitive the index is to its own design choices.",
+      "credit": "Screenshot of the FLSRI site",
+      "source": "screenshot of public/pages/simulate.html"
+    },
+    {
+      "id": "uncertainty-excerpt",
+      "src": ".portfolio/uncertainty-excerpt.webp",
+      "alt": "Document excerpt card headed 'What the pipeline does' quoting the README on 90% rank bands from 10,000 seeded Monte-Carlo re-scorings and lower-confidence flags.",
+      "caption": "Every scored country ships with a rank band and a confidence flag, so scores are read in tiers.",
+      "credit": "Excerpt from the FLSRI README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "risk-map"
+}

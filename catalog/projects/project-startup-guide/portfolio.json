@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "id": "project-startup-guide",
+  "title": "Project Startup Guide",
+  "repo": "Ethical-Tech-CoLab/project-startup-guide",
+  "summary": "A starter kit and interactive dashboard for students and non-engineers beginning a project with AI assistance: four documents written before any code, a human review gate, then build.",
+  "kind": "tool",
+  "methodTags": [
+    "applied-ai",
+    "agentic-workloads"
+  ],
+  "domainTags": [
+    "education"
+  ],
+  "contribution": {
+    "date": "2026-10-04",
+    "role": "built",
+    "credits": []
+  },
+  "narrative": {
+    "problem": "Most first projects die the same way: someone asks an AI to build an app, gets 800 lines back, and spends three weeks discovering nobody agreed on what the app was.",
+    "decision": "Puts four short Markdown documents (concept, specification, plan and backlog) in front of the code; each is drafted with an AI assistant, rewritten by the student and approved by a human reviewer against a checklist before work moves on.",
+    "tradeoff": "Building starts later, and every phase depends on a second person being available to review; a learner without a reviewer cannot pass the gate as designed.",
+    "limitation": "Pricing, free tiers, student benefits and MCP server addresses change and were checked only when written, and the method assumes VS Code Copilot Chat in Agent mode for most of the work."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/project-startup-guide/commit/bebbb08d23ee22c6bf7099a165024c955cb7156b",
+        "date": "2026-10-04"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/project-startup-guide#readme",
+        "date": "2026-10-04"
+      },
+      {
+        "label": "Start here",
+        "url": "https://github.com/Ethical-Tech-CoLab/project-startup-guide/blob/main/guide/00-START-HERE.md",
+        "date": "2026-10-04"
+      },
+      {
+        "label": "Prompt pack",
+        "url": "https://github.com/Ethical-Tech-CoLab/project-startup-guide/blob/main/prompts/PROMPT-PACK.md",
+        "date": "2026-10-04"
+      },
+      {
+        "label": "Reviewer's checklist",
+        "url": "https://github.com/Ethical-Tech-CoLab/project-startup-guide/blob/main/templates/REVIEW-CHECKLIST.md",
+        "date": "2026-10-04"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/project-startup-guide"
+  },
+  "images": [
+    {
+      "id": "start-here",
+      "src": ".portfolio/start-here.webp",
+      "alt": "Project Startup Guide dashboard on the Start here tab, showing the method as five boxes from CONCEPT-IDEA.md through SPECIFICATION.md and PLAN + BACKLOG to Human review and Build & ship, above four summary figures.",
+      "caption": "The whole method on one line: each document answers one question, and each arrow is a checkpoint where a person signs off.",
+      "credit": "Screenshot of the Project Startup Guide dashboard",
+      "source": "screenshot of docs/index.html"
+    },
+    {
+      "id": "five-phases",
+      "src": ".portfolio/five-phases.webp",
+      "alt": "Dashboard section listing who the guide is for, how to use the dashboard, and five phase cards with time estimates from accounts and tools to build and ship, plus a templates card.",
+      "caption": "The five phases with time estimates; progress ticks are stored only in the visitor's browser.",
+      "credit": "Screenshot of the Project Startup Guide dashboard",
+      "source": "screenshot of docs/index.html"
+    },
+    {
+      "id": "chat-first",
+      "src": ".portfolio/chat-first.webp",
+      "alt": "Dashboard panel headed Chat first. The terminal is the fallback, not the default, with a copyable Agent-mode prompt pattern and a note on the two things that still need the student's hands.",
+      "caption": "Every step leads with a prompt to paste into Copilot Chat in Agent mode, with terminal commands as the fallback.",
+      "credit": "Screenshot of the Project Startup Guide dashboard",
+      "source": "screenshot of docs/index.html"
+    }
+  ],
+  "defaultImageId": "start-here"
+}

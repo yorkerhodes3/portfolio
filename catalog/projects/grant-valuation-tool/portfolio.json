@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "grant-valuation-tool",
+  "title": "ETC Grant Valuator",
+  "repo": "Ethical-Tech-CoLab/grant-valuation-tool",
+  "summary": "An AI-assisted grant valuation and pipeline tool for the Ethical Tech CoLab that scores funding prospects against the lab's mission and tracks applications from prospect through award and reporting.",
+  "kind": "decision-model",
+  "methodTags": [
+    "applied-ai",
+    "frontier-models",
+    "decision-models"
+  ],
+  "domainTags": [
+    "education"
+  ],
+  "contribution": {
+    "date": "2026-10-13",
+    "role": "advisor-prof",
+    "roleNote": "Ethical Tech CoLab internal tool with an accompanying research paper and peer review.",
+    "credits": [
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "A small research lab has to find grant opportunities, judge which fit its mission and are worth the effort, write to each funder's review criteria, and keep track of deadlines, applications, awards and reporting across a pipeline.",
+    "decision": "Claude (claude-opus-4-8) returns per-criterion scores, win probability, red flags and a pursue / consider / pass recommendation, but the fit score is computed in code as the weighted average of the five criterion scores using fixed weights in mission.ts.",
+    "tradeoff": "Win probability, which drives expected value, remains the model's judgement and nothing calibrates it yet; the peer review found two-thirds of the pipeline's expected value rests on a single unvalidated estimate.",
+    "limitation": "A stability check (re-scoring the same grants) and the calibration loop are still open. Grants live in a committed JSON file that is not safe for concurrent writes or multi-user use, and there is no authentication yet.",
+    "caveat": "The GitHub Pages link is a static overview; the full tool needs a Node server and an Anthropic API key. Fit scores and win probabilities are AI judgements, not calibrated predictions."
+  },
+  "evidence": {
+    "level": "evaluated-result",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/grant-valuation-tool/commit/aed0a8d57a25bdbae685f7519ae9652b09091b53",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/grant-valuation-tool#readme",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Research paper",
+        "url": "https://github.com/Ethical-Tech-CoLab/grant-valuation-tool/blob/main/GrantValuator-Paper.md",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Peer review",
+        "url": "https://github.com/Ethical-Tech-CoLab/grant-valuation-tool/blob/main/PEER-REVIEW.md",
+        "date": "2026-10-13"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/grant-valuation-tool"
+  },
+  "images": [
+    {
+      "id": "overview",
+      "src": ".portfolio/overview.webp",
+      "alt": "Document excerpt card headed ETC Grant Valuator, quoting the README: capture prospective grants, let Claude score each one against ETC's mission, and track the winners through to reporting and outcomes.",
+      "caption": "What the tool does: AI scoring of grant prospects against the lab's mission, plus pipeline tracking to award.",
+      "credit": "Excerpt from the ETC Grant Valuator README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "scoring",
+      "src": ".portfolio/scoring.webp",
+      "alt": "Document excerpt card headed How scoring works, quoting the README: the fit score is computed server-side as the weighted average of five criterion scores with fixed weights, and expected value as amount times win probability.",
+      "caption": "The fit score is arithmetic in code, not a number the model asserts; expected value multiplies amount by win probability.",
+      "credit": "Excerpt from the ETC Grant Valuator README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "peer-review",
+      "src": ".portfolio/peer-review.webp",
+      "alt": "Document excerpt card headed Peer Review, quoting the review finding that win probability is the load-bearing number, nothing calibrates it, and the award-tracking feedback loop is not yet closed.",
+      "caption": "The independent peer review's central caution: win probability is uncalibrated until decided applications feed back in.",
+      "credit": "Excerpt from the ETC Grant Valuator README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "overview"
+}

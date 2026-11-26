@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "id": "ariane-501-blind-spot-lab",
+  "title": "The 37-Second Blind Spot: A Million Green Tests, One Missing Assumption",
+  "repo": "Ethical-Tech-CoLab/ariane-501-blind-spot-lab",
+  "summary": "A reproducible Ariane 501 study that uses seeded Monte Carlo experiments to show what must be true for testing or AI evaluations to uncover a failure, for people who design evaluations.",
+  "kind": "research",
+  "methodTags": [
+    "decision-models",
+    "open-source"
+  ],
+  "domainTags": [
+    "ai-governance",
+    "education"
+  ],
+  "contribution": {
+    "date": "2026-10-04",
+    "role": "built",
+    "roleNote": "Independent analysis inspired by Channi Greenwall's article on Ariane 501; no affiliation with the author, ESA, CNES or NIST.",
+    "credits": []
+  },
+  "narrative": {
+    "problem": "Large counts of passing tests can create false confidence. The Ariane 501 failure was testable and preventable, yet a million tests drawn from the wrong input distribution, run against an idealized stub or judged by a weak oracle, can all pass. Evaluators of AI and software systems need to know what conditions a test world must meet before more tests help.",
+    "decision": "Runs 1,600,000 seeded synthetic test opportunities, signed-conversion boundary tests, barrier ablations and a 128-configuration prerequisite experiment in a standard-library Python model, with a --check mode that reruns every experiment and compares eight generated artifacts byte-for-byte.",
+    "tradeoff": "Fixed seeds and a dependency-free toy model make every count reproducible offline with no API key, but the model relies on invented, labeled values and distributions instead of the original flight executable, a calibrated BH transfer function or raw telemetry.",
+    "limitation": "It is a retrospective toy model, not recovered Ada source, a digital twin or flight certification, and not proof that an AI system would have found the problem without hindsight. Evidence retention and enforced response are modeled, not measured human outcomes.",
+    "caveat": "All inputs are synthetic and labeled: results are not measured Ariane 4/Ariane 5 trajectories or estimated launch failure rates, and the modeled remedies are illustrative, not engineering guidance."
+  },
+  "evidence": {
+    "level": "evaluated-result",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/ariane-501-blind-spot-lab/commit/3e0d206576ca7c6b235a9257689de6442ad95432",
+        "date": "2026-10-04"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/ariane-501-blind-spot-lab#readme",
+        "date": "2026-10-04"
+      },
+      {
+        "label": "Generated results summary",
+        "url": "https://github.com/Ethical-Tech-CoLab/ariane-501-blind-spot-lab/blob/main/results/summary.md",
+        "date": "2026-10-04"
+      },
+      {
+        "label": "Detailed research and hypothesis assessment",
+        "url": "https://github.com/Ethical-Tech-CoLab/ariane-501-blind-spot-lab/blob/main/docs/STUDY.md",
+        "date": "2026-10-04"
+      },
+      {
+        "label": "Methods and statistical limitations",
+        "url": "https://github.com/Ethical-Tech-CoLab/ariane-501-blind-spot-lab/blob/main/docs/METHODS.md",
+        "date": "2026-10-04"
+      },
+      {
+        "label": "BLIND-SPOT teaching and evaluation framework",
+        "url": "https://github.com/Ethical-Tech-CoLab/ariane-501-blind-spot-lab/blob/main/docs/FRAMEWORK.md",
+        "date": "2026-10-04"
+      },
+      {
+        "label": "Mariupol evidence and methods review",
+        "url": "https://github.com/Ethical-Tech-CoLab/ariane-501-blind-spot-lab/blob/main/docs/MARIUPOL_REVIEW.md",
+        "date": "2026-10-04"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/ariane-501-blind-spot-lab"
+  },
+  "images": [
+    {
+      "id": "monte-carlo",
+      "src": ".portfolio/monte-carlo.webp",
+      "alt": "Bar chart titled 'A million green tests can miss an out-of-profile bug': million_legacy 0 of 1,000,000 detected, expanded_faithful 25,005 of 100,000, rare_tail_faithful 96 of 200,000, and three expanded variants at 0 of 100,000.",
+      "caption": "Detection counts across the six seeded campaigns: only test worlds that include the dangerous input and model the mechanism faithfully find the failure.",
+      "credit": "Chart from the ariane-501-blind-spot-lab repository",
+      "source": "repository file results/monte_carlo.svg"
+    },
+    {
+      "id": "detection-readiness",
+      "src": ".portfolio/detection-readiness.webp",
+      "alt": "Grid titled 'What has to be true for a failure to become actionable?' with rows such as No overflow exposure and Packet-only oracle, columns E, L, F, O, B, R, A, and Detect, 95% and Block outcome cells marked 1 or 0.",
+      "caption": "The prerequisite experiment removes one test-process condition at a time to show which are needed for detection, a 95% discovery target and a modeled response.",
+      "credit": "Chart from the ariane-501-blind-spot-lab repository",
+      "source": "repository file results/detection_readiness.svg"
+    },
+    {
+      "id": "detection-probability",
+      "src": ".portfolio/detection-probability.webp",
+      "alt": "Line chart titled 'More tests help only when exposure is nonzero' plotting probability of at least one detection against test budget on a log scale for p = 0.25, 0.0005, 1e-06 and a flat line for p = 0.",
+      "caption": "Analytic detection probability by test budget: when exposure is zero, no budget is large enough.",
+      "credit": "Chart from the ariane-501-blind-spot-lab repository",
+      "source": "repository file results/detection_probability.svg"
+    }
+  ],
+  "defaultImageId": "monte-carlo"
+}

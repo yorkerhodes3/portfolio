@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "agentic-ontology",
+  "title": "Wayfinder — Agentic Ontology",
+  "repo": "yorkerhodes3/agentic-ontology",
+  "summary": "A concept for a personal AI agent that acts for its person from a small, typed ontology and writes every step to a personal ledger the person can inspect.",
+  "kind": "application",
+  "methodTags": [
+    "agentic-workloads",
+    "applied-ai",
+    "provenance",
+    "open-source"
+  ],
+  "domainTags": [
+    "ai-governance"
+  ],
+  "contribution": {
+    "date": "2026-11-26",
+    "role": "built",
+    "credits": []
+  },
+  "narrative": {
+    "problem": "A personal AI agent that acts for someone can believe, share and do things its person cannot see afterwards. Wayfinder aims to let the person see what the agent believed, what it shared, what it did and why.",
+    "decision": "Wayfinder is designed to run on TrustGraph, the open-source ontology runtime for AI agents, unmodified and as deployed containers; each job of the ontology is built on an existing TrustGraph feature and the repository contains no TrustGraph code.",
+    "tradeoff": "Relying on TrustGraph as an unmodified dependency, pinned to release v2.11, keeps the project small but ties its capabilities and upgrade path to what TrustGraph already offers.",
+    "limitation": "The README states the status as \"concept and plan approved; building milestone M1. Nothing runnable yet.\" The site's simulation dashboard and two-sides screen are synthetic and deterministic illustrations of the design.",
+    "caveat": "The simulations are synthetic and deterministic: scripted flows with template text, no LLM runs and no real data. Only the lease negotiation is computed live, by the vendored Neocloud engine."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/yorkerhodes3/agentic-ontology/commit/b6d7f5c4923f274c113ba415710ad1d5e8b152a9",
+        "date": "2026-11-26"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/yorkerhodes3/agentic-ontology#readme",
+        "date": "2026-11-26"
+      },
+      {
+        "label": "Concept (CONCEPT-IDEA.md)",
+        "url": "https://github.com/yorkerhodes3/agentic-ontology/blob/main/CONCEPT-IDEA.md",
+        "date": "2026-11-26"
+      },
+      {
+        "label": "Specification",
+        "url": "https://github.com/yorkerhodes3/agentic-ontology/blob/main/SPECIFICATION.md",
+        "date": "2026-11-26"
+      },
+      {
+        "label": "Plan",
+        "url": "https://github.com/yorkerhodes3/agentic-ontology/blob/main/PLAN.md",
+        "date": "2026-11-26"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/yorkerhodes3/agentic-ontology"
+  },
+  "images": [
+    {
+      "id": "ontology-home",
+      "src": ".portfolio/ontology-home.webp",
+      "alt": "Wayfinder home page with the headline \"Your agent. Your rules.\" beside a diagram linking a Person node to Event, Lease, Claim, ConsentRule, Passport, Mandate and Gate nodes.",
+      "caption": "The landing page shows the small ontology around one synthetic person, with a gate that writes to the ledger before any action.",
+      "credit": "Screenshot of the Wayfinder site",
+      "source": "screenshot of docs/index.html"
+    },
+    {
+      "id": "simulation-dashboard",
+      "src": ".portfolio/simulation-dashboard.webp",
+      "alt": "Simulation dashboard page headed \"Agentic work, in progress\" with buttons to see the workload or follow one run, and a notice that runs are simulated, synthetic and deterministic.",
+      "caption": "The simulation dashboard follows agent runs lane by lane, from the first request to the sealed ledger.",
+      "credit": "Screenshot of the Wayfinder site",
+      "source": "screenshot of docs/simulate.html"
+    },
+    {
+      "id": "two-sides-negotiation",
+      "src": ".portfolio/two-sides-negotiation.webp",
+      "alt": "Negotiation page headed \"Two agents. Two private simulations.\" describing a tenant agent and a landlord agent, with a note that offers are computed by the vendored Neocloud engine.",
+      "caption": "The two-sides screen puts a tenant's and a landlord's agent at one table, each with its own private model of the negotiation.",
+      "credit": "Screenshot of the Wayfinder site",
+      "source": "screenshot of docs/negotiate.html"
+    }
+  ],
+  "defaultImageId": "ontology-home"
+}

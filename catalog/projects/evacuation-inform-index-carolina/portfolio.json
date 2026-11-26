@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "id": "evacuation-inform-index-carolina",
+  "title": "Evacuation Inform Index (EII)",
+  "repo": "Ethical-Tech-CoLab/evacuation-inform-index-carolina",
+  "summary": "A composite index and interactive world map that scores 104 INFORM Severity crises on the risk of evacuating against the risk of staying, for comparing crises at a strategic level.",
+  "kind": "decision-model",
+  "methodTags": [
+    "decision-models",
+    "data-visualization",
+    "applied-ai"
+  ],
+  "domainTags": [
+    "humanitarian-response",
+    "global-affairs"
+  ],
+  "contribution": {
+    "date": "2026-10-13",
+    "role": "advisor-prof",
+    "roleNote": "Summer 2026 Ethical Tech CoLab cohort project; Yorke advised.",
+    "credits": [
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "Comparing crises means weighing the danger of staying against the risk of leaving, yet INFORM publishes no coordinates, and whether the roads out are usable, the most decisive input to evacuation feasibility, is reported by no open global feed for conflict zones.",
+    "decision": "Places every crisis at a curated location, labelled as a sub-national area, a reception area or a population-weighted country point, instead of offset country centroids that put about three quarters of points somewhere the crisis is not.",
+    "tradeoff": "65 crises remain country-level stand-ins, and six are flagged low-confidence because a more precise point could not be assigned without inventing one; road reports are pinned at the crisis, never at the blockage.",
+    "limitation": "Weights are preliminary, pending AHP expert surveys; only monthly fatalities enter the conflict score, road status is keyword-derived from headlines, and the ratio is least informative for the severity-5 crises.",
+    "caveat": "Not for advising anyone whether to leave, operational go/no-go, route selection or justifying a restriction on movement. One score per crisis, mostly country-level; the hosted site shows a frozen data snapshot."
+  },
+  "evidence": {
+    "level": "evaluated-result",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/evacuation-inform-index-carolina/commit/d2caf17969d57d0f7a9d6cfae4e6a144380553aa",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/evacuation-inform-index-carolina#readme",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Research report (plain language)",
+        "url": "https://github.com/Ethical-Tech-CoLab/evacuation-inform-index-carolina/blob/main/EII-Paper.md",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Peer review",
+        "url": "https://github.com/Ethical-Tech-CoLab/evacuation-inform-index-carolina/blob/main/PEER-REVIEW.md",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Known gaps (backlog)",
+        "url": "https://github.com/Ethical-Tech-CoLab/evacuation-inform-index-carolina/blob/main/BACKLOG.md",
+        "date": "2026-10-13"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/evacuation-inform-index-carolina"
+  },
+  "images": [
+    {
+      "id": "crisis-map",
+      "src": ".portfolio/crisis-map.webp",
+      "alt": "Evacuation Inform Index map with coloured crisis circles over a heatmap on a grey background, layer controls on the left, a blue-to-red EII legend and crisis-type filters showing 104 of 104 crises.",
+      "caption": "The crisis map: colour is the EII ratio of evacuating to staying, size is INFORM severity, and filters group crises by driver.",
+      "credit": "Screenshot of the Evacuation Inform Index site",
+      "source": "screenshot of index.html"
+    },
+    {
+      "id": "scope",
+      "src": ".portfolio/scope.webp",
+      "alt": "Document excerpt card headed Scope, quoting that the unit of analysis is one score per crisis, mostly at country level, refreshed monthly.",
+      "caption": "What the index is for: comparing crises strategically, not planning a corridor, a convoy or an hour.",
+      "credit": "Excerpt from the Evacuation Inform Index README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "proxy-check",
+      "src": ".portfolio/proxy-check.webp",
+      "alt": "Document excerpt card headed Peer Review, quoting a correlation of r = 0.62 between Conditions (RSS) and Complexity (RSE).",
+      "caption": "The peer review's central objection, tested against the live 104-crisis dataset: Complexity is a different measurement from Conditions, not a noisy copy.",
+      "credit": "Excerpt from the Evacuation Inform Index README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "crisis-map"
+}

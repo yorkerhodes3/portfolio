@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "id": "ethical-ai-proxy",
+  "title": "Ethical AI Proxy",
+  "repo": "Ethical-Tech-CoLab/ethical-ai-proxy",
+  "summary": "A lightweight CORS proxy that lets Ethical Tech CoLab GitHub Pages demos make live calls to the Claude API or GPU-hosted models without exposing API keys in browser code.",
+  "kind": "infrastructure",
+  "methodTags": [
+    "applied-ai",
+    "frontier-models",
+    "edge-hardware"
+  ],
+  "domainTags": [
+    "cybersecurity"
+  ],
+  "contribution": {
+    "date": "2026-07-23",
+    "role": "advisor-prof",
+    "credits": [
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Christine Lumen",
+        "github": "ChristineLumen",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "GitHub Pages is static hosting: a demo there cannot hide API keys, because everything is visible in the browser, cannot make server-side API calls, and cannot get past CORS restrictions to reach the lab's own GPU server.",
+    "decision": "A small server, run on the GPU server or any server, holds the API keys, allowlists GitHub Pages origins, rate-limits requests and forwards them to the Claude API or to one configured GPU inference server; a browser client helper offers ask, stream and GPU calls.",
+    "tradeoff": "Keys never reach the browser, but every AI-enabled demo now depends on a separately operated server staying up, and the GPU route forwards only to the configured server, so it deliberately cannot act as a general relay.",
+    "limitation": "The README covers setup, endpoints and security controls but reports no tests, load evaluation or deployment record; operators must supply their own process management (pm2 or systemd) and configuration."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/ethical-ai-proxy/commit/bcb924cf0480b8e802b009d2e4b204adb563b33b",
+        "date": "2026-07-23"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/ethical-ai-proxy#readme",
+        "date": "2026-07-23"
+      },
+      {
+        "label": "Security policy",
+        "url": "https://github.com/Ethical-Tech-CoLab/ethical-ai-proxy/blob/main/SECURITY.md",
+        "date": "2026-07-23"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/ethical-ai-proxy"
+  },
+  "images": [
+    {
+      "id": "overview",
+      "src": ".portfolio/overview.webp",
+      "alt": "Document excerpt card headed 'Ethical AI Proxy' quoting the README: a lightweight CORS proxy that lets GitHub Pages demos make live AI calls to the Claude API, GPU-hosted models or both without exposing API keys.",
+      "caption": "What the proxy is for: live AI calls from static demos without putting keys in client-side code.",
+      "credit": "Excerpt from the Ethical AI Proxy README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "solution",
+      "src": ".portfolio/solution.webp",
+      "alt": "Document excerpt card headed 'The Solution' quoting the README: the proxy runs on your GPU server or any server, and only allowlisted origins can call it.",
+      "caption": "The proxy can be self-hosted next to the models, and only allowlisted Pages origins may use it.",
+      "credit": "Excerpt from the Ethical AI Proxy README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "no-open-relay",
+      "src": ".portfolio/no-open-relay.webp",
+      "alt": "Document excerpt card headed 'Security' quoting the README: no open relay — the GPU proxy only forwards to the configured server.",
+      "caption": "A deliberate limit on scope: GPU traffic goes only to the one configured server.",
+      "credit": "Excerpt from the Ethical AI Proxy README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "overview"
+}

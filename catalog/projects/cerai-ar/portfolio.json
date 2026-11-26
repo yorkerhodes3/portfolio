@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "id": "cerai-ar",
+  "title": "CERAI — Civilian Evacuation Risk Anticipation Index",
+  "repo": "Ethical-Tech-CoLab/CERAI_AR",
+  "summary": "A research prototype that scores civilian risk during evacuations in armed conflict, with Monte Carlo sensitivity analysis, to support International Humanitarian Law review and humanitarian planning.",
+  "kind": "decision-model",
+  "methodTags": [
+    "decision-models"
+  ],
+  "domainTags": [
+    "humanitarian-response",
+    "global-affairs"
+  ],
+  "contribution": {
+    "date": "2026-08-04",
+    "role": "co-built",
+    "roleNote": "Developed by Teresa Cantero as part of PhD research at NYU School of Law on IHL and AI.",
+    "credits": [
+      {
+        "name": "Teresa Cantero",
+        "role": "Developer"
+      },
+      {
+        "name": "Alana Robertson",
+        "github": "alanarobertson",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "Evacuation decisions in armed conflict must weigh hazards, infrastructure, population vulnerability, the information environment and weather against International Humanitarian Law obligations, and that reasoning is often hard for humanitarian and legal audiences such as the UN and ICRC to trace or audit.",
+    "decision": "Combines multi-category risk indicators into a composite index with Monte Carlo sensitivity analysis and source-credibility tagging, and keeps endangerment separate from feasibility so operational difficulty cannot silently override the duty to protect, all in a single-file HTML prototype.",
+    "tradeoff": "A single composite gauge makes risk legible and easy to audit in a browser, but it rests on a fixed weight vector and a 75% threshold that peer review flagged as false precision, and its Monte Carlo varies inputs rather than weights.",
+    "limitation": "Peer review recommended major revisions; literature positioning beyond INFORM Severity and external data licensing remain open, the 75% threshold is only partially addressed, and evaluation is a retrospective face-validity table of four anchor cases.",
+    "caveat": "Research prototype: outputs are indicative and not a substitute for operational decision-making or legal advice."
+  },
+  "evidence": {
+    "level": "evaluated-result",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/CERAI_AR/commit/3f6051506cca4b3a82e6b26c6b8b41e5340a57e7",
+        "date": "2026-08-04"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/CERAI_AR#readme",
+        "date": "2026-08-04"
+      },
+      {
+        "label": "Research report",
+        "url": "https://github.com/Ethical-Tech-CoLab/CERAI_AR/blob/main/CERAI-Paper.md",
+        "date": "2026-08-04"
+      },
+      {
+        "label": "Independent peer review",
+        "url": "https://github.com/Ethical-Tech-CoLab/CERAI_AR/blob/main/PEER-REVIEW.md",
+        "date": "2026-08-04"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/CERAI_AR"
+  },
+  "images": [
+    {
+      "id": "endangerment-gauge",
+      "src": ".portfolio/endangerment-gauge.webp",
+      "alt": "CERAI assessment screen with threat environment 19%, feasibility 83% and vulnerability multiplier 1.06x, a semicircular endangerment gauge reading 19% Manageable with an IHL 75% marker, and triggered IHL obligations AP I Art. 58 and GCIV Art. 18.",
+      "caption": "The endangerment view turns indicator inputs into a scored gauge, marks the IHL threshold and lists the obligations the current inputs trigger.",
+      "credit": "Screenshot of the CERAI site",
+      "source": "screenshot of index.html"
+    },
+    {
+      "id": "risk-inputs",
+      "src": ".portfolio/risk-inputs.webp",
+      "alt": "Form of risk inputs including hostility intensity and armed group proximity sliders, imminent attack and chemical threat menus, and an Infrastructure & Access section with corridor status, transport sufficiency, distance to safety, notice time and weather.",
+      "caption": "Each dimension is scored from explicit inputs, so every assumption behind a score is visible and adjustable.",
+      "credit": "Screenshot of the CERAI site",
+      "source": "screenshot of index.html (scrolled)"
+    },
+    {
+      "id": "evaluation-excerpt",
+      "src": ".portfolio/evaluation-excerpt.webp",
+      "alt": "Document excerpt card headed 'Tool evaluated' quoting the README on publishing the weight vector, aggregation formulas and a face-validity table for four anchor cases.",
+      "caption": "After peer review, the report publishes its weights and a face-validity check against four historical evacuations.",
+      "credit": "Excerpt from the CERAI README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "endangerment-gauge"
+}

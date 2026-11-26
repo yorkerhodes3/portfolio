@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "id": "turnstone",
+  "title": "Turnstone",
+  "repo": "Ethical-Tech-CoLab/turnstone",
+  "summary": "A browser tool for photographing cultural objects from every side so the resulting 3D record states how good it is and what it may be relied on for, with signed provenance from photographs to mesh.",
+  "kind": "tool",
+  "methodTags": [
+    "digital-twins",
+    "provenance",
+    "open-source"
+  ],
+  "domainTags": [
+    "cultural-heritage"
+  ],
+  "contribution": {
+    "date": "2026-08-23",
+    "role": "built",
+    "roleNote": "Provides the metric extractors and mobile client that the Ethical-Tech-CoLab/DPA capture rubric states it lacks.",
+    "credits": []
+  },
+  "narrative": {
+    "problem": "A 3D model of a statue, vessel or mask is only worth something afterwards if it says how good it is. DPA defines a ten-dimension capture rubric but states it has no metric extractors and no mobile client, and photogrammetry captures often skip coverage underneath and around an object.",
+    "decision": "The rubric is data, with every threshold in one file; live extractors compute sharpness, exposure, overlap, coverage and scale from actual pixels, and the record's class is the worst dimension, never the average. Records bind photographs to the mesh with Ed25519 signatures and mandatory attests / doesNotAttest fields.",
+    "tradeoff": "Worst-dimension scoring always names the one thing to fix, but a single weak dimension caps the whole record, and device metadata cannot be scored live, so live classes stay provisional until the final assessment.",
+    "limitation": "Surface completeness is only an estimate (open question OQ-1), device metadata is deferred, the reconstruction container is unbuilt, and the IIIF 3D export follows a draft. A capture says nothing about lawful ownership and is deliberately not an input to provenance confidence.",
+    "caveat": "Browser storage is not an archive: photographs live in IndexedDB until exported and can be evicted. A flawless capture is not a claim of lawful ownership."
+  },
+  "evidence": {
+    "level": "evaluated-result",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/turnstone/commit/6355964f89dd1fa6d242ae9b7876baf650cec09e",
+        "date": "2026-08-23"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/turnstone#readme",
+        "date": "2026-08-23"
+      },
+      {
+        "label": "Photogrammetry specification",
+        "url": "https://github.com/Ethical-Tech-CoLab/turnstone/blob/main/PHOTOGRAMMETRY-SPEC.md",
+        "date": "2026-08-23"
+      },
+      {
+        "label": "Photogrammetry concept and decisions",
+        "url": "https://github.com/Ethical-Tech-CoLab/turnstone/blob/main/PHOTOGRAMMETRY-CONCEPT.md",
+        "date": "2026-08-23"
+      },
+      {
+        "label": "Heritage rubric (heritage-v1)",
+        "url": "https://github.com/Ethical-Tech-CoLab/turnstone/blob/main/rubric/heritage-v1.json",
+        "date": "2026-08-23"
+      },
+      {
+        "label": "Research decisions",
+        "url": "https://github.com/Ethical-Tech-CoLab/turnstone/blob/main/research/decisions.md",
+        "date": "2026-08-23"
+      },
+      {
+        "label": "Reconstruction server",
+        "url": "https://github.com/Ethical-Tech-CoLab/turnstone/blob/main/server/README.md",
+        "date": "2026-08-23"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/turnstone"
+  },
+  "images": [
+    {
+      "id": "capture-client",
+      "src": ".portfolio/capture-client.webp",
+      "alt": "Turnstone capture screen with a dark camera panel reading 'Record an object from every side.', a fitness class of insufficient with score 0/100, and setup fields for subject, identifier, material sensitivity, scale reference and camera focus locking.",
+      "caption": "The offline capture client: guidance, scoring and object details such as material sensitivity and scale reference are gathered before the first frame.",
+      "credit": "Screenshot of the Turnstone site",
+      "source": "screenshot of web/capture.html"
+    },
+    {
+      "id": "quality-demo",
+      "src": ".portfolio/quality-demo.webp",
+      "alt": "Turnstone quality demo page stating 'This page measures capture quality from real pixels', with Run demo, Camera, Scale bar and Reset controls and a side panel explaining that the class is the worst dimension, never the average.",
+      "caption": "The quality demo explains each measurement and why a single weak dimension sets the record's class.",
+      "credit": "Screenshot of the Turnstone site",
+      "source": "screenshot of web/index.html"
+    },
+    {
+      "id": "capture-mat",
+      "src": ".portfolio/capture-mat.webp",
+      "alt": "Printable 'Turnstone object capture mat' with a 180 mm black-and-white scale bar, a row of grey and colour reference patches, a dashed square with four fiducial markers marked 'place object here', and boxes for the measured bar length and date.",
+      "caption": "The printable mat supplies scale and colour references; the tool asks for the measured bar length because printers scale silently.",
+      "credit": "Image from the turnstone repository",
+      "source": "repository file docs/assets/target-a4.svg"
+    }
+  ],
+  "defaultImageId": "capture-client"
+}

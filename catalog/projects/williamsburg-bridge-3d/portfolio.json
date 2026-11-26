@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "williamsburg-bridge-3d",
+  "title": "Williamsburg Bridge — source-governed digital twin",
+  "repo": "Ethical-Tech-CoLab/williamsburg-bridge-3d",
+  "summary": "A browser 3D model of the Williamsburg Bridge in which every part carries its provenance, so a reader can ask of any surface how it is known and get a real answer, including 'we do not'.",
+  "kind": "application",
+  "methodTags": [
+    "digital-twins",
+    "provenance"
+  ],
+  "domainTags": [
+    "civic-infrastructure",
+    "cultural-heritage"
+  ],
+  "contribution": {
+    "date": "2026-08-11",
+    "role": "built",
+    "credits": []
+  },
+  "narrative": {
+    "problem": "The national record for the Williamsburg Bridge, HAER NY-128, contains no measured drawings and one sentence of dimensions, so any 3D model of it either guesses or has to say where its evidence runs out.",
+    "decision": "No dimension may exist in the model without a registered source and an explicit confidence grade; geometry provenance is derived in the build, and the published site deploys only if the traceability and regression test suites pass.",
+    "tradeoff": "Almost everything is inferred, so turning off INFERRED in the viewer makes the bridge disappear, and unknowns such as the side-span length stay deliberately round placeholders instead of plausible guesses.",
+    "limitation": "Milestone 1 only: no part is measured, 32 of 57 parts are graded D, 11 questions are open with 14 registered source conflicts, and the sourced approaches end about 22 m above mean high water because the sources do not close.",
+    "caveat": "A schematic, not a survey: inferred parts render dashed, dimensions are withheld where provenance is not documented, and the HAER photographs are reference imagery only."
+  },
+  "evidence": {
+    "level": "evaluated-result",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/williamsburg-bridge-3d/commit/b3e77588a7e72e05e3ccd7b7d2e9c12117ad882d",
+        "date": "2026-08-11"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/williamsburg-bridge-3d#readme",
+        "date": "2026-08-11"
+      },
+      {
+        "label": "Geometry control document",
+        "url": "https://github.com/Ethical-Tech-CoLab/williamsburg-bridge-3d/blob/main/GEOMETRY-CONTROL.md",
+        "date": "2026-08-11"
+      },
+      {
+        "label": "Source register",
+        "url": "https://github.com/Ethical-Tech-CoLab/williamsburg-bridge-3d/blob/main/SOURCE-REGISTER.md",
+        "date": "2026-08-11"
+      },
+      {
+        "label": "Confidence model",
+        "url": "https://github.com/Ethical-Tech-CoLab/williamsburg-bridge-3d/blob/main/CONFIDENCE-MODEL.md",
+        "date": "2026-08-11"
+      },
+      {
+        "label": "Validation report",
+        "url": "https://github.com/Ethical-Tech-CoLab/williamsburg-bridge-3d/blob/main/tests/validation_report.json",
+        "date": "2026-08-11"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/williamsburg-bridge-3d"
+  },
+  "images": [
+    {
+      "id": "haer-aerial",
+      "src": "viewer/public/photos/haer-ny128-2.jpg",
+      "alt": "Black-and-white aerial photograph labelled HAER No. NY-128-2 of the Williamsburg Bridge's steel towers, cables and trussed deck crossing the East River, with a ferry passing beneath.",
+      "caption": "A HAER NY-128 photograph (Library of Congress, public domain) that the viewer shows beside the model; with no known camera pose, it never grades a dimension.",
+      "credit": "Image from the williamsburg-bridge-3d repository (HAER, Library of Congress)",
+      "source": "repository file viewer/public/photos/haer-ny128-2.jpg"
+    },
+    {
+      "id": "one-rule",
+      "src": ".portfolio/one-rule.webp",
+      "alt": "Document excerpt card headed The one rule, quoting that no dimension may exist in the model without tracing to a registered source with an explicit confidence grade.",
+      "caption": "The rule the whole model is built around: anything unsourced is graded D, labelled a placeholder and tied to an open question.",
+      "credit": "Excerpt from the Williamsburg Bridge digital twin README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "bridge-disappears",
+      "src": ".portfolio/bridge-disappears.webp",
+      "alt": "Document excerpt card headed What the sources actually support, quoting that turning off INFERRED in the viewer makes the bridge disappear, leaving only the reference frame.",
+      "caption": "The honest state of the model: with inferred geometry hidden, only the centreline, station markers and mean-high-water plane remain.",
+      "credit": "Excerpt from the Williamsburg Bridge digital twin README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "haer-aerial"
+}

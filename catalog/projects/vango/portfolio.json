@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "vango",
+  "title": "VANGO — Art Passport",
+  "repo": "Ethical-Tech-CoLab/VANGO",
+  "summary": "A mobile-style digital passport in which art visitors collect a stamp for each artwork they see by scanning a QR code or entering its code; a student research prototype on audience engagement.",
+  "kind": "application",
+  "methodTags": [
+    "provenance"
+  ],
+  "domainTags": [
+    "cultural-heritage"
+  ],
+  "contribution": {
+    "date": "2026-07-23",
+    "role": "advisor-prof",
+    "roleNote": "Developed by Melanie MacKew as masters research at the NYU Center for Global Affairs (2026), under the Ethical Tech CoLab; Yorke advised.",
+    "credits": [
+      {
+        "name": "Melanie MacKew",
+        "github": "mmelanie",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "Most people who visit a museum, a biennale or a small studio exhibition leave with nothing to show for it, and for the institution the encounter is equally invisible.",
+    "decision": "Borrows the travel passport: a stamp records only that a person saw a particular work on a particular day, not ownership, value or authenticity, and in guest mode nothing leaves the visitor's phone.",
+    "tradeoff": "A public code proves nothing about presence: anyone holding it can collect the stamp from anywhere. Signed stamp tokens are verified server-side, but bare codes are still accepted because the printed QR codes encode them.",
+    "limitation": "Seven catalogue works, five of them fictional; never placed in a real exhibition or tested with visitors, and the published demo cannot sign anyone in because its server address points to a local machine.",
+    "caveat": "Academic demonstration only: five of the seven artworks are fictional, account sign-in does not work on the public demo, and a stamp is not evidence of attendance, ownership or lawful origin."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/VANGO/commit/de5b8a3d4a6b2cb59a308fc4b6363b60443646c6",
+        "date": "2026-07-23"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/VANGO#readme",
+        "date": "2026-07-23"
+      },
+      {
+        "label": "Research report (plain language)",
+        "url": "https://github.com/Ethical-Tech-CoLab/VANGO/blob/main/VANGO-Paper.md",
+        "date": "2026-07-23"
+      },
+      {
+        "label": "Stamp URLs and signed tokens",
+        "url": "https://github.com/Ethical-Tech-CoLab/VANGO/blob/main/docs/stamp-urls.md",
+        "date": "2026-07-23"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/VANGO"
+  },
+  "images": [
+    {
+      "id": "passport-cover",
+      "src": ".portfolio/passport-cover.webp",
+      "alt": "Phone-shaped VANGO app showing a burgundy passport cover with an Ars Pro Mundo laurel emblem, the word PASSPORT, the line Art · Worlds visited and Tap to open.",
+      "caption": "The passport cover: the app is designed as a small illustrated passport book on a phone.",
+      "credit": "Screenshot of the VANGO site",
+      "source": "screenshot of vango-passport.html"
+    },
+    {
+      "id": "stamp-page",
+      "src": ".portfolio/stamp-page.webp",
+      "alt": "Printable stamp page with a QR code, the code BURA01, the artwork Bura Ceramics from Niger at AABC, and a Collect this stamp button.",
+      "caption": "A stamp page for display beside an artwork: scanning its QR code adds the stamp to the visitor's passport.",
+      "credit": "Screenshot of the VANGO site",
+      "source": "screenshot of public/stamps/BURA01.html"
+    },
+    {
+      "id": "how-it-works",
+      "src": ".portfolio/how-it-works.webp",
+      "alt": "Document excerpt card headed VANGO — Art Passport, quoting that each artwork has a unique code and scanning or entering it earns a stamp saved to the passport.",
+      "caption": "How collection works in one sentence: one code per artwork, one stamp per visit.",
+      "credit": "Excerpt from the VANGO README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "passport-cover"
+}

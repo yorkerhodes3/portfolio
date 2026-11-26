@@ -1,0 +1,15 @@
+{
+  "$comment": "Human decisions about candidates that are not simply included. Reasons are public: keep them neutral. Any candidate not listed here is included once a valid record exists; new repositories found by a refresh are reported as awaiting confirmation until a record is approved.",
+  "excluded": {
+    "yorkerhodes3/portfolio": "This portfolio.",
+    "Ethical-Tech-CoLab/ethical-tech-colab.github.io": "Organization redirect page; no project content.",
+    "Ethical-Tech-CoLab/haste": "Fork of microsoft/haste with minor lab changes; the project belongs to its upstream authors.",
+    "Ethical-Tech-CoLab/Summer-2026-Tech-Rehearsal": "Event slide deck; the projects it presents are listed individually.",
+    "Ethical-Tech-CoLab/us-entity-structure-guide": "Organizational research for the lab rather than a project."
+  },
+  "duplicates": {
+    "Ethical-Tech-CoLab/race-condition-mod": "yorkerhodes3/race-condition-mod",
+    "yorkerhodes3/reverse-stress": "Ethical-Tech-CoLab/reverse-stress"
+  },
+  "withdrawn": {}
+}

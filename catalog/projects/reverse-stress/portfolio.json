@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "id": "reverse-stress",
+  "title": "Resilience Atlas",
+  "repo": "Ethical-Tech-CoLab/reverse-stress",
+  "aliases": [
+    "yorkerhodes3/reverse-stress"
+  ],
+  "summary": "An interactive browser guide to supply chain resilience and reverse stress testing for learners and researchers, with a teaching brief, a concept atlas, a synthetic reverse stress lab and a source library.",
+  "kind": "research",
+  "methodTags": [
+    "decision-models",
+    "data-visualization"
+  ],
+  "domainTags": [
+    "supply-chain-resilience",
+    "education"
+  ],
+  "contribution": {
+    "date": "2026-11-10",
+    "role": "built",
+    "credits": []
+  },
+  "narrative": {
+    "problem": "A supplier that is safe on its own does not make a resilient network: hidden risk can sit in a combination of dependencies, and forward scenario tests only check the disruptions someone thought to imagine.",
+    "decision": "Starts from an outcome that must not fail and works backward to the disruptions that could cause it, taught entirely in the browser with no external AI, tracking or uploads, on an anonymised High Tech, SI and ISV scenario.",
+    "tradeoff": "The reverse stress lab is a synthetic single-layer normal-model example, so its outputs illustrate the method rather than giving calibrated risk scores, and learner notes stay in one browser without syncing.",
+    "limitation": "Teaching material, not a validated operational tool or established standard; the roadmap to reproduce methods, build benchmarks and run a bounded shadow-mode pilot is proposed, not implemented.",
+    "caveat": "The scenario is illustrative, not a confirmed partnership or product capability, and the lab's outputs are not forecasts or calibrated risk scores."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/reverse-stress/commit/a7c5eb47c7550842c586aa26e56c934e5b4320e2",
+        "date": "2026-11-10"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/reverse-stress#readme",
+        "date": "2026-11-10"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/reverse-stress"
+  },
+  "images": [
+    {
+      "id": "overview",
+      "src": ".portfolio/overview.webp",
+      "alt": "Resilience Atlas overview headed Make sense of the system. Not just the next disruption, with a role-label note and a panel reading Start with what cannot fail. Work backward, beside a diagram tracing suppliers to a 25% supply shortfall.",
+      "caption": "The central idea: begin with an unacceptable loss and trace which upstream combinations could produce it.",
+      "credit": "Screenshot of the Resilience Atlas site",
+      "source": "screenshot of index.html"
+    },
+    {
+      "id": "three-ideas",
+      "src": ".portfolio/three-ideas.webp",
+      "alt": "Section titled Three ideas to take into the room with three cards: A safer node isn't a resilient network, The hidden risk may be in the combination, and Discovery is not decision validation, each citing sources.",
+      "caption": "The one-minute version for a class, with each claim linked to its source and a note on keeping study versions apart.",
+      "credit": "Screenshot of the Resilience Atlas site",
+      "source": "screenshot of index.html"
+    },
+    {
+      "id": "mission-to-decision",
+      "src": ".portfolio/mission-to-decision.webp",
+      "alt": "Section titled From the mission to a better decision with five steps from Define the function to Choose recovery actions, followed by a starting collection of five research works.",
+      "caption": "The connecting thread from defining a function to choosing recovery actions, and the starting reading collection behind it.",
+      "credit": "Screenshot of the Resilience Atlas site",
+      "source": "screenshot of index.html"
+    }
+  ],
+  "defaultImageId": "overview"
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "id": "ai-research-question-assistant",
+  "title": "AI-Powered Assistance in Formulating Research Questions",
+  "repo": "Ethical-Tech-CoLab/ai-research-question-assistant",
+  "summary": "A plain-language paper, reusable prompt and journal-credibility rubric on how AI can help researchers form answerable research questions, and the guardrails that use requires.",
+  "kind": "research",
+  "methodTags": [
+    "applied-ai",
+    "frontier-models"
+  ],
+  "domainTags": [
+    "education",
+    "ai-governance"
+  ],
+  "contribution": {
+    "date": "2026-10-13",
+    "role": "advisor-prof",
+    "roleNote": "Masters research by an Ethical Tech CoLab student cohort at the NYU Center for Global Affairs; Yorke is listed among the authors.",
+    "credits": [
+      {
+        "name": "Nathaniel Fossella",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Alexa Shamie",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Kirsten Co",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Taylor Badt",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Amanda Lindsey",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Grace Driscoll",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Mohagani Townsend",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Pegi Bracaj",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Vedant Jain",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "AI is increasingly used to help academic researchers pose research questions by mining large literatures, but the same tools can hallucinate citations, fabricate conceptual linkages, overstate consensus and shift a researcher's framing toward what the model predicts rather than what the literature supports.",
+    "decision": "Pairs AI for ideation with AI for critical interrogation: a reusable researcher prompt that scores sources against a fixed journal-credibility rubric, plus a proposed red-team agent that audits citations and flags unsupported claims.",
+    "tradeoff": "The guidance is model-agnostic text rather than software, so nothing enforces it: its value depends on researchers independently checking sources, and the red-team agent remains a proposal.",
+    "limitation": "The prompt is unevaluated. Peer review recommended major revisions and found every effect claim is design argument; a minimal evaluation protocol is sketched but has not been run, and the planned Next.js application is not built.",
+    "caveat": "The paper was partly generated and checked with the M365 Copilot Researcher Agent running OpenAI GPT v5; treat AI-suggested research questions as exploratory starting points, not conclusions."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/ai-research-question-assistant/commit/5052adde3a2f4a52999da768f31f2d7922075a53",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/ai-research-question-assistant#readme",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Full paper",
+        "url": "https://github.com/Ethical-Tech-CoLab/ai-research-question-assistant/blob/main/docs/paper.md",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Research report (plain-language)",
+        "url": "https://github.com/Ethical-Tech-CoLab/ai-research-question-assistant/blob/main/ResearchQuestions-Paper.md",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Peer review",
+        "url": "https://github.com/Ethical-Tech-CoLab/ai-research-question-assistant/blob/main/PEER-REVIEW.md",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Researcher prompt",
+        "url": "https://github.com/Ethical-Tech-CoLab/ai-research-question-assistant/blob/main/docs/researcher-prompt.md",
+        "date": "2026-10-13"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/ai-research-question-assistant"
+  },
+  "images": [
+    {
+      "id": "landing",
+      "src": ".portfolio/landing.webp",
+      "alt": "Landing page with the eyebrow Ethical Tech CoLab · Fall 2025 Cohort, the paper title, a one-line summary, the list of ten authors and buttons to read the full paper or view it on GitHub.",
+      "caption": "The landing page presents the cohort's paper, its authors and the way into the full text.",
+      "credit": "Screenshot of the AI-Powered Assistance in Formulating Research Questions site",
+      "source": "screenshot of index.html"
+    },
+    {
+      "id": "five-mechanisms",
+      "src": ".portfolio/five-mechanisms.webp",
+      "alt": "Five numbered cards: identifying research gaps, formulating new questions (citing 1,107 of 4,451 SCIMUSE ideas rated highly interesting), summarizing the state of the art, comparing findings, and integrated research assistants.",
+      "caption": "The five ways the paper says AI assists question formulation, with the SCIMUSE figure pinned to its source after peer review.",
+      "credit": "Screenshot of the AI-Powered Assistance in Formulating Research Questions site",
+      "source": "screenshot of index.html"
+    },
+    {
+      "id": "guardrails",
+      "src": ".portfolio/guardrails.webp",
+      "alt": "Guardrails section listing four checks researchers should make, a box describing a proposed red-team agent, and Read & reuse cards for the full paper, the researcher prompt and the journal-credibility rubric.",
+      "caption": "The guardrails and proposed red-team agent, next to the reusable prompt and rubric the paper ships with.",
+      "credit": "Screenshot of the AI-Powered Assistance in Formulating Research Questions site",
+      "source": "screenshot of index.html"
+    }
+  ],
+  "defaultImageId": "landing"
+}

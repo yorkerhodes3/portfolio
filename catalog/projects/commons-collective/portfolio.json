@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "commons-collective",
+  "title": "Commons Collective",
+  "repo": "Ethical-Tech-CoLab/commons-collective",
+  "summary": "An AI-assisted academic discussion draft, with a browser simulation lab, on collective bargaining institutions through which data contributors could share fairly in AI value, for researchers and funders.",
+  "kind": "research",
+  "methodTags": [
+    "applied-ai",
+    "decision-models"
+  ],
+  "domainTags": [
+    "ai-governance",
+    "commerce"
+  ],
+  "contribution": {
+    "date": "2026-09-20",
+    "role": "built",
+    "roleNote": "Developed from a session brief for the Ethical Tech CoLab.",
+    "credits": []
+  },
+  "narrative": {
+    "problem": "Institutions that let dispersed data creators, such as individual workers, platform users and small publishers, bargain collectively with AI labs are largely absent, and there is little agreement on what such an ecosystem would look like, how it should be governed or how it would pay.",
+    "decision": "The Simulation Lab runs entirely on GitHub Pages in a Web Worker using the same versioned kernel as the Node tests, with no server, credentials, analytics or live AI calls; a run is replayed from its seed and configuration and checked against a state fingerprint.",
+    "tradeoff": "With no live model calls, agent policies are scripted or seeded and the live P2 policy is unavailable in the static release, so results are conditional on stated assumptions rather than observed behaviour.",
+    "limitation": "Not peer-reviewed and not a record of participant agreement; simulation inputs are illustrative and uncalibrated, and the funding trials are cohort-finance trials under explicit assumptions, not empirical observations.",
+    "caveat": "Synthetic and uncalibrated: no real people, money or AI services are involved. People named in the report are a research circle, not authors or endorsers. Not legal or investment advice."
+  },
+  "evidence": {
+    "level": "evaluated-result",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/commons-collective/commit/6de0faa59d112f0ffb7af8e9f5f0673cdd7f6898",
+        "date": "2026-09-20"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/commons-collective#readme",
+        "date": "2026-09-20"
+      },
+      {
+        "label": "Source report",
+        "url": "https://github.com/Ethical-Tech-CoLab/commons-collective/blob/main/research/report.md",
+        "date": "2026-09-20"
+      },
+      {
+        "label": "Startup funding methods and trial results",
+        "url": "https://github.com/Ethical-Tech-CoLab/commons-collective/blob/main/agentic-model/STARTUP-FUNDING.md",
+        "date": "2026-09-20"
+      },
+      {
+        "label": "Focused first-draft paper",
+        "url": "https://github.com/Ethical-Tech-CoLab/commons-collective/blob/main/papers/commons-collective-paper-draft.md",
+        "date": "2026-09-20"
+      },
+      {
+        "label": "Evidence register",
+        "url": "https://github.com/Ethical-Tech-CoLab/commons-collective/blob/main/research/sources.json",
+        "date": "2026-09-20"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/commons-collective"
+  },
+  "images": [
+    {
+      "id": "workshop-brief",
+      "src": "site/assets/workshop/original.png",
+      "alt": "Photo of a whiteboard holding a printed brief titled Collective Bargaining & Institutions, surrounded by six printed cards attributed to named researchers.",
+      "caption": "The workshop brief and six attributed source cards the research was developed from; printed attributions are not verified quotations or endorsements.",
+      "credit": "Image from the commons-collective repository",
+      "source": "repository file site/assets/workshop/original.png"
+    },
+    {
+      "id": "proposed-club",
+      "src": ".portfolio/proposed-club.webp",
+      "alt": "Document excerpt card headed Collective Bargaining Institutions for the AI Data Commons, quoting a free-entry buyers' and suppliers' club with supplier voting rights and an affected-party council.",
+      "caption": "The core institutional proposal: a free-entry club that pairs consumer purchasing with contributor bargaining and gives affected parties a voice.",
+      "credit": "Excerpt from the Commons Collective README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "funding-trials",
+      "src": ".portfolio/funding-trials.webp",
+      "alt": "Document excerpt card headed Investor-funded startup planning, quoting a 10,000-trial design comparison and 4,000 independent-seed validation trials.",
+      "caption": "The startup-finance plan is tested with seeded trials and an independent holdout, reported as conditional results under explicit assumptions.",
+      "credit": "Excerpt from the Commons Collective README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "workshop-brief"
+}

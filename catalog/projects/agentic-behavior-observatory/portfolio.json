@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "agentic-behavior-observatory",
+  "title": "Agentic Behavior Observatory",
+  "repo": "Ethical-Tech-CoLab/agentic-behavior-observatory",
+  "summary": "A browser and command-line tool that scores GitHub repositories on six axes of agentic-behavior modeling, with file-and-line evidence, for researchers reviewing synthetic-population work.",
+  "kind": "tool",
+  "methodTags": [
+    "decision-models",
+    "data-visualization",
+    "open-source"
+  ],
+  "domainTags": [
+    "ai-governance",
+    "education"
+  ],
+  "contribution": {
+    "date": "2026-10-13",
+    "role": "advisor-prof",
+    "credits": [
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "When someone builds a system that generates or evaluates synthetic populations at scale, it is hard to see what they are actually modeling and what they leave out: which demographic dimensions appear, which model versions the results rest on, and whether one agent's private context is kept from another's.",
+    "decision": "Scores every repository by signal coverage against one taxonomy file (analyzer/signals.py) that is exported to the browser, so the dashboard and the CLI score identically and each point links to the file and line where its signal fired.",
+    "tradeoff": "Regular expressions match vocabulary, not meaning: a repository that discusses a technique without implementing it still fires the signal, and a score measures coverage of the taxonomy rather than scientific quality.",
+    "limitation": "Up to 120 files per repository are read, so large repositories are sampled rather than read whole, and the demographic vocabulary is a fixed English list that under-reports populations described in other terms.",
+    "caveat": "Scores are signal coverage against the taxonomy, not a quality judgment; a low context-isolation score marks a boundary nobody wrote down, not proof of a leak."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/agentic-behavior-observatory/commit/9b3c6e1a97cdce7ae5ab43909726a5a8dd41ba73",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/agentic-behavior-observatory#readme",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Self-analysis report",
+        "url": "https://github.com/Ethical-Tech-CoLab/agentic-behavior-observatory/blob/main/data/reports/Ethical-Tech-CoLab__agentic-behavior-observatory.md",
+        "date": "2026-10-13"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/agentic-behavior-observatory"
+  },
+  "images": [
+    {
+      "id": "dashboard",
+      "src": ".portfolio/dashboard.webp",
+      "alt": "Observatory tab with an Analyze a repository URL field, axis filter chips, summary counts such as 22 repositories, 15 ETC projects and 42 model versions, and score cards for the observatory itself, microsoft/autogen and camel-ai/camel.",
+      "caption": "The dashboard: paste a repository URL to analyze it live, or filter the committed corpus by axis.",
+      "credit": "Screenshot of the Agentic Behavior Observatory site",
+      "source": "screenshot of docs/index.html"
+    },
+    {
+      "id": "corpus-cards",
+      "src": ".portfolio/corpus-cards.webp",
+      "alt": "Grid of repository cards including AgentTorch, PettingZoo, ercf, SDV, AI-Models-Research and Exodus, each with six axis bars and tags for the demographic dimensions and model versions found.",
+      "caption": "Each card sets a repository's six axis scores beside the demographic dimensions and model versions detected in it.",
+      "credit": "Screenshot of the Agentic Behavior Observatory site",
+      "source": "screenshot of docs/index.html"
+    },
+    {
+      "id": "limits",
+      "src": ".portfolio/limits.webp",
+      "alt": "Document excerpt card headed Limits worth stating, quoting the README that regular expressions match vocabulary, not meaning, which is why every signal links to its evidence.",
+      "caption": "The README states the method's main limit: signals detect vocabulary, so every score links back to its evidence.",
+      "credit": "Excerpt from the Agentic Behavior Observatory README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "dashboard"
+}

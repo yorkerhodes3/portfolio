@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://yorkerhodes3.github.io/portfolio/schema/portfolio.schema.json",
+  "title": "Portfolio project record (v1)",
+  "description": "One per project, at the source repository root as portfolio.json. Tags, kinds, roles and evidence levels must exist in catalog/tags.json; the refresh checks that separately.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "title", "repo", "summary", "kind", "methodTags", "domainTags", "contribution", "narrative", "evidence", "links", "images", "defaultImageId"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "maxLength": 60, "description": "Stable; never changes on rename." },
+    "title": { "type": "string", "minLength": 2, "maxLength": 80 },
+    "repo": { "type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$", "description": "Canonical owner/repo." },
+    "aliases": { "type": "array", "items": { "type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$" }, "uniqueItems": true },
+    "summary": { "type": "string", "minLength": 20, "maxLength": 220 },
+    "kind": { "type": "string" },
+    "methodTags": { "type": "array", "items": { "type": "string" }, "minItems": 1, "uniqueItems": true },
+    "domainTags": { "type": "array", "items": { "type": "string" }, "minItems": 1, "uniqueItems": true },
+    "contribution": {
+      "type": "object", "additionalProperties": false, "required": ["date", "role", "credits"],
+      "properties": {
+        "date": { "type": "string", "format": "date", "description": "Latest qualifying contribution, ISO calendar date." },
+        "role": { "type": "string" },
+        "roleNote": { "type": "string", "maxLength": 200 },
+        "credits": {
+          "type": "array", "uniqueItems": true,
+          "items": {
+            "type": "object", "additionalProperties": false, "required": ["name"],
+            "properties": { "name": { "type": "string", "minLength": 1 }, "github": { "type": "string" }, "role": { "type": "string" } }
+          }
+        }
+      }
+    },
+    "narrative": {
+      "type": "object", "additionalProperties": false, "required": ["problem", "decision", "tradeoff", "limitation"],
+      "properties": {
+        "problem": { "type": "string", "minLength": 30, "maxLength": 600 },
+        "decision": { "type": "string", "minLength": 20, "maxLength": 400 },
+        "tradeoff": { "type": "string", "minLength": 20, "maxLength": 400 },
+        "limitation": { "type": "string", "minLength": 20, "maxLength": 400 },
+        "caveat": { "type": "string", "maxLength": 300, "description": "Shown beside the demo link, e.g. synthetic data." }
+      }
+    },
+    "evidence": {
+      "type": "object", "additionalProperties": false, "required": ["level", "links"],
+      "properties": {
+        "level": { "type": "string" },
+        "links": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object", "additionalProperties": false, "required": ["label", "url", "date"],
+            "properties": { "label": { "type": "string" }, "url": { "type": "string", "format": "uri" }, "date": { "type": "string", "format": "date" } }
+          }
+        }
+      }
+    },
+    "links": {
+      "type": "object", "additionalProperties": false, "required": ["source"],
+      "properties": {
+        "source": { "type": "string", "format": "uri" },
+        "demo": { "type": "string", "format": "uri" },
+        "share": { "type": "string", "format": "uri" }
+      }
+    },
+    "images": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["id", "src", "alt", "caption", "credit"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "src": { "type": "string", "minLength": 1, "description": "Path relative to this record (the repository root), or an https URL." },
+          "alt": { "type": "string", "minLength": 10, "maxLength": 300 },
+          "caption": { "type": "string", "minLength": 5, "maxLength": 300 },
+          "credit": { "type": "string", "minLength": 2, "maxLength": 200 },
+          "source": { "type": "string", "maxLength": 200 }
+        }
+      }
+    },
+    "defaultImageId": { "type": "string" },
+    "brand": {
+      "type": "object", "additionalProperties": false,
+      "properties": { "bg": { "$ref": "#/$defs/hex" }, "fg": { "$ref": "#/$defs/hex" }, "accent": { "$ref": "#/$defs/hex" } }
+    },
+    "icons": {
+      "type": "object", "additionalProperties": false,
+      "properties": { "favicon": { "type": "string" }, "shareImage": { "type": "string" } }
+    }
+  },
+  "$defs": { "hex": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" } }
+}

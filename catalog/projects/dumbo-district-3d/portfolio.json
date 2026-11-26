@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "id": "dumbo-district-3d",
+  "title": "DUMBO District Digital Twin",
+  "repo": "Ethical-Tech-CoLab/dumbo-district-3d",
+  "summary": "A walkable, browser-renderable digital twin of the DUMBO neighbourhood in Brooklyn, built from authoritative NYC open data with every asset traceable to a registered source.",
+  "kind": "application",
+  "methodTags": [
+    "digital-twins",
+    "provenance"
+  ],
+  "domainTags": [
+    "civic-infrastructure"
+  ],
+  "contribution": {
+    "date": "2026-08-14",
+    "role": "built",
+    "credits": []
+  },
+  "narrative": {
+    "problem": "Two teams were building two 3D viewers, of the DUMBO district and of the Manhattan Bridge, and the central risk was duplicated geometry and incompatible coordinates. A district model also needs every building, tree and surface traceable to a source someone can check.",
+    "decision": "The district contains no bridge geometry: it interoperates with the Manhattan Bridge twin through shared contracts, a common viewer kernel and coordinate frame, and a module manifest that is the entire dependency surface between the projects.",
+    "tradeoff": "The Manhattan Bridge does not appear on the published site, because its assets belong to the other module; the viewer shows an integration notice and a labelled placeholder instead.",
+    "limitation": "Bridge placement is provisional. Photograph classification needs a person, because the automatic screen cannot reliably tell an office interior from a street view, and tree canopy form and seasonal colour are plausible for the genus rather than measured.",
+    "caveat": "The Manhattan Bridge is not shown on the published site; the viewer renders the district alone and displays an integration notice."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/dumbo-district-3d/commit/be41ddd3d29ca2e2d2dec20d1c69609d93ed8672",
+        "date": "2026-08-14"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/dumbo-district-3d#readme",
+        "date": "2026-08-14"
+      },
+      {
+        "label": "Phase 1 implementation report",
+        "url": "https://github.com/Ethical-Tech-CoLab/dumbo-district-3d/blob/main/IMPLEMENTATION-REPORT.md",
+        "date": "2026-08-14"
+      },
+      {
+        "label": "Source register",
+        "url": "https://github.com/Ethical-Tech-CoLab/dumbo-district-3d/blob/main/DUMBO-SOURCE-REGISTER.md",
+        "date": "2026-08-14"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/dumbo-district-3d"
+  },
+  "images": [
+    {
+      "id": "twin-overview",
+      "src": ".portfolio/twin-overview.webp",
+      "alt": "Document-excerpt card titled \"DUMBO District Digital Twin\" quoting the README's description of a walkable twin built from NYC open data with traceable assets.",
+      "caption": "What the twin is: a walkable browser model of DUMBO in which every asset traces back to a registered source.",
+      "credit": "Excerpt from the DUMBO District Digital Twin README",
+      "source": "README excerpt"
+    },
+    {
+      "id": "tree-fixtures",
+      "src": ".portfolio/tree-fixtures.webp",
+      "alt": "Table of DUMBO tree fixtures showing London plane, honey locust and oak prototypes at three maturities across spring, summer, autumn and winter.",
+      "caption": "Tree prototypes from the NYC Forestry census across four seasons; position, species and trunk diameter are grade A, canopy form is graded C.",
+      "credit": "Screenshot of the DUMBO District Digital Twin site",
+      "source": "screenshot of viewer/public/trees/index.html"
+    },
+    {
+      "id": "control-document",
+      "src": ".portfolio/control-document.webp",
+      "alt": "Document-excerpt card titled \"The control document is the source of truth\" quoting the README on scripts carrying no dimensional constants of their own.",
+      "caption": "The build method: a machine-parsed control document holds every coordinate and dimension, so the model changes only when the document does.",
+      "credit": "Excerpt from the DUMBO District Digital Twin README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "twin-overview"
+}

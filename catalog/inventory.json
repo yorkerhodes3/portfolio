@@ -1,0 +1,547 @@
+{
+  "$comment": "Every candidate and its disposition. Public: reasons are neutral.",
+  "privateExclusions": 1,
+  "candidates": [
+    {
+      "repo": "Ethical-Tech-CoLab/3d-agentic-evacuation-simulation",
+      "id": "3d-agentic-evacuation-simulation",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "homepage": "https://ethical-tech-colab.github.io/3d-agentic-evacuation-simulation/",
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/after-the-corridor-report",
+      "id": "after-the-corridor-report",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "homepage": "https://ethical-tech-colab.github.io/after-the-corridor-report/",
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/agentic-behavior-observatory",
+      "id": "agentic-behavior-observatory",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "homepage": "https://ethical-tech-colab.github.io/agentic-behavior-observatory/",
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/agentic-language-development",
+      "id": "agentic-language-development",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "homepage": "https://ethical-tech-colab.github.io/agentic-language-development/",
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/ai-carbon-footprint",
+      "id": "ai-carbon-footprint",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/AI-Models-Research",
+      "id": "ai-models-research",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/ai-research-question-assistant",
+      "id": "ai-research-question-assistant",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "homepage": "https://ethical-tech-colab.github.io/ai-research-question-assistant/",
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/ariane-501-blind-spot-lab",
+      "id": "ariane-501-blind-spot-lab",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "homepage": "https://ethical-tech-colab.github.io/ariane-501-blind-spot-lab/",
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/arts-provenance-agent",
+      "id": "arts-provenance-agent",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/Avatar-Impact-Stories",
+      "id": "avatar-impact-stories",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "homepage": "https://ethical-tech-colab.github.io/Avatar-Impact-Stories/",
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/brooklyn-bridge-3d",
+      "id": "brooklyn-bridge-3d",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/CERAI_AR",
+      "id": "cerai-ar",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/colab-board",
+      "id": "colab-board",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "homepage": "https://ethical-tech-colab.github.io/colab-board/",
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/commons-collective",
+      "id": "commons-collective",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "homepage": "https://ethical-tech-colab.github.io/commons-collective/",
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/cyber-dictionary",
+      "id": "cyber-dictionary",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/digital-3d-shared-contracts",
+      "id": "digital-3d-shared-contracts",
+      "disposition": "included",
+      "source": "draft",
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/digital-passport-artworks",
+      "id": "digital-passport-artworks",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/diplomacy-table-live",
+      "id": "diplomacy-table-live",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/diplomatic-simulator",
+      "id": "diplomatic-simulator",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/DPA",
+      "id": "dpa",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/dropboard",
+      "id": "dropboard",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/dumbo-district-3d",
+      "id": "dumbo-district-3d",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/energy-cyber-society",
+      "id": "energy-cyber-society",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/ercf",
+      "id": "ercf",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/ethical-ai-proxy",
+      "id": "ethical-ai-proxy",
+      "disposition": "included",
+      "source": "draft",
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/ethical-tech-colab.github.io",
+      "id": "ethical-tech-colab-github-io",
+      "disposition": "excluded",
+      "reason": "Organization redirect page; no project content."
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/Evac-Sim-Melanie",
+      "id": "evac-sim-melanie",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/evacuation-inform-index-carolina",
+      "id": "evacuation-inform-index-carolina",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "homepage": "https://ethical-tech-colab.github.io/evacuation-inform-index-carolina/",
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/Exodus",
+      "id": "exodus",
+      "disposition": "included",
+      "source": "draft",
+      "homepage": "https://exodus-ruddy.vercel.app",
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/felementum",
+      "id": "felementum",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "homepage": "https://ethical-tech-colab.github.io/felementum/",
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/forced-labor-structural-risk-index",
+      "id": "forced-labor-structural-risk-index",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/Fraternity",
+      "id": "fraternity",
+      "disposition": "included",
+      "source": "draft",
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/GBV-patterns",
+      "id": "gbv-patterns",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/grant-valuation-tool",
+      "id": "grant-valuation-tool",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/haste",
+      "id": "haste",
+      "disposition": "excluded",
+      "reason": "Fork of microsoft/haste with minor lab changes; the project belongs to its upstream authors."
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/India-EvacSimulation",
+      "id": "india-evacsimulation",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/manhattan-bridge-3d",
+      "id": "manhattan-bridge-3d",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/manhattan-bridge-noise-dumbo",
+      "id": "manhattan-bridge-noise-dumbo",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/mariupol-evacuation-model",
+      "id": "mariupol-evacuation-model",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/plumb",
+      "id": "plumb",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "homepage": "https://ethical-tech-colab.github.io/plumb/",
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/project-startup-guide",
+      "id": "project-startup-guide",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/provenance-search",
+      "id": "provenance-search",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/race-condition-mod",
+      "id": "race-condition-mod",
+      "disposition": "duplicate",
+      "reason": "Same project as yorkerhodes3/race-condition-mod."
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/read-as-book",
+      "id": "read-as-book",
+      "disposition": "included",
+      "source": "draft",
+      "homepage": "https://ethicaltechlab.org/publications",
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/reverse-stress",
+      "id": "reverse-stress",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/Summer-2026-Tech-Rehearsal",
+      "id": "summer-2026-tech-rehearsal",
+      "disposition": "excluded",
+      "reason": "Event slide deck; the projects it presents are listed individually."
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/turnstone",
+      "id": "turnstone",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/us-entity-structure-guide",
+      "id": "us-entity-structure-guide",
+      "disposition": "excluded",
+      "reason": "Organizational research for the lab rather than a project."
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/usage-calc",
+      "id": "usage-calc",
+      "disposition": "included",
+      "source": "draft",
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/VANGO",
+      "id": "vango",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/War-Games",
+      "id": "war-games",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/website",
+      "id": "website",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/what-is-ethical-ai",
+      "id": "what-is-ethical-ai",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "Ethical-Tech-CoLab/williamsburg-bridge-3d",
+      "id": "williamsburg-bridge-3d",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "yorkerhodes3/agentic-ontology",
+      "id": "agentic-ontology",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "yorkerhodes3/bare-metal-jacket",
+      "id": "bare-metal-jacket",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "homepage": "https://yorkerhodes3.github.io/bare-metal-jacket/",
+      "branch": "main"
+    },
+    {
+      "repo": "yorkerhodes3/crowddeck",
+      "id": "crowddeck",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "homepage": "https://yorkerhodes3.github.io/crowddeck/",
+      "branch": "main"
+    },
+    {
+      "repo": "yorkerhodes3/ethical-ai-field-guide",
+      "id": "ethical-ai-field-guide",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "homepage": "https://yorkerhodes3.github.io/ethical-ai-field-guide/",
+      "branch": "main"
+    },
+    {
+      "repo": "yorkerhodes3/neocloud-supply-os",
+      "id": "neocloud-supply-os",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "yorkerhodes3/nyu-violet-lab-preview",
+      "id": "nyu-violet-lab-preview",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "homepage": "https://yorkerhodes3.github.io/nyu-violet-lab-preview/",
+      "branch": "main"
+    },
+    {
+      "repo": "yorkerhodes3/pageturn-book",
+      "id": "pageturn-book",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "yorkerhodes3/portfolio",
+      "id": "portfolio",
+      "disposition": "excluded",
+      "reason": "This portfolio."
+    },
+    {
+      "repo": "yorkerhodes3/quest-payments",
+      "id": "quest-payments",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "master"
+    },
+    {
+      "repo": "yorkerhodes3/race-condition-mod",
+      "id": "race-condition-mod",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "yorkerhodes3/reverse-stress",
+      "id": "reverse-stress",
+      "disposition": "duplicate",
+      "reason": "Same project as Ethical-Tech-CoLab/reverse-stress."
+    },
+    {
+      "repo": "yorkerhodes3/sovereign-agent-trust-mesh",
+      "id": "sovereign-agent-trust-mesh",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "yorkerhodes3/teardown-3D",
+      "id": "teardown-3d",
+      "disposition": "included",
+      "source": "draft",
+      "pages": true,
+      "branch": "main"
+    },
+    {
+      "repo": "yorkerhodes3/webpage-note",
+      "id": "webpage-note",
+      "disposition": "included",
+      "source": "draft",
+      "branch": "main"
+    }
+  ]
+}

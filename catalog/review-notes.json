@@ -1,0 +1,21 @@
+{
+  "$comment": "Doubts raised while drafting, shown in catalog/REVIEW.md. Delete a note once resolved.",
+  "agentic-ontology": "README says 'Nothing runnable yet'; working demonstration rests on the simulation site. Could be Design.",
+  "agentic-language-development": "Set to Design: site and foundation code run, but no experiments exist yet.",
+  "ai-carbon-footprint": "Only method tag is frontier-models (the report assesses GPT-3 energy use).",
+  "arts-provenance-agent": "ethereum tag rests on Base Sepolia, ecrecover and secp256k1.",
+  "avatar-impact-stories": "README credits the Fall 2025 cohort as a group, with no names; it says Shiran Mlamdovsky Somech advised. Yorke's role comes from his commits (kiosk maintenance).",
+  "cerai-ar": "Teresa Cantero is named as the developer in the paper.",
+  "diplomatic-simulator": "Independent peer review recommends major revisions; that is stated as the limitation.",
+  "dpa": "Role set to co-built although Yorke wrote most commits: the README says most package code was written by others.",
+  "exodus": "Login cruiz may be Carlos D. Ruiz; not confirmed.",
+  "forced-labor-structural-risk-index": "The CoLab website says Amanda Lindsey built the index; login aml1045 not confirmed as hers.",
+  "fraternity": "Login yagorocha-web mapped to Yago Rocha from another CoLab report.",
+  "gbv-patterns": "Documented field use rests on the Ethical Tech Summit showing and the CATW team listed in the README.",
+  "grant-valuation-tool": "Evaluated result rests on its research paper and peer review; stability check still open.",
+  "neocloud-supply-os": "Set to Design (specification stage) although a static demo site exists.",
+  "teardown-3d": "Credits whaleyxbt (claude-motion) and Barty-Bart (sound samples) from the README.",
+  "vango": "provenance tag is debatable: its report says it is not a provenance tool.",
+  "williamsburg-bridge-3d": "README says no photographs reviewed yet, but the latest commit mentions a review of 246.",
+  "website": "Role co-built (90 of 360 human commits)."
+}

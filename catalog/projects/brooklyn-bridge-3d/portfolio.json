@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "id": "brooklyn-bridge-3d",
+  "title": "Brooklyn Bridge Digital Twin",
+  "repo": "Ethical-Tech-CoLab/brooklyn-bridge-3d",
+  "summary": "A browser-viewable 3D control model of the Brooklyn Bridge in which every dimension traces to a registered source with a confidence grade, for review and HO-scale model study.",
+  "kind": "application",
+  "methodTags": [
+    "digital-twins",
+    "provenance"
+  ],
+  "domainTags": [
+    "civic-infrastructure",
+    "cultural-heritage"
+  ],
+  "contribution": {
+    "date": "2026-08-10",
+    "role": "built",
+    "credits": []
+  },
+  "narrative": {
+    "problem": "3D models of landmark structures rarely show which dimensions were read from a source and which were guessed. The Brooklyn Bridge is well documented in the national record, yet turning HAER drawings, Washington Roebling's reports and NYC DOT studies into geometry still leaves gaps that are easy to hide.",
+    "decision": "Grades every control dimension against a registered source and lets viewers untick INFERRED and ASSUMED geometry; anything unsourced is graded D, drawn with a dotted outline and linked to a named open question.",
+    "tradeoff": "The honest view is sparse: with inferred and assumed parts hidden, only the two anchorages and seven station markers remain, and photographs may inform material or arrangement but can never set a dimension.",
+    "limitation": "At Milestone 1, 14 of 101 controls are placeholders, the approach supports are drawn as the wrong kind of structure, the tower taper is invented, and four of nine registered source conflicts remain open.",
+    "caveat": "Not an as-built survey: much of the geometry is inferred or assumed, and known errors are registered rather than hidden. Untick INFERRED and ASSUMED in the viewer to see what the sources actually locate."
+  },
+  "evidence": {
+    "level": "evaluated-result",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/brooklyn-bridge-3d/commit/4bff90c164124df2506c094076b832f3fc1855e0",
+        "date": "2026-08-10"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/brooklyn-bridge-3d#readme",
+        "date": "2026-08-10"
+      },
+      {
+        "label": "Validation report",
+        "url": "https://github.com/Ethical-Tech-CoLab/brooklyn-bridge-3d/blob/main/tests/validation_report.json",
+        "date": "2026-08-10"
+      },
+      {
+        "label": "Source register",
+        "url": "https://github.com/Ethical-Tech-CoLab/brooklyn-bridge-3d/blob/main/SOURCE-REGISTER.md",
+        "date": "2026-08-10"
+      },
+      {
+        "label": "Open problems",
+        "url": "https://github.com/Ethical-Tech-CoLab/brooklyn-bridge-3d/blob/main/OPEN-PROBLEMS.md",
+        "date": "2026-08-10"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/brooklyn-bridge-3d"
+  },
+  "images": [
+    {
+      "id": "haer-drawing",
+      "src": "viewer/public/reference/haer-ny18-tower.png",
+      "alt": "Detail of the HAER NY-18 measured drawing: a Brooklyn Bridge tower elevation annotated on main cables, suspenders, diagonal stays and granite stonework, dimensioned 276'-6\" overall to the waterline with 110' clearance.",
+      "caption": "Tower detail from the HAER NY-18 measured drawing, one of the reference views the viewer's compare panel overlays on the model.",
+      "credit": "Image from the brooklyn-bridge-3d repository (HAER No. NY-18, a work of the U.S. Government)",
+      "source": "repository file viewer/public/reference/haer-ny18-tower.png"
+    },
+    {
+      "id": "tower-photo",
+      "src": "sources/photos/loc-570579c.jpg",
+      "alt": "Colour photograph of the Brooklyn Bridge from the Brooklyn waterfront: a granite tower with pointed arches, the cable and stay fan, the deck truss and the Manhattan skyline across the East River.",
+      "caption": "An archival photograph from the source set; the model's rules let photographs settle material and arrangement, never a dimension.",
+      "credit": "Image from the brooklyn-bridge-3d repository",
+      "source": "repository file sources/photos/loc-570579c.jpg"
+    },
+    {
+      "id": "source-rule",
+      "src": ".portfolio/source-rule.webp",
+      "alt": "Document excerpt card titled Brooklyn Bridge Digital Twin, quoting the rule that every dimension traces to a registered source with an explicit confidence grade and unsourced parts are graded D.",
+      "caption": "The model's governing rule, quoted from the README.",
+      "credit": "Excerpt from the Brooklyn Bridge Digital Twin README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "haer-drawing"
+}

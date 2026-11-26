@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "id": "gbv-patterns",
+  "title": "GBV Patterns",
+  "repo": "Ethical-Tech-CoLab/GBV-patterns",
+  "summary": "An advocacy and research platform on femicide and gender-based violence, built with the Coalition Against Trafficking in Women, making the case for New York to become the first US state to name femicide in law.",
+  "kind": "research",
+  "methodTags": [
+    "data-visualization"
+  ],
+  "domainTags": [
+    "human-rights"
+  ],
+  "contribution": {
+    "date": "2026-11-20",
+    "role": "advisor-prof",
+    "roleNote": "Built by the Ethical Tech CoLab at NYU with the Coalition Against Trafficking in Women (CATW); first shown at the Ethical Tech Summit, 20 November 2026.",
+    "credits": [
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      },
+      {
+        "name": "Taina Bien-Aimé",
+        "role": "Contributor"
+      },
+      {
+        "name": "Nora Hennick",
+        "role": "Contributor"
+      },
+      {
+        "name": "Giorgia Piantanida",
+        "role": "Contributor"
+      },
+      {
+        "name": "Catherine Hidalgo Jara",
+        "role": "Contributor"
+      },
+      {
+        "name": "Mia",
+        "role": "Contributor"
+      },
+      {
+        "name": "Elly",
+        "role": "Contributor"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "About three dozen countries define femicide in their criminal codes and no US state does. New York counts domestic violence homicides by borough and relationship, but a woman killed by a buyer, a pimp or a trafficker has no category to be counted in.",
+    "decision": "Shows the Women Count USA databases only through their author's own published share links, rather than aggregating them, and keeps raw exports containing names, photos and narratives out of the repository.",
+    "tradeoff": "Case-level patterns cannot be charted on the site until Dawn Wilcox and CATW agree in writing; until then visitors log counts by hand with a tally tool.",
+    "limitation": "The number of femicides in the sex trade is unknown, not zero; county-level enforcement counts are not published, and the Progress page and BACKLOG.md list what is not yet built or researched.",
+    "caveat": "Describes femicide, rape and trafficking, including real cases. Every figure links to its source; figures quoted from secondary summaries are flagged."
+  },
+  "evidence": {
+    "level": "field-use",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/GBV-patterns/commit/9e38644a5cb43111246f789209efb73e95d0bfbf",
+        "date": "2026-11-20"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/GBV-patterns#readme",
+        "date": "2026-11-20"
+      },
+      {
+        "label": "Presenter walkthrough",
+        "url": "https://github.com/Ethical-Tech-CoLab/GBV-patterns/blob/main/WALKTHROUGH.md",
+        "date": "2026-11-20"
+      },
+      {
+        "label": "Invisible Men New York collection protocol",
+        "url": "https://github.com/Ethical-Tech-CoLab/GBV-patterns/blob/main/analysis/INVISIBLE_MEN_NY_PROTOCOL.md",
+        "date": "2026-11-20"
+      },
+      {
+        "label": "Backlog of unbuilt work",
+        "url": "https://github.com/Ethical-Tech-CoLab/GBV-patterns/blob/main/BACKLOG.md",
+        "date": "2026-11-20"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/GBV-patterns"
+  },
+  "images": [
+    {
+      "id": "home",
+      "src": ".portfolio/home.webp",
+      "alt": "Dark home page titled Femicide in New York State over drifting silhouettes of women and men, calling on New York to be the first US state to codify femicide into law, with Ethical Tech CoLab and Coalition logos.",
+      "caption": "The platform's argument in one screen: femicide is counted elsewhere, and New York could be the first US state to name it in law.",
+      "credit": "Screenshot of the GBV Patterns site",
+      "source": "screenshot of docs/index.html"
+    },
+    {
+      "id": "about-catw",
+      "src": ".portfolio/about-catw.webp",
+      "alt": "About CATW page describing the Coalition Against Trafficking in Women's work since 1988 and three areas: advocating for strong laws, raising public awareness and supporting survivor leadership.",
+      "caption": "CATW, the partner behind the platform; the site describes itself as the data arm of CATW's argument for New York.",
+      "credit": "Screenshot of the GBV Patterns site",
+      "source": "screenshot of docs/about-catw.html"
+    },
+    {
+      "id": "the-gap",
+      "src": ".portfolio/the-gap.webp",
+      "alt": "Document excerpt card headed GBV Patterns, quoting that a woman killed by a buyer, a pimp or a trafficker has no category to be counted in New York.",
+      "caption": "The gap the platform exists to make visible: these deaths are uncounted, which is not the same as zero.",
+      "credit": "Excerpt from the GBV Patterns README",
+      "source": "README excerpt"
+    }
+  ],
+  "defaultImageId": "home"
+}

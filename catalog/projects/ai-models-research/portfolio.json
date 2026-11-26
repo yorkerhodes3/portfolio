@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "id": "ai-models-research",
+  "title": "AI Models Research",
+  "repo": "Ethical-Tech-CoLab/AI-Models-Research",
+  "summary": "A research knowledge base for researchers, policy analysts and engineers comparing AI model families on capability, accuracy, speed, energy use and token cost, with every figure sourced, dated and graded.",
+  "kind": "research",
+  "methodTags": [
+    "frontier-models",
+    "decision-models",
+    "open-source"
+  ],
+  "domainTags": [
+    "ai-governance",
+    "climate-energy"
+  ],
+  "contribution": {
+    "date": "2026-10-13",
+    "role": "advisor-prof",
+    "roleNote": "Ethical Tech CoLab research repository.",
+    "credits": [
+      {
+        "name": "Carolina Moron",
+        "github": "carolina-moron",
+        "role": "Student researcher"
+      }
+    ]
+  },
+  "narrative": {
+    "problem": "Public discussion of model capability is dominated by provider launch materials and single-number leaderboard rankings, often produced under evaluation conditions that are undisclosed, unreproducible, or not comparable across providers, so it is hard to choose a model for a given task, budget and deployment constraint on evidence.",
+    "decision": "Separates independently verified measurement (Grade A), institutional primary research (Grade B) and provider-reported claims (Grade C), and generates every comparison table from source-linked CSV records that validation scripts check.",
+    "tradeoff": "Claims that cannot meet the standard are recorded as 'Not publicly disclosed' or 'Insufficient independent evidence' rather than estimated, so many cells stay empty and no model ranking is published.",
+    "limitation": "Research cut-off 2026-07-22. Phase 1 is complete; chapters, data and navigation are partial; the sixteen model-family profiles are not started; energy, latency and factuality datasets are empty; and the survey is not peer reviewed.",
+    "caveat": "Prices, rankings and availability are historical records as of the cut-off date, not current facts; nothing here is legal, financial or procurement advice."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/AI-Models-Research/commit/379d7200009b35dc324e7f5ab226328b1b999eef",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/AI-Models-Research#readme",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Research methodology",
+        "url": "https://github.com/Ethical-Tech-CoLab/AI-Models-Research/blob/main/research-methodology.md",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Limitations",
+        "url": "https://github.com/Ethical-Tech-CoLab/AI-Models-Research/blob/main/limitations.md",
+        "date": "2026-10-13"
+      },
+      {
+        "label": "Research gaps (chapter 21)",
+        "url": "https://github.com/Ethical-Tech-CoLab/AI-Models-Research/blob/main/docs/21-research-gaps.md",
+        "date": "2026-10-13"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/AI-Models-Research"
+  },
+  "images": [
+    {
+      "id": "cost-calculator",
+      "src": ".portfolio/cost-calculator.webp",
+      "alt": "Interactive companion page titled Cost, speed, and energy per accepted task, with the research cut-off date, evidence-grade badges A, B and C, and the start of a calculator with input, output and reasoning token sliders.",
+      "caption": "The interactive companion frames model choice as cost per accepted task rather than advertised price, and labels each figure with its evidence grade.",
+      "credit": "Screenshot of the AI Models Research interactive page",
+      "source": "screenshot of docs/interactive/index.html"
+    },
+    {
+      "id": "request-cost",
+      "src": "assets/charts/fig4-illustrative-request-cost.png",
+      "alt": "Bar chart titled A 26-fold spread in nominal cost for the same request, showing per-request cost for eight models from $1.25 for Claude Fable 5 down to $0.048 for DeepSeek V4 Pro.",
+      "caption": "The same illustrative document-analysis job varies 26-fold in nominal cost across models; quality is not held constant and the data are provider-reported (Grade C).",
+      "credit": "Image from the AI-Models-Research repository",
+      "source": "repository file assets/charts/fig4-illustrative-request-cost.png"
+    },
+    {
+      "id": "energy-per-query",
+      "src": "assets/charts/fig5-energy-per-query.png",
+      "alt": "Bar chart titled Reasoning budget, not model size, drives energy per query, comparing a median 0.34 Wh representative query with a median 4.32 Wh query using 15 times the test-time tokens.",
+      "caption": "Analytical estimates show reasoning budget, not model size, dominating energy per query (Grade A; not measurements of a named service).",
+      "credit": "Image from the AI-Models-Research repository",
+      "source": "repository file assets/charts/fig5-energy-per-query.png"
+    }
+  ],
+  "defaultImageId": "cost-calculator"
+}

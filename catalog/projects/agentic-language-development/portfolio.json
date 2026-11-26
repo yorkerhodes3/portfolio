@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "agentic-language-development",
+  "title": "Agentic Language Development",
+  "repo": "Ethical-Tech-CoLab/agentic-language-development",
+  "summary": "A research concept and preregistrable study protocol asking whether two isolated artificial agents can invent a grounded, auditable language through shared experience.",
+  "kind": "research",
+  "methodTags": [
+    "agentic-workloads",
+    "digital-twins",
+    "provenance",
+    "open-source"
+  ],
+  "domainTags": [
+    "ai-governance",
+    "education"
+  ],
+  "contribution": {
+    "date": "2026-09-03",
+    "role": "built",
+    "credits": []
+  },
+  "narrative": {
+    "problem": "Studying whether two agents can establish stable meanings without a supplied dictionary requires telling genuine, causally used communication apart from a memorized lookup code. Pretrained language models already contain human-language concepts, so restricting their external channel does not make them language-naive.",
+    "decision": "Each agent (Baby A and Baby B) has its own DTSF digital twin, private memory and mandatory chronological language ledger kept with hash chains and signed Merkle checkpoints, and may communicate only through a controlled non-human Symbol Gateway, watched by a BabySitter that never teaches or translates.",
+    "tradeoff": "Strict channel isolation and monitor-only supervision make any emergent language auditable, but they rule out teaching or reward shaping by the observer, and the ledger, channel and anchoring machinery has to be built and verified before any experiment can run.",
+    "limitation": "The repository is in the foundation implementation phase: the workspace, runtime schemas, twin-pack skeletons, evidence schema and ledger validators exist, but independent ledger/channel hash chaining is still ahead and no experiment results are claimed.",
+    "caveat": "Pre-results research concept: the site and page-turn manuscript describe a study protocol; no experiment results are claimed yet."
+  },
+  "evidence": {
+    "level": "design",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/Ethical-Tech-CoLab/agentic-language-development/commit/feb68708333d2a1212bc7789480fa48e999ae643",
+        "date": "2026-09-03"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/Ethical-Tech-CoLab/agentic-language-development#readme",
+        "date": "2026-09-03"
+      },
+      {
+        "label": "Research manuscript",
+        "url": "https://github.com/Ethical-Tech-CoLab/agentic-language-development/blob/main/RESEARCH.md",
+        "date": "2026-09-03"
+      },
+      {
+        "label": "Concept and rationale",
+        "url": "https://github.com/Ethical-Tech-CoLab/agentic-language-development/blob/main/CONCEPT-IDEA.md",
+        "date": "2026-09-03"
+      },
+      {
+        "label": "Specification",
+        "url": "https://github.com/Ethical-Tech-CoLab/agentic-language-development/blob/main/SPECIFICATION.md",
+        "date": "2026-09-03"
+      },
+      {
+        "label": "Ledger integrity design",
+        "url": "https://github.com/Ethical-Tech-CoLab/agentic-language-development/blob/main/LEDGER-INTEGRITY-DESIGN.md",
+        "date": "2026-09-03"
+      },
+      {
+        "label": "Experiment notebook",
+        "url": "https://github.com/Ethical-Tech-CoLab/agentic-language-development/blob/main/EXPERIMENT-NOTEBOOK.md",
+        "date": "2026-09-03"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/Ethical-Tech-CoLab/agentic-language-development"
+  },
+  "images": [
+    {
+      "id": "concept-site",
+      "src": ".portfolio/concept-site.webp",
+      "alt": "Project site headline 'Can agents invent a language?' beside a diagram of a BabySitter/Nursery box above Baby A and Baby B, a dashed Symbol Gateway labelled the only permitted route, and an Immutable evidence box.",
+      "caption": "The study design at a glance: two isolated learners with independent ledgers, one permitted symbol channel, and a monitor that preserves evidence without teaching.",
+      "credit": "Screenshot of the Agentic Language Development site",
+      "source": "screenshot of index.html"
+    },
+    {
+      "id": "research-book",
+      "src": ".portfolio/research-book.webp",
+      "alt": "Page-turn edition landing page showing a manuscript cover titled 'Auditable Emergent Communication Between isolated artificial agents' with Read as book and Download PDF buttons and '49 pages available'.",
+      "caption": "The full research manuscript is published as a 49-page page-turn book with a PDF download.",
+      "credit": "Screenshot of the Agentic Language Development site",
+      "source": "screenshot of research-book.html"
+    },
+    {
+      "id": "manuscript",
+      "src": ".portfolio/manuscript.webp",
+      "alt": "Print edition of the manuscript 'Auditable Emergent Communication Between Isolated Artificial Agents' with a metadata block stating it is a working pre-results study protocol, followed by the abstract and keywords.",
+      "caption": "The print edition states its empirical status up front: no Nursery Lab experiment is reported as completed.",
+      "credit": "Screenshot of the Agentic Language Development site",
+      "source": "screenshot of book/research-print.html"
+    }
+  ],
+  "defaultImageId": "concept-site"
+}
