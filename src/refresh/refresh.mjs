@@ -36,24 +36,34 @@ const excluded = lower(dispositions.excluded), duplicates = lower(dispositions.d
 
 // Drafts: records awaiting adoption by their source repository (PLAN D-04).
 const drafts = new Map();
+const draftErrors = new Map(); // directory name (= project id) → problem
 for (const dir of existsSync('catalog/projects') ? readdirSync('catalog/projects') : []) {
   const p = join('catalog/projects', dir, 'portfolio.json');
   if (!existsSync(p)) continue;
-  try { const r = JSON.parse(readFileSync(p, 'utf8')); drafts.set(r.repo.toLowerCase(), { record: r, dir: join('catalog/projects', dir) }); }
-  catch (err) { drafts.set(`invalid:${dir}`, { error: `catalog/projects/${dir}/portfolio.json is not valid JSON: ${err.message}` }); }
+  try {
+    const r = JSON.parse(readFileSync(p, 'utf8'));
+    if (typeof r.repo !== 'string') throw new Error('missing "repo"');
+    drafts.set(r.repo.toLowerCase(), { record: r, dir: join('catalog/projects', dir) });
+  } catch (err) { draftErrors.set(dir, `catalog/projects/${dir}/portfolio.json cannot be read: ${err.message}`); }
 }
+
+// Previously approved projects by repository (canonical or alias), and which repository owns each id.
+const prevByRepo = new Map();
+for (const p of previous.projects) for (const r of [p.repo, ...(p.aliases || [])]) prevByRepo.set(r.toLowerCase(), p);
+const isHttp = u => typeof u === 'string' && /^https?:\/\//i.test(u);
 
 // 1. Discover candidates.
 const warnings = [];
 let candidates = [];
 let hiddenCount = 0;
+const failedOwners = new Set();
 if (OFFLINE) {
   candidates = readJson('catalog/inventory.json', { candidates: [] }).candidates.map(c => ({ full_name: c.repo, offline: true, default_branch: c.branch || 'main', has_pages: !!c.pages, homepage: c.homepage || '' }));
   warnings.push('Offline run: repository listings and upstream records were not reread.');
 } else {
   for (const owner of OWNERS) {
     try { candidates.push(...(await listOwnerRepos(owner)).filter(r => r.pushed_at >= CUTOFF || r.created_at >= CUTOFF)); }
-    catch (err) { warnings.push(`Incomplete listing for ${owner}: ${err.message}. Coverage cannot be called complete.`); }
+    catch (err) { failedOwners.add(owner.toLowerCase()); warnings.push(`Incomplete listing for ${owner}: ${err.message}. Its approved projects are kept unchanged; coverage cannot be called complete.`); }
   }
 }
 candidates = candidates.filter(r => hidden.has(sha(r.full_name)) ? (hiddenCount++, false) : true);
@@ -73,19 +83,19 @@ async function readImage(src, { repo, sha: ref, dir, source }) {
   return buf;
 }
 
+// Reads and encodes all three pictures before writing any, so a failure never leaves media half-replaced.
 async function mirror(record, ctx) {
-  const media = {};
-  mkdirSync(join('media', record.id), { recursive: true });
+  const media = {}, writes = [];
   for (const img of record.images) {
     const buf = await readImage(img.src, ctx);
     const base = join('media', record.id, img.id);
     const full = await sharp(buf, { animated: false }).resize({ width: 1600, withoutEnlargement: true }).webp({ quality: 78 }).toBuffer();
     const thumb = await sharp(buf, { animated: false }).resize({ width: 640, withoutEnlargement: true }).webp({ quality: 72 }).toBuffer();
-    for (const [p, b] of [[`${base}.webp`, full], [`${base}-640.webp`, thumb]]) if (!existsSync(p) || !readFileSync(p).equals(b)) writeFileSync(p, b);
+    writes.push([`${base}.webp`, full], [`${base}-640.webp`, thumb]);
     const meta = await sharp(full).metadata();
     media[img.id] = { full: `media/${record.id}/${img.id}.webp`, thumb: `media/${record.id}/${img.id}-640.webp`, width: meta.width, height: meta.height };
   }
-  return media;
+  return { media, commit: () => { mkdirSync(join('media', record.id), { recursive: true }); for (const [p, b] of writes) if (!existsSync(p) || !readFileSync(p).equals(b)) writeFileSync(p, b); } };
 }
 
 for (const r of candidates.sort((a, b) => a.full_name.localeCompare(b.full_name))) {
@@ -94,7 +104,10 @@ for (const r of candidates.sort((a, b) => a.full_name.localeCompare(b.full_name)
   if (excluded[key]) { inventory.push({ ...entry, disposition: 'excluded', reason: excluded[key] }); continue; }
   if (duplicates[key]) { inventory.push({ ...entry, disposition: 'duplicate', reason: `Same project as ${duplicates[key]}.` }); continue; }
 
+  const prev = prevByRepo.get(key);
   let record, source, ref, problems = [], dir;
+  const draftError = draftErrors.get(prev?.id) || draftErrors.get(entry.id);
+  if (draftError) problems.push(draftError);
   try {
     const upstream = OFFLINE ? null : await fileOrNull(repo, 'portfolio.json');
     if (upstream) {
@@ -108,28 +121,39 @@ for (const r of candidates.sort((a, b) => a.full_name.localeCompare(b.full_name)
     problems.push(`could not read the repository: ${err.message}`);
   }
   if (!record && !problems.length) {
+    if (prev && !withdrawn[key] && !withdrawn[prev.id]) {
+      // An approved project only leaves the catalog by an explicit withdrawal, never because a file went missing.
+      report.blocked.push({ repo, problems: [OFFLINE ? 'offline: the record lives in the repository and was not reread' : 'no portfolio.json found in the repository or catalog/projects'], kept: true });
+      projects.push(prev);
+      inventory.push({ ...entry, id: prev.id, disposition: 'included', reason: 'Last approved version kept; no record found this run.' });
+      continue;
+    }
     inventory.push({ ...entry, disposition: 'awaiting confirmation', reason: 'No portfolio.json yet.' });
     report.awaiting.push(repo);
     continue;
   }
   if (record) problems.push(...validateRecord(record, { repo }));
-  const id = record?.id || entry.id;
+  const id = record?.id || prev?.id || entry.id;
   if (withdrawn[key] || withdrawn[id]) { inventory.push({ ...entry, id, disposition: 'withdrawn', reason: 'Withdrawn by the owner.' }); if (prevById.has(id)) report.withdrawn.push(id); continue; }
-  if (projects.some(p => p.id === id)) problems.push(`id "${id}" is already used by another project`);
+  const owner = prevById.get(id);
+  if (owner && owner !== prev) problems.push(`id "${id}" belongs to ${owner.repo}`);
+  else if (projects.some(p => p.id === id)) problems.push(`id "${id}" is already used by another project`);
+  if (prev && record && record.id !== prev.id) problems.push(`id changed from "${prev.id}" to "${record.id}"; ids are stable`);
+  if (record?.links && !isHttp(record.links.source)) problems.push('/links/source must be an http(s) URL');
 
   let media;
   if (!problems.length) {
-    try { media = await mirror(record, { repo, sha: ref, dir, source }); }
+    try { const m = await mirror(record, { repo, sha: ref, dir, source }); m.commit(); media = m.media; }
     catch (err) { problems.push(`picture could not be read: ${err.message}`); }
   }
-  const prev = prevById.get(id);
   if (problems.length) {
-    report.blocked.push({ repo, problems, kept: !!prev });
-    if (prev) projects.push(prev);
+    const keep = prev && !projects.some(p => p.id === prev.id);
+    report.blocked.push({ repo, problems, kept: !!keep });
+    if (keep) projects.push(prev);
     inventory.push({ ...entry, id, disposition: prev ? 'included' : 'awaiting confirmation', reason: prev ? 'Last approved version kept; latest revision is invalid.' : 'Record is invalid.', source });
     continue;
   }
-  const demo = record.links.demo || (r.has_pages ? pagesUrl(repo) : (r.homepage || undefined));
+  const demo = record.links.demo || (r.has_pages ? pagesUrl(repo) : (isHttp(r.homepage) ? r.homepage : undefined));
   const project = { ...record, links: { ...record.links, ...(demo ? { demo } : {}) }, source, ...(ref ? { sourceCommit: ref } : prev?.sourceCommit ? { sourceCommit: prev.sourceCommit } : {}), media };
   if (source === 'draft') report.pending.push(id);
   if (!prev) report.new.push(id);
@@ -144,6 +168,12 @@ function stripVolatile(p) { const { sourceCommit, ...rest } = p; return rest; }
 for (const [key] of Object.entries(withdrawn)) {
   const gone = previous.projects.find(p => p.repo.toLowerCase() === key || p.id === key);
   if (gone && !report.withdrawn.includes(gone.id)) report.withdrawn.push(gone.id);
+}
+// A failed owner listing keeps that owner's approved projects unchanged.
+for (const p of previous.projects) {
+  if (!failedOwners.has(p.repo.split('/')[0].toLowerCase()) || projects.some(x => x.id === p.id)) continue;
+  projects.push(p);
+  report.blocked.push({ repo: p.repo, problems: ['owner listing failed'], kept: true });
 }
 const kept = projects.filter(p => !report.withdrawn.includes(p.id)).sort((a, b) => a.id.localeCompare(b.id));
 

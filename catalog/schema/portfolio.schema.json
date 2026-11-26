@@ -50,7 +50,7 @@
           "type": "array", "minItems": 1,
           "items": {
             "type": "object", "additionalProperties": false, "required": ["label", "url", "date"],
-            "properties": { "label": { "type": "string" }, "url": { "type": "string", "format": "uri" }, "date": { "type": "string", "format": "date" } }
+            "properties": { "label": { "type": "string" }, "url": { "type": "string", "format": "uri", "pattern": "^https?://" }, "date": { "type": "string", "format": "date" } }
           }
         }
       }
@@ -58,9 +58,9 @@
     "links": {
       "type": "object", "additionalProperties": false, "required": ["source"],
       "properties": {
-        "source": { "type": "string", "format": "uri" },
-        "demo": { "type": "string", "format": "uri" },
-        "share": { "type": "string", "format": "uri" }
+        "source": { "type": "string", "format": "uri", "pattern": "^https?://" },
+        "demo": { "type": "string", "format": "uri", "pattern": "^https?://" },
+        "share": { "type": "string", "format": "uri", "pattern": "^https?://" }
       }
     },
     "images": {

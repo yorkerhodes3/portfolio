@@ -31,6 +31,9 @@ test('a valid record passes and vocabulary, image and date rules are enforced', 
   assert.match(validateRecord(record({ contribution: { date: '2025-12-31', role: 'built', credits: [] } })).join(), /cutoff/);
   assert.match(validateRecord(record(), { repo: 'yorkerhodes3/other' }).join(), /does not match/);
   assert.ok(validateRecord({ ...record(), images: record().images.slice(0, 2) }).length, 'exactly three images');
+  const js = 'javascript:alert(document.domain)';
+  assert.ok(validateRecord(record({ links: { source: 'https://github.com/yorkerhodes3/alpha', demo: js } })).length, 'javascript: demo link rejected');
+  assert.ok(validateRecord(record({ evidence: { level: 'design', links: [{ label: 'x', url: js, date: '2026-03-01' }] } })).length, 'javascript: evidence link rejected');
 });
 
 test('roles follow commit history: only others → Advisor/Prof, ≥80% Yorke → built, otherwise co-built', () => {
@@ -91,6 +94,25 @@ test('refresh: a malformed revision keeps the last approved record; a withdrawal
   f.run();
   assert.equal(f.snap().projects.some(p => p.id === 'alpha'), false);
   assert.equal(f.snap().counts.projects, 1);
+});
+
+test('refresh: an unreadable draft or a stolen id never removes or replaces an approved project', async () => {
+  const f = await fixture();
+  f.run();
+  const before = f.snap().projects.find(p => p.id === 'alpha');
+  writeFileSync(join(f.dir, 'catalog/projects/alpha/portfolio.json'), '{ "not": json');
+  f.run();
+  assert.deepEqual(f.snap().projects.find(p => p.id === 'alpha'), before, 'syntax error keeps the approved record');
+  assert.match(readFileSync(join(f.dir, 'catalog/refresh-report.md'), 'utf8'), /cannot be read/);
+  // beta's record claims alpha's id: it is blocked, and alpha stays exactly once.
+  writeFileSync(join(f.dir, 'catalog/projects/alpha/portfolio.json'), JSON.stringify(record()));
+  const beta = JSON.parse(readFileSync(join(f.dir, 'catalog/projects/beta/portfolio.json'), 'utf8'));
+  writeFileSync(join(f.dir, 'catalog/projects/beta/portfolio.json'), JSON.stringify({ ...beta, id: 'alpha' }));
+  f.run();
+  const ids = f.snap().projects.map(p => p.id);
+  assert.deepEqual(ids.filter(i => i === 'alpha').length, 1);
+  assert.ok(ids.includes('beta'), 'beta keeps its last approved version');
+  assert.match(readFileSync(join(f.dir, 'catalog/refresh-report.md'), 'utf8'), /belongs to yorkerhodes3\/alpha/);
 });
 
 test('no privately excluded repository is named anywhere in published or catalog files', () => {

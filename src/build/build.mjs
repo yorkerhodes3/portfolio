@@ -47,6 +47,8 @@ const demoState = p => {
 const defaultMedia = p => p.media[p.defaultImageId];
 const defaultImage = p => p.images.find(i => i.id === p.defaultImageId);
 const abs = path => new URL(path, site.siteUrl).href;
+// Record URLs come from other repositories: only http(s) links are rendered as links.
+const href = v => /^https?:\/\//i.test(String(v || '')) ? esc(v) : '#';
 const bioHtml = esc(site.bioLine).replace(/^(I make complex decisions testable)/, '<em>$1</em>');
 
 function card(p) {
@@ -59,7 +61,7 @@ function card(p) {
     <p class="summary">${esc(p.summary)}</p>
     <div class="tags">${p.methodTags.map(t => `<span class="tag">${esc(METHOD[t])}</span>`).join('')}${p.domainTags.map(t => `<span class="tag">${esc(DOMAIN[t])}</span>`).join('')}</div>
     <div class="owner">${esc(KIND[p.kind])} · ${esc(owner(p))} · updated ${esc(longDate(p.contribution.date))}</div>
-    <div class="foot">${d ? `<a class="btn sm" href="${esc(p.links.demo)}" title="${esc(d.note)}">${esc(d.label)} ↗</a>` : ''}<a class="btn sm" href="${esc(p.links.source)}">Source ↗</a></div>
+    <div class="foot">${d ? `<a class="btn sm" href="${href(p.links.demo)}" title="${esc(d.note)}">${esc(d.label)} ↗</a>` : ''}<a class="btn sm" href="${href(p.links.source)}">Source ↗</a></div>
   </div>
 </li>`;
 }
@@ -178,15 +180,15 @@ ${siteHeader(prefix, 'work')}
     </figure>
     <aside class="facts">
       <div class="panel actions">
-        ${d ? `<a class="btn primary" href="${esc(p.links.demo)}">${d.live ? 'Try the live demo ↗' : 'Open the demo link ↗'}</a><span class="check">${esc(d.note)}</span>` : `<p class="small muted" style="margin:0">No demo: this project's evidence is in its repository and documents.</p>`}
+        ${d ? `<a class="btn primary" href="${href(p.links.demo)}">${d.live ? 'Try the live demo ↗' : 'Open the demo link ↗'}</a><span class="check">${esc(d.note)}</span>` : `<p class="small muted" style="margin:0">No demo: this project's evidence is in its repository and documents.</p>`}
         ${p.narrative.caveat ? `<p class="caveat"><b>Before you try it:</b> ${esc(p.narrative.caveat)}</p>` : ''}
-        <a class="btn" href="${esc(p.links.source)}">View the source ↗</a>
+        <a class="btn" href="${href(p.links.source)}">View the source ↗</a>
       </div>
       <div class="panel fact"><h2>Who did the work</h2>
         <p><strong>Yorke: ${esc(ROLE[p.contribution.role])}.</strong>${p.contribution.roleNote ? ` ${esc(p.contribution.roleNote)}` : ''}</p>
         ${credits.length ? `<ul>${credits.map(c => `<li>${c.github ? `<a href="https://github.com/${esc(c.github)}">${esc(c.name)}</a>` : esc(c.name)}${c.role ? `, ${esc(c.role)}` : ''}</li>`).join('')}</ul>` : '<p class="muted small" style="margin:0">No other contributors recorded.</p>'}
       </div>
-      <div class="panel fact"><h2>Evidence</h2><p>${esc(EVIDENCE[p.evidence.level])}.</p><ul>${p.evidence.links.map(e => `<li><a href="${esc(e.url)}">${esc(e.label)}</a> <span class="muted">(${esc(longDate(e.date))})</span></li>`).join('')}</ul></div>
+      <div class="panel fact"><h2>Evidence</h2><p>${esc(EVIDENCE[p.evidence.level])}.</p><ul>${p.evidence.links.map(e => `<li><a href="${href(e.url)}">${esc(e.label)}</a> <span class="muted">(${esc(longDate(e.date))})</span></li>`).join('')}</ul></div>
     </aside>
   </div>
   <section class="story" aria-label="Project narrative">

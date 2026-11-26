@@ -9,6 +9,7 @@ import { join, posix } from 'node:path';
 import { gh, fileOrNull } from '../lib/github.mjs';
 
 const OPEN = process.argv.includes('--open');
+const FORCE = process.argv.includes('--force');
 const only = process.argv.slice(2).filter(a => !a.startsWith('--'));
 const BRANCH = 'portfolio/metadata';
 const snapshot = JSON.parse(readFileSync('catalog/snapshot.json', 'utf8'));
@@ -88,7 +89,8 @@ async function sitePlan(p, needs) {
     if (!has('twitter:card')) tags.push('<meta name="twitter:card" content="summary_large_image">');
     if (!has('twitter:image')) tags.push(`<meta name="twitter:image" content="${url}">`);
   }
-  const patched = html.replace(/<\/head>/i, `<!-- Favicon and share preview (portfolio metadata) -->\n${tags.join('\n')}\n</head>`);
+  const block = `<!-- Favicon and share preview (portfolio metadata) -->\n${tags.join('\n')}\n</head>`;
+  const patched = html.replace(/<\/head>/i, () => block);
   files.push([layout.html, Buffer.from(patched)]);
   return { files, assets, note: null };
 }
@@ -129,8 +131,10 @@ for (const p of snapshot.projects.filter(p => !only.length || only.includes(p.id
   const changed = [needs.favicon && 'favicon', needs.share && 'share preview'].filter(Boolean);
   const message = `Add portfolio metadata${changed.length ? ` and ${changed.join(' and ')}` : ''}\n\nportfolio.json describes this project for ${site.siteUrl}; tags in it drive the portfolio's filters.\n\n${TRAILER}`;
   try {
-    const base = await commitFiles(p.repo, files, message);
+    // Never reset a branch under an open PR: a maintainer may have pushed corrections to it.
     const existing = await gh(`repos/${p.repo}/pulls?state=open&head=${p.repo.split('/')[0]}:${encodeURIComponent(BRANCH)}`);
+    if (existing[0] && !FORCE) { results.push({ ...plan, status: 'skipped: PR already open (rerun with --force to replace its branch)', pr: existing[0].html_url }); continue; }
+    const base = await commitFiles(p.repo, files, message);
     const body = `This adds **\`portfolio.json\`**, the record that describes this project in [Yorke Rhodes's portfolio](${site.siteUrl}p/${p.id}/)${files.some(f => f[0].startsWith('.portfolio/')) ? ', plus the pictures it uses in `.portfolio/`' : ''}.${changed.length ? (plan.wired ? ` It also adds a ${changed.join(' and a ')} for this project's site, with the matching \`<head>\` tags.` : ` It also adds a generated ${changed.join(' and ')} in \`.portfolio/\`.`) : ''}\n\n- Edit \`methodTags\` / \`domainTags\` to change how the project is filtered; valid tags are listed in [catalog/tags.json](https://github.com/yorkerhodes3/portfolio/blob/main/catalog/tags.json).\n- Credits and roles come from the commit history and README. Please correct anything inaccurate before merging.\n- The portfolio reads this file on its next refresh. Nothing here changes how the project runs.\n${needs.share ? `\nOptional: upload the share image (${plan.wired ? files.find(f => /og-image\.png$/.test(f[0]))[0] : '.portfolio/og-image.png'}) under **Settings → General → Social preview** so GitHub links show it too.\n` : ''}${sitePart.note ? `\nNot included: ${sitePart.note}\n` : ''}`;
     const pr = existing[0] || await gh(`repos/${p.repo}/pulls`, { method: 'POST', body: { title: `Add portfolio metadata${changed.length ? `, ${changed.join(' and ')}` : ''}`, head: BRANCH, base, body } });
     results.push({ ...plan, status: existing[0] ? 'updated' : 'opened', pr: pr.html_url });
