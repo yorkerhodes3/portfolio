@@ -1,6 +1,6 @@
 # Plan: Yorke E. Rhodes III | Work since January 2026
 
-**Status:** Draft for human review · **Spec:** [v0.2.0, approved with changes](./SPECIFICATION.md) · **Date:** 2026-11-26  
+**Status:** Approved (owner, 2026-11-26: "Proceed with the full build") · **Spec:** [v0.2.0, approved with changes](./SPECIFICATION.md) · **Date:** 2026-11-26  
 **Owner and reviewer:** Yorke E. Rhodes III · **Drafting assistance:** GitHub Copilot · **Task list:** [BACKLOG.md](./BACKLOG.md)
 
 ## 1. Approach
@@ -26,16 +26,16 @@ Treat every project as an **existing product** and this portfolio as a reader of
 | D-11 | Pictures, favicons and share images | Three pictures per project, chosen in this order: existing share image, Playwright captures of distinct demo views, README figures or diagrams, document excerpts for papers. Stored as WebP no wider than 1,600 px and normally under 250 KB. Missing favicons and 1200 × 630 share images are rendered from one template using the project's own colors where its record supplies them, otherwise Wayfinder's. They go into the same per-repository PR as `portfolio.json`. GitHub's repository social preview has no upload API, so the same image is set by hand in each repository's Settings. Captions carry third-party attribution such as basemap tiles. | Invented product screens; one image repeated three times; pushing to repositories without a PR. |
 | D-12 | Testing | `node:test` for the refresh rules: distinct counts, determinism, failure preservation and exclusions. One Playwright smoke test covers filters, gallery and downloads. At release: an axe accessibility scan, a 320 px phone pass, offline PDF inspection and the trial readers. | Snapshot tests of whole pages (brittle, little signal); a full end-to-end suite for a two-template site. |
 
-**Career source files (D-10).** The CV Reference folder holds seven PDFs prepared for the Belfer Center Nova Fellowship application. **All seven are read as context**, shaping which work and themes the CV and bios emphasize. The public text states only facts that appear in Yorke's own documents, written neutrally for a general reader. Where sources disagree on a fact, Yorke decides; never merge conflicting dates silently.
+**Career source files (D-10).** The CV Reference folder holds seven PDFs prepared for a fellowship application; they are not published. **All seven are read as context**, shaping which work and themes the CV and bios emphasize. The public text states only facts that appear in Yorke's own documents, written neutrally for a general reader. Where sources disagree on a fact, Yorke decides; never merge conflicting dates silently.
 
 | File | Role in the CV and bios |
 | --- | --- |
-| `Belfer Center Fellow - CV - Yorke Rhodes.pdf` | **Primary** for roles, scope, shipped systems, teaching, talks, publications, advisory roles, affiliations and education. Drop fellowship-directed wording. |
-| `Yorke Rhodes III LinkedIn PDF.pdf` | **Primary** cross-check for titles, organizations and dates. |
-| `Belfer Center Fellow Statement of Interest Yorke Rhodes III.pdf` | Context for the bios' themes and motivations; restate facts in the third person without the application argument. |
-| `Belfer Center Fellowship - Project Proposal - Yorke Rhodes.pdf` | Context for current research direction. A proposed project is described as work only if it appears in the portfolio. |
-| `Belfer Center Nova Fellow Application - Yorke Rhodes - email.pdf` | Context only. Yorke's contact details appear only with his approval (Q-01). It also lists the references' names and contact details: third-party personal data, never published. |
-| `Belfer Center recommendation for Yorke Rhodes - multilateral.pdf`, `… - industry - Microsoft.pdf` | Context for which contributions others found significant. **Not quoted, paraphrased or attributed** without the recommender's written consent, recorded in the career PR (Q-05). |
+| Fellowship CV | **Primary** for roles, scope, shipped systems, teaching, talks, publications, advisory roles, affiliations and education. Drop fellowship-directed wording. |
+| LinkedIn profile export | **Primary** cross-check for titles, organizations and dates. |
+| Statement of interest | Context for the bios' themes and motivations; restate facts in the third person without the application argument. |
+| Project proposal | Context for current research direction. A proposed project is described as work only if it appears in the portfolio. |
+| Application cover email | Context only. Yorke's contact details appear only with his approval (Q-01). It also lists the references' names and contact details: third-party personal data, never published. |
+| Two recommendation letters | Context for which contributions others found significant. **Not quoted, paraphrased or attributed** without the recommender's written consent, recorded in the career PR (Q-05). |
 
 ## 3. Architecture
 
@@ -162,4 +162,4 @@ A change reaches the public URL only by merging a reviewed PR to `main`.
 - [ ] Dependencies, owners and risk triggers are actionable.
 - [ ] The schedule fits the hours Yorke can give, and the cut list is acceptable.
 
-**Verdict: pending human review.** Approval of this plan and [BACKLOG.md](./BACKLOG.md) is the gate before implementation beyond M0 setup. Revised the same day after review of the effort estimate.
+**Verdict: approved.** Yorke instructed the full build on 2026-11-26. Built the same day on branch `build/v1`; one deviation: the session could not write to Ethical-Tech-CoLab repositories, so those 49 metadata PRs are prepared for Yorke to open (BACKLOG T-065).

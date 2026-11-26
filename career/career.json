@@ -1,0 +1,237 @@
+{
+  "$comment": "Approved career record behind the CV, Full Bio and Speaker Bio (SPECIFICATION FR-09, FR-12). Facts come from Yorke's own CV Reference documents; the public LinkedIn profile bounds Microsoft program detail (PLAN R-10). Recommendation letters are never quoted. Edit here, rebuild, and review the PR.",
+  "edition": {
+    "revised": "2026-11-26",
+    "sources": "Yorke's fellowship CV and LinkedIn profile export (CV Reference folder), with owner corrections of 2026-11-26: NYU Integrated Marketing 2012–2024, NYU Center for Global Affairs 2024–present, DTSF as the twin framework's name, and pre-2014 history restored."
+  },
+  "contact": {
+    "location": "New York City Metropolitan Area",
+    "links": [
+      { "label": "linkedin.com/in/yorkerhodes", "url": "https://www.linkedin.com/in/yorkerhodes" },
+      { "label": "github.com/yorkerhodes3", "url": "https://github.com/yorkerhodes3" },
+      { "label": "yorkerhodes3.github.io/portfolio", "url": "https://yorkerhodes3.github.io/portfolio/" }
+    ]
+  },
+  "profile": "Technology executive, builder and educator working where AI agents, blockchain and supply-chain traceability meet public policy. At Microsoft he leads company-wide traceability work and cofounded Blockchain at Microsoft. At NYU he created a graduate course on emerging technology in ethical sourcing and founded the Ethical Tech CoLab, where student researchers build working prototypes for human-rights and global-affairs problems.",
+  "experience": [
+    {
+      "organization": "Microsoft",
+      "period": "2014 – present",
+      "roles": [
+        {
+          "title": "Director, Digital Transformation, Traceability",
+          "start": "2023-07", "end": null,
+          "bullets": [
+            "Leads a cross-company effort to provide traceability data for every part and relationship in Microsoft's high-tech supply chains, from mine to datacenter and mine to device.",
+            "Designs the platform and product approach, using distributed-systems methods, design thinking and pre-mortems, to meet regulatory and ESG commitments to keep forced labor out of opaque upstream supply chains, including US UFLPA and NDAA requirements.",
+            "Extends traceability to raw materials, Scope 2 and 3 emissions data capture, and end-of-life disposition."
+          ]
+        },
+        {
+          "title": "Cofounder, Blockchain at Microsoft",
+          "start": "2015-07", "end": null,
+          "bullets": [
+            "Core team for Microsoft's blockchain strategy: prioritizing assets and resources across the company, adding blockchain benefits to products, and providing frameworks for cloud-scale blockchain and identity systems."
+          ]
+        },
+        {
+          "title": "Director, Digital Transformation, Blockchain, Cloud Supply Chain",
+          "start": "2020-07", "end": "2023-07",
+          "bullets": [
+            "Brought a traceability and financial-controls solution to production in one of the world's largest supply chains, using blockchain as a subledger that connects physical movement, documentation and payments.",
+            "Improved end-to-end (Tier 0 to Tier 2) item-level traceability, reduced cycle time and expanded margins; enabled just-in-time payments that reduced capital out of pocket.",
+            "Recognized with Gartner's Power of the Profession Supply Chain Breakthrough of the Year (2020) and a Treasury & Risk Alexander Hamilton Gold Award."
+          ]
+        },
+        {
+          "title": "Principal Program Manager, Blockchain Engineering, Microsoft Azure",
+          "start": "2017-12", "end": "2020-07",
+          "bullets": [
+            "Led Azure blockchain engagements with the most advanced customers and partners on the path to production, turning their requirements into product input across Azure.",
+            "Published best-practice guidance on key custody, enterprise consensus, consortium governance, security architecture, smart-contract practice and tokenization."
+          ]
+        },
+        {
+          "title": "Global Business Strategist, Blockchain & Identity",
+          "start": "2014-11", "end": "2017-12",
+          "bullets": [
+            "Managed Microsoft's worldwide blockchain partner ecosystem, with a focus on identity: product alignment, application architecture, business modeling, go-to-market and co-sell strategy for open-source and commercial partners."
+          ]
+        }
+      ]
+    },
+    {
+      "organization": "New York University",
+      "period": "2012 – present",
+      "roles": [
+        {
+          "title": "Adjunct Professor, Center for Global Affairs, School of Professional Studies",
+          "start": "2024-08", "end": null,
+          "bullets": [
+            "Created and teaches the graduate course Beyond the Brand: Harnessing Emerging Technologies in Ethical Sourcing, bridging ethical sourcing, global affairs, regulation and emerging technology.",
+            "Course research addresses forced labor, human trafficking and online grooming, with a mid-semester hackathon aligned to the Ethical Tech Summit.",
+            "Founded the Ethical Tech CoLab to turn students' interdisciplinary knowledge into applied interventions at the intersection of emerging technology and the human condition."
+          ]
+        },
+        {
+          "title": "Adjunct Professor, Digital & Ecommerce Marketing, M.S. in Integrated Marketing",
+          "start": "2012-08", "end": "2024-12",
+          "bullets": [
+            "Taught a global perspective on digital and e-commerce marketing, global trade and material risk, with recurring coverage of Web3, decentralized identity, tokenization and AI."
+          ]
+        }
+      ]
+    },
+    {
+      "organization": "Photon",
+      "period": "2010 – 2014",
+      "roles": [
+        {
+          "title": "Vice President and Creative Director",
+          "start": "2011-03", "end": "2014-11",
+          "bullets": [
+            "Founded the in-house UX agency 72 Pixels and led creative direction for Fortune 100 clients; ideated, designed and shipped more than 650 digital and mobile experiences.",
+            "Recruited and led a team of 38 UI/UX designers across New York, Chicago and San Francisco, using agile delivery with 12-week launch cycles."
+          ]
+        },
+        {
+          "title": "General Manager, US Operations",
+          "start": "2010-11", "end": "2014-11",
+          "bullets": [
+            "Built Photon's resident US employee base and oversaw recruiting, delivery oversight and customer onboarding; as head of marketing, led the company through three rebrands."
+          ]
+        }
+      ]
+    },
+    {
+      "organization": "XL Marketing – Zeta Interactive",
+      "period": "2008 – 2010",
+      "roles": [
+        {
+          "title": "Chief Technology Officer and Chief Information Officer",
+          "start": "2009-01", "end": "2010-06",
+          "bullets": [
+            "Integrated the digital marketing portfolio companies to meet growth goals across lead generation, email marketing, conversion optimization and survey systems.",
+            "Co-founded the portfolio company OnDemand Research, taking it from concept to 100,000 monthly unique visitors in six months."
+          ]
+        },
+        {
+          "title": "Chief Operating Officer",
+          "start": "2008-06", "end": "2009-01",
+          "bullets": [
+            "Ran operations, technology and growth through the company's second consecutive Inc. 500 listing (ranked 126th in 2008)."
+          ]
+        }
+      ]
+    },
+    {
+      "organization": "Broadband wireless startup",
+      "period": "2007",
+      "roles": [
+        {
+          "title": "Chief Executive Officer",
+          "start": "2007-04", "end": "2007-09",
+          "bullets": [
+            "Recruited to take a regional wireless broadband provider national; formed scale-up partnerships with Cisco, IBM, iPass and Boingo and doubled revenue from FY2006 to FY2007."
+          ]
+        }
+      ]
+    },
+    {
+      "organization": "IBM Global Services",
+      "period": "2003 – 2007",
+      "roles": [
+        {
+          "title": "Principal; Director, Wireless Services Business",
+          "start": "2003-02", "end": "2007-03",
+          "bullets": [
+            "Rebuilt the wireless services practice and brought to market offerings in broadband and metro wireless, RFID, biometric authentication and digital video surveillance."
+          ]
+        }
+      ]
+    },
+    {
+      "organization": "Goldman Sachs",
+      "period": "2000 – 2003",
+      "roles": [
+        {
+          "title": "Vice President, Investment Banking Technology",
+          "start": "2000-08", "end": "2003-02",
+          "bullets": [
+            "Provided technical due diligence on prospective merger and IPO candidates and led a worldwide mobile and wireless team across Hong Kong, Tokyo, London, Sydney, New York and California.",
+            "Brought five products to market for bankers, including the largest BlackBerry implementation in the world at the time and remote access that scaled after September 11, 2001."
+          ]
+        }
+      ]
+    },
+    {
+      "organization": "Microsoft",
+      "period": "1992 – 2000",
+      "roles": [
+        {
+          "title": "Messaging Architect; Product Manager; Systems Engineer",
+          "start": "1992-05", "end": "2000-04",
+          "bullets": [
+            "Designed worldwide email architectures for Fortune 100 companies and brought customer design input into Microsoft Exchange during its development."
+          ]
+        }
+      ]
+    },
+    {
+      "organization": "PCSI",
+      "period": "1988 – 1992",
+      "roles": [
+        {
+          "title": "Programmer Analyst",
+          "start": "1988", "end": "1992",
+          "bullets": [
+            "Database design and optimization for large-scale systems; clients included Union Carbide, The New York Times and Pfizer."
+          ]
+        }
+      ]
+    }
+  ],
+  "systems": [
+    { "name": "Digital Twin Systems Framework (DTSF)", "detail": "A verifiability layer for digital twins using cryptographic attestations and zero-knowledge proofs." },
+    { "name": "x402 agentic commerce patterns", "detail": "Integration of real-time micropayment rails into corporate and academic settings, with reference patterns for agent-to-agent and human-to-agent commerce." },
+    { "name": "Diplomacy Table", "detail": "An applied-research environment for AI-mediated multilateral negotiation." }
+  ],
+  "selectedProjects": ["agentic-ontology", "sovereign-agent-trust-mesh", "felementum", "diplomatic-simulator", "quest-payments", "bare-metal-jacket", "neocloud-supply-os", "manhattan-bridge-3d"],
+  "teaching": [
+    "Ethical Tech Summit: semesterly flagship convening that produces public-facing primers and policy artifacts.",
+    "Agentic Commerce & x402 Hackathon: designer and host, pairing NYU students with industry and policy mentors.",
+    "Mentor to Ethical Tech CoLab applicants and student researchers."
+  ],
+  "engagement": [
+    "UN Commission on the Status of Women (CSW): panelist on technology, equity and human-rights-driven supply-chain visibility.",
+    "World Economic Forum, Davos: contributor on the World Bank blockchain bond and tokenized capital instruments.",
+    "OECD: contributions on responsible blockchain and digital-asset deployment and cross-border regulatory coordination.",
+    "Harvard Museum Traceability Symposium: contributor on provenance, attestation and cultural-heritage traceability.",
+    "Guest lecturer and advisor: Rice University, University of Pennsylvania, and Cornell Tech and Columbia Engineering through the EEA University Engagement Program.",
+    "Enterprise Ethereum Alliance Business Readiness Report: co-author and editorial contributor."
+  ],
+  "recognition": [
+    "Gartner Power of the Profession Supply Chain Award: Supply Chain Breakthrough of the Year, 2020 (Microsoft team).",
+    "Treasury & Risk Alexander Hamilton Award, Gold: Risk Management for Blockchain in Supply Chain with Financial Controls.",
+    "Inc. 500: ranked 126th fastest-growing company, 2008 (XL Marketing, as COO).",
+    "Speaker, NFT.NYC 2021."
+  ],
+  "affiliations": [
+    "Enterprise Ethereum Alliance: Founding Board Member.",
+    "x402 Foundation at the Linux Foundation: Founding Board Member.",
+    "ID2020: helped co-fund the digital-identity NGO at its founding.",
+    "Ethical Tech CoLab, NYU Center for Global Affairs: Founder and Lab Director."
+  ],
+  "education": [
+    { "institution": "New York University, Courant Institute of Mathematical Sciences", "degree": "B.S., Computer Science", "year": "1985" }
+  ],
+  "skills": ["AI and agentic systems", "Agentic commerce and x402", "Blockchain and Ethereum", "Decentralized identity and verifiable credentials", "Zero-knowledge proofs", "Supply-chain traceability", "Distributed systems", "Product and go-to-market strategy"],
+  "languages": ["German"],
+  "fullBio": [
+    "Yorke E. Rhodes III builds systems that make high-stakes decisions inspectable, and teaches others to do the same. He is Director of Digital Transformation for Traceability at Microsoft, where he leads a cross-company effort to trace every part and relationship in Microsoft's hardware supply chains, from mine to datacenter, to meet regulatory and ESG commitments that keep forced labor out of opaque upstream suppliers. In 2015 he cofounded Blockchain at Microsoft. The blockchain subledger his team brought to production in Microsoft's cloud supply chain was named Gartner's Supply Chain Breakthrough of the Year in 2020 and won a Treasury & Risk Alexander Hamilton Gold Award.",
+    "At New York University's Center for Global Affairs, Rhodes created and teaches the graduate course Beyond the Brand: Harnessing Emerging Technologies in Ethical Sourcing, and founded the Ethical Tech CoLab. Its student researchers build working prototypes where emerging technology meets the human condition: civilian-evacuation risk models, forced-labor risk indices, provenance passports for cultural objects and AI-mediated diplomatic negotiation. From 2012 to 2024 he taught digital and e-commerce marketing in NYU's M.S. in Integrated Marketing.",
+    "His recent independent work spans agentic AI and commerce: a typed ontology that governs what a personal AI agent may believe, reveal and do; a trust mesh that joins agent-to-agent networking with Ethereum agent-identity registries; a design for incentive-based ticket payments over the x402 protocol; and self-hosted infrastructure for running models on owned hardware. He is a founding board member of the Enterprise Ethereum Alliance and of the x402 Foundation at the Linux Foundation, and helped co-fund the digital-identity NGO ID2020.",
+    "Earlier, Rhodes held technology and leadership roles at Microsoft, Goldman Sachs, IBM Global Services, XL Marketing – Zeta Interactive and Photon, where he founded the in-house UX agency 72 Pixels. He has spoken at the UN Commission on the Status of Women and contributed to World Economic Forum discussions of the World Bank's blockchain bond. He holds a B.S. in Computer Science from NYU's Courant Institute."
+  ],
+  "speakerBio": "Yorke E. Rhodes III is Director of Digital Transformation for Traceability at Microsoft and cofounder of Blockchain at Microsoft, where he leads work to trace hardware supply chains from mine to datacenter and keep forced labor out of them. He is an adjunct professor at NYU's Center for Global Affairs and founder of the Ethical Tech CoLab, whose student researchers build working prototypes for problems from civilian evacuation to cultural-heritage provenance. His recent work spans AI agents, agentic commerce on the x402 protocol, Ethereum agent identity and decision models. He is a founding board member of the Enterprise Ethereum Alliance, and his team's blockchain supply-chain work was named Gartner's Supply Chain Breakthrough of the Year."
+}
