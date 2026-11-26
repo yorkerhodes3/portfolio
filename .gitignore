@@ -1,0 +1,8 @@
+# Career source originals (CV Reference folder). This repository is public;
+# only approved extracts in career/ are committed.
+private/
+
+node_modules/
+dist/
+test-results/
+playwright-report/
